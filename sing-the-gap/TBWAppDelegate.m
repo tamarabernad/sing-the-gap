@@ -7,6 +7,7 @@
 //
 
 #import "TBWAppDelegate.h"
+#import "TBWHomeViewController.h"
 
 @implementation TBWAppDelegate
 
@@ -20,6 +21,14 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    
+    
+    TBWHomeViewController *hvc = [[TBWHomeViewController alloc] init];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:hvc];
+    [nc setNavigationBarHidden:YES];
+    
+    [self.window setRootViewController:nc];
     return YES;
 }
 
