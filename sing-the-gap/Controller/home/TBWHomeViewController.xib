@@ -18,6 +18,7 @@
                     <rect key="frame" x="137" y="269" width="52" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Browse">
+                        <color key="titleColor" red="1" green="0.0" blue="0.16543742511086101" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
