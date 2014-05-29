@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9390E7D9-0CB8-4C9E-BC2C-33E020EE404C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>sing-the-gap</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5061257A-28CD-45F8-ADFD-398045E79CED</key>
+		<string>https://github.com/tamarinda/sing-the-gap.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>sing-the-gap.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5061257A-28CD-45F8-ADFD-398045E79CED</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/tamarinda/sing-the-gap.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5061257A-28CD-45F8-ADFD-398045E79CED</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5061257A-28CD-45F8-ADFD-398045E79CED</string>
+			<key>IDESourceControlWCCName</key>
+			<string>sing-the-gap</string>
+		</dict>
+	</array>
+</dict>
+</plist>

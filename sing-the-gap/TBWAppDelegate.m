@@ -8,6 +8,7 @@
 
 #import "TBWAppDelegate.h"
 #import "TBWHomeViewController.h"
+#import <HockeySDK/HockeySDK.h>
 
 @implementation TBWAppDelegate
 
@@ -21,6 +22,10 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"ca8dfdcf2403016c02c8b8a0b9a07f3d"];
+    [[BITHockeyManager sharedHockeyManager] startManager];
+    [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation];
     
     
     

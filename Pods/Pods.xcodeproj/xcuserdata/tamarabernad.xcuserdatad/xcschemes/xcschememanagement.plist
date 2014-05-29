@@ -4,35 +4,65 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>HockeySDKResources.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Pods-AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Pods-HockeySDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>Pods-TestFlightSDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2BA14F442FDC4DF1B2305FB8</key>
+		<key>51EB7B24BD704E61BEA0D931</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5AA5C543B4884166942A9E07</key>
+		<key>51F307D165AE4832A4BE8157</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>61C43B5363854134BBD94CB5</key>
+		<key>BD8D392E0FD64FA89E7F6833</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E3CEE97CDD49422E905A0271</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F4254EEADCC64BBE81D3E4F0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
