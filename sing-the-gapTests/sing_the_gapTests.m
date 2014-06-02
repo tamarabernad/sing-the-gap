@@ -26,10 +26,5 @@
     [super tearDown];
 }
 
-- (void)testExample
-{
-    XCTAssertTrue(YES);
-//    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
-}
 
 @end

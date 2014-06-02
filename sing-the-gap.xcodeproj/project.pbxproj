@@ -27,6 +27,13 @@
 		63EDC0781934DD2E00278B84 /* TBWHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63EDC0761934DD2E00278B84 /* TBWHomeViewController.xib */; };
 		63EDC0801934DDC400278B84 /* TBWBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EDC07E1934DDC400278B84 /* TBWBrowseViewController.m */; };
 		63EDC0811934DDC400278B84 /* TBWBrowseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63EDC07F1934DDC400278B84 /* TBWBrowseViewController.xib */; };
+		C995C6F1193B4A1900D87BCD /* TBWAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6F0193B4A1900D87BCD /* TBWAudioManager.m */; };
+		C995C6F2193B4A1900D87BCD /* TBWAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6F0193B4A1900D87BCD /* TBWAudioManager.m */; };
+		C995C6F5193B4AEE00D87BCD /* TBWGapSong.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6F4193B4AEE00D87BCD /* TBWGapSong.m */; };
+		C995C6F6193B4AEE00D87BCD /* TBWGapSong.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6F4193B4AEE00D87BCD /* TBWGapSong.m */; };
+		C995C6F9193B4B3300D87BCD /* TBWGap.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6F8193B4B3300D87BCD /* TBWGap.m */; };
+		C995C6FA193B4B3300D87BCD /* TBWGap.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6F8193B4B3300D87BCD /* TBWGap.m */; };
+		C995C6FC193B4BE100D87BCD /* TBWAudioManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6FB193B4BE100D87BCD /* TBWAudioManagerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +73,13 @@
 		63EDC07E1934DDC400278B84 /* TBWBrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWBrowseViewController.m; sourceTree = "<group>"; };
 		63EDC07F1934DDC400278B84 /* TBWBrowseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWBrowseViewController.xib; sourceTree = "<group>"; };
 		65DFACA32083428BA307B345 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C995C6EF193B4A1900D87BCD /* TBWAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWAudioManager.h; sourceTree = "<group>"; };
+		C995C6F0193B4A1900D87BCD /* TBWAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWAudioManager.m; sourceTree = "<group>"; };
+		C995C6F3193B4AEE00D87BCD /* TBWGapSong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWGapSong.h; sourceTree = "<group>"; };
+		C995C6F4193B4AEE00D87BCD /* TBWGapSong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWGapSong.m; sourceTree = "<group>"; };
+		C995C6F7193B4B3300D87BCD /* TBWGap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWGap.h; sourceTree = "<group>"; };
+		C995C6F8193B4B3300D87BCD /* TBWGap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWGap.m; sourceTree = "<group>"; };
+		C995C6FB193B4BE100D87BCD /* TBWAudioManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWAudioManagerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +145,7 @@
 		63EDC03E1934DC1B00278B84 /* sing-the-gap */ = {
 			isa = PBXGroup;
 			children = (
+				C995C6EE193B48F800D87BCD /* Services */,
 				63EDC06B1934DCF100278B84 /* Controller */,
 				63EDC06C1934DCF100278B84 /* Model */,
 				63EDC06D1934DCF100278B84 /* View */,
@@ -158,6 +173,7 @@
 			children = (
 				63EDC0611934DC1B00278B84 /* sing_the_gapTests.m */,
 				63EDC05C1934DC1B00278B84 /* Supporting Files */,
+				C995C6FB193B4BE100D87BCD /* TBWAudioManagerTests.m */,
 			);
 			path = "sing-the-gapTests";
 			sourceTree = "<group>";
@@ -187,6 +203,10 @@
 			isa = PBXGroup;
 			children = (
 				63EDC04A1934DC1B00278B84 /* sing_the_gap.xcdatamodeld */,
+				C995C6F3193B4AEE00D87BCD /* TBWGapSong.h */,
+				C995C6F4193B4AEE00D87BCD /* TBWGapSong.m */,
+				C995C6F7193B4B3300D87BCD /* TBWGap.h */,
+				C995C6F8193B4B3300D87BCD /* TBWGap.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,6 +257,15 @@
 			children = (
 			);
 			path = purchased;
+			sourceTree = "<group>";
+		};
+		C995C6EE193B48F800D87BCD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C995C6EF193B4A1900D87BCD /* TBWAudioManager.h */,
+				C995C6F0193B4A1900D87BCD /* TBWAudioManager.m */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,11 +401,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C995C6F9193B4B3300D87BCD /* TBWGap.m in Sources */,
 				63EDC0491934DC1B00278B84 /* TBWAppDelegate.m in Sources */,
 				63EDC04C1934DC1B00278B84 /* sing_the_gap.xcdatamodeld in Sources */,
+				C995C6F1193B4A1900D87BCD /* TBWAudioManager.m in Sources */,
 				63EDC0801934DDC400278B84 /* TBWBrowseViewController.m in Sources */,
 				63EDC0451934DC1B00278B84 /* main.m in Sources */,
 				63EDC0771934DD2E00278B84 /* TBWHomeViewController.m in Sources */,
+				C995C6F5193B4AEE00D87BCD /* TBWGapSong.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +416,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C995C6FA193B4B3300D87BCD /* TBWGap.m in Sources */,
+				C995C6F2193B4A1900D87BCD /* TBWAudioManager.m in Sources */,
 				63EDC0621934DC1B00278B84 /* sing_the_gapTests.m in Sources */,
+				C995C6F6193B4AEE00D87BCD /* TBWGapSong.m in Sources */,
+				C995C6FC193B4BE100D87BCD /* TBWAudioManagerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

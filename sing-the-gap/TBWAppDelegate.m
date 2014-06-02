@@ -9,6 +9,7 @@
 #import "TBWAppDelegate.h"
 #import "TBWHomeViewController.h"
 #import <HockeySDK/HockeySDK.h>
+#import "TBWAudioManager.h"
 
 @implementation TBWAppDelegate
 
@@ -34,8 +35,38 @@
     [nc setNavigationBarHidden:YES];
     
     [self.window setRootViewController:nc];
+    [self testAudioFileCreation];
     return YES;
 }
+- (void)testAudioFileCreation
+{
+    NSError *error = nil;
+    
+    NSURL *recordingsDirectory = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:@"recordings"] isDirectory:YES];
+    
+    [[NSFileManager defaultManager] createDirectoryAtURL:recordingsDirectory withIntermediateDirectories:YES attributes:nil error:&error];
+    
+    NSURL *gapSongsDirectory = [NSURL fileURLWithPath:[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"gap-songs"] isDirectory:YES];
+    
+    [[NSFileManager defaultManager] createDirectoryAtURL:gapSongsDirectory withIntermediateDirectories:YES attributes:nil error:&error];
+    
+    NSURL *creationsDirectory = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:@"creations"] isDirectory:YES];
+    
+    [[NSFileManager defaultManager] createDirectoryAtURL:creationsDirectory withIntermediateDirectories:YES attributes:nil error:&error];
+    
+    
+    NSString *songPath = [[gapSongsDirectory path] stringByAppendingPathComponent:@"test.m4a"];
+    NSString *recordingPath = [[recordingsDirectory path] stringByAppendingPathComponent:@"campechano.wav"];
+    NSString* file = [[creationsDirectory path] stringByAppendingPathComponent:@"mymp3.m4a"];
+    
+    TBWAudioManager *sut = [[TBWAudioManager alloc] init];
+    [sut createAudioMixWithBaseAudio:songPath GapAudio:recordingPath AndDestinationPath:file AndMarkerMiliseconds:@[@1500, @3000]];
+    
+    
+    BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:file];
+//    XCTAssertTrue(fileExists);
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
