@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "TBWAudioManager.h"
 #import "TBWTextToSpeechService.h"
+#import "TBWRecordingService.h"
 
 @interface TBWAudioManagerTests : XCTestCase
 
@@ -69,6 +70,22 @@
     
     BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:recordingPath];
     XCTAssertTrue(fileExists);
+    
+}
+- (void)testRecording{
+    NSError *error = nil;
+    
+    NSURL *recordingsDirectory = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:@"recordings"] isDirectory:YES];
+    
+    [[NSFileManager defaultManager] createDirectoryAtURL:recordingsDirectory withIntermediateDirectories:YES attributes:nil error:&error];
+    
+    NSString *recordingPath = [[recordingsDirectory path] stringByAppendingPathComponent:@"recording.m4a"];
+
+    TBWRecordingService *sut = [[TBWRecordingService alloc] init];
+    [sut recordAudioWithDuration:2.0 ToFile:recordingPath];
+    
+
+    XCTAssertTrue(YES);
     
 }
 @end

@@ -8,6 +8,7 @@
 
 #import "TBWHomeViewController.h"
 #import "TBWBrowseViewController.h"
+#import "TBWRecordingService.h"
 @interface TBWHomeViewController ()
 
 @end
@@ -35,8 +36,19 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)onBrowseClick:(id)sender {
-    TBWBrowseViewController *bvc = [[TBWBrowseViewController alloc] init];
-    [self.navigationController pushViewController:bvc animated:YES];
+    NSError *error = nil;
+    NSURL *recordingsDirectory = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:@"recordings"] isDirectory:YES];
+    
+    [[NSFileManager defaultManager] createDirectoryAtURL:recordingsDirectory withIntermediateDirectories:YES attributes:nil error:&error];
+    
+    NSString *recordingPath = [[recordingsDirectory path] stringByAppendingPathComponent:@"recording.m4a"];
+
+    
+    
+    TBWRecordingService *r = [[TBWRecordingService alloc] init];
+    [r recordAudioWithDuration:5.0 ToFile:recordingPath];
+//    TBWBrowseViewController *bvc = [[TBWBrowseViewController alloc] init];
+//    [self.navigationController pushViewController:bvc animated:YES];
 
 }
 

@@ -61,6 +61,7 @@
 		C995CB01193D13DA00D87BCD /* wave_sada.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CAE8193D13DA00D87BCD /* wave_sada.cpp */; };
 		C995CB02193D13DA00D87BCD /* wavegen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CAE9193D13DA00D87BCD /* wavegen.cpp */; };
 		C995CB06193D140600D87BCD /* espeak-data in Resources */ = {isa = PBXBuildFile; fileRef = C995CB05193D140600D87BCD /* espeak-data */; };
+		C995CB0A193D1E5100D87BCD /* TBWRecordingService.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CB09193D1E5100D87BCD /* TBWRecordingService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +155,8 @@
 		C995CAE8193D13DA00D87BCD /* wave_sada.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wave_sada.cpp; sourceTree = "<group>"; };
 		C995CAE9193D13DA00D87BCD /* wavegen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wavegen.cpp; sourceTree = "<group>"; };
 		C995CB05193D140600D87BCD /* espeak-data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "espeak-data"; sourceTree = "<group>"; };
+		C995CB08193D1E5100D87BCD /* TBWRecordingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWRecordingService.h; sourceTree = "<group>"; };
+		C995CB09193D1E5100D87BCD /* TBWRecordingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWRecordingService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +345,8 @@
 				C995C6F0193B4A1900D87BCD /* TBWAudioManager.m */,
 				C995C6FE193CFDE900D87BCD /* TBWTextToSpeechService.h */,
 				C995C6FF193CFDE900D87BCD /* TBWTextToSpeechService.m */,
+				C995CB08193D1E5100D87BCD /* TBWRecordingService.h */,
+				C995CB09193D1E5100D87BCD /* TBWRecordingService.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -577,6 +582,7 @@
 				C995CAFE193D13DA00D87BCD /* voices.cpp in Sources */,
 				C995CAEB193D13DA00D87BCD /* compiledict.cpp in Sources */,
 				C995C700193CFDE900D87BCD /* TBWTextToSpeechService.m in Sources */,
+				C995CB0A193D1E5100D87BCD /* TBWRecordingService.m in Sources */,
 				C995CAEE193D13DA00D87BCD /* espeak_command.cpp in Sources */,
 				C995CAFC193D13DA00D87BCD /* tr_languages.cpp in Sources */,
 				C995C6F1193B4A1900D87BCD /* TBWAudioManager.m in Sources */,
