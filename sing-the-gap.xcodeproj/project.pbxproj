@@ -34,6 +34,33 @@
 		C995C6F9193B4B3300D87BCD /* TBWGap.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6F8193B4B3300D87BCD /* TBWGap.m */; };
 		C995C6FA193B4B3300D87BCD /* TBWGap.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6F8193B4B3300D87BCD /* TBWGap.m */; };
 		C995C6FC193B4BE100D87BCD /* TBWAudioManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6FB193B4BE100D87BCD /* TBWAudioManagerTests.m */; };
+		C995C700193CFDE900D87BCD /* TBWTextToSpeechService.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6FF193CFDE900D87BCD /* TBWTextToSpeechService.m */; };
+		C995CAEA193D13DA00D87BCD /* ESpeakEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CABE193D13DA00D87BCD /* ESpeakEngine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C995CAEB193D13DA00D87BCD /* compiledict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CAC0193D13DA00D87BCD /* compiledict.cpp */; };
+		C995CAEC193D13DA00D87BCD /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CAC1193D13DA00D87BCD /* debug.cpp */; };
+		C995CAED193D13DA00D87BCD /* dictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CAC3193D13DA00D87BCD /* dictionary.cpp */; };
+		C995CAEE193D13DA00D87BCD /* espeak_command.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CAC4193D13DA00D87BCD /* espeak_command.cpp */; };
+		C995CAEF193D13DA00D87BCD /* event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CAC6193D13DA00D87BCD /* event.cpp */; };
+		C995CAF0193D13DA00D87BCD /* fifo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CAC8193D13DA00D87BCD /* fifo.cpp */; };
+		C995CAF1193D13DA00D87BCD /* intonation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CACA193D13DA00D87BCD /* intonation.cpp */; };
+		C995CAF2193D13DA00D87BCD /* klatt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CACB193D13DA00D87BCD /* klatt.cpp */; };
+		C995CAF3193D13DA00D87BCD /* mbrowrap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CACD193D13DA00D87BCD /* mbrowrap.cpp */; };
+		C995CAF4193D13DA00D87BCD /* numbers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CACF193D13DA00D87BCD /* numbers.cpp */; };
+		C995CAF5193D13DA00D87BCD /* phonemelist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CAD1193D13DA00D87BCD /* phonemelist.cpp */; };
+		C995CAF6193D13DA00D87BCD /* readclause.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CAD5193D13DA00D87BCD /* readclause.cpp */; };
+		C995CAF7193D13DA00D87BCD /* setlengths.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CAD6193D13DA00D87BCD /* setlengths.cpp */; };
+		C995CAF8193D13DA00D87BCD /* speak_lib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CAD8193D13DA00D87BCD /* speak_lib.cpp */; };
+		C995CAF9193D13DA00D87BCD /* synth_mbrola.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CADC193D13DA00D87BCD /* synth_mbrola.cpp */; };
+		C995CAFA193D13DA00D87BCD /* synthdata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CADD193D13DA00D87BCD /* synthdata.cpp */; };
+		C995CAFB193D13DA00D87BCD /* synthesize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CADE193D13DA00D87BCD /* synthesize.cpp */; };
+		C995CAFC193D13DA00D87BCD /* tr_languages.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CAE0193D13DA00D87BCD /* tr_languages.cpp */; };
+		C995CAFD193D13DA00D87BCD /* translate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CAE1193D13DA00D87BCD /* translate.cpp */; };
+		C995CAFE193D13DA00D87BCD /* voices.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CAE4193D13DA00D87BCD /* voices.cpp */; };
+		C995CAFF193D13DA00D87BCD /* wave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CAE5193D13DA00D87BCD /* wave.cpp */; };
+		C995CB00193D13DA00D87BCD /* wave_pulse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CAE7193D13DA00D87BCD /* wave_pulse.cpp */; };
+		C995CB01193D13DA00D87BCD /* wave_sada.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CAE8193D13DA00D87BCD /* wave_sada.cpp */; };
+		C995CB02193D13DA00D87BCD /* wavegen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CAE9193D13DA00D87BCD /* wavegen.cpp */; };
+		C995CB06193D140600D87BCD /* espeak-data in Resources */ = {isa = PBXBuildFile; fileRef = C995CB05193D140600D87BCD /* espeak-data */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +107,53 @@
 		C995C6F7193B4B3300D87BCD /* TBWGap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWGap.h; sourceTree = "<group>"; };
 		C995C6F8193B4B3300D87BCD /* TBWGap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWGap.m; sourceTree = "<group>"; };
 		C995C6FB193B4BE100D87BCD /* TBWAudioManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWAudioManagerTests.m; sourceTree = "<group>"; };
+		C995C6FE193CFDE900D87BCD /* TBWTextToSpeechService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWTextToSpeechService.h; sourceTree = "<group>"; };
+		C995C6FF193CFDE900D87BCD /* TBWTextToSpeechService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWTextToSpeechService.m; sourceTree = "<group>"; };
+		C995CABD193D13DA00D87BCD /* ESpeakEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESpeakEngine.h; sourceTree = "<group>"; };
+		C995CABE193D13DA00D87BCD /* ESpeakEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESpeakEngine.m; sourceTree = "<group>"; };
+		C995CAC0193D13DA00D87BCD /* compiledict.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = compiledict.cpp; sourceTree = "<group>"; };
+		C995CAC1193D13DA00D87BCD /* debug.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = debug.cpp; sourceTree = "<group>"; };
+		C995CAC2193D13DA00D87BCD /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
+		C995CAC3193D13DA00D87BCD /* dictionary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dictionary.cpp; sourceTree = "<group>"; };
+		C995CAC4193D13DA00D87BCD /* espeak_command.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = espeak_command.cpp; sourceTree = "<group>"; };
+		C995CAC5193D13DA00D87BCD /* espeak_command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = espeak_command.h; sourceTree = "<group>"; };
+		C995CAC6193D13DA00D87BCD /* event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = event.cpp; sourceTree = "<group>"; };
+		C995CAC7193D13DA00D87BCD /* event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = event.h; sourceTree = "<group>"; };
+		C995CAC8193D13DA00D87BCD /* fifo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fifo.cpp; sourceTree = "<group>"; };
+		C995CAC9193D13DA00D87BCD /* fifo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fifo.h; sourceTree = "<group>"; };
+		C995CACA193D13DA00D87BCD /* intonation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = intonation.cpp; sourceTree = "<group>"; };
+		C995CACB193D13DA00D87BCD /* klatt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = klatt.cpp; sourceTree = "<group>"; };
+		C995CACC193D13DA00D87BCD /* klatt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = klatt.h; sourceTree = "<group>"; };
+		C995CACD193D13DA00D87BCD /* mbrowrap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mbrowrap.cpp; sourceTree = "<group>"; };
+		C995CACE193D13DA00D87BCD /* mbrowrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mbrowrap.h; sourceTree = "<group>"; };
+		C995CACF193D13DA00D87BCD /* numbers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = numbers.cpp; sourceTree = "<group>"; };
+		C995CAD0193D13DA00D87BCD /* phoneme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = phoneme.h; sourceTree = "<group>"; };
+		C995CAD1193D13DA00D87BCD /* phonemelist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = phonemelist.cpp; sourceTree = "<group>"; };
+		C995CAD2193D13DA00D87BCD /* portaudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = portaudio.h; sourceTree = "<group>"; };
+		C995CAD3193D13DA00D87BCD /* portaudio18.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = portaudio18.h; sourceTree = "<group>"; };
+		C995CAD4193D13DA00D87BCD /* portaudio19.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = portaudio19.h; sourceTree = "<group>"; };
+		C995CAD5193D13DA00D87BCD /* readclause.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = readclause.cpp; sourceTree = "<group>"; };
+		C995CAD6193D13DA00D87BCD /* setlengths.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = setlengths.cpp; sourceTree = "<group>"; };
+		C995CAD7193D13DA00D87BCD /* sintab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sintab.h; sourceTree = "<group>"; };
+		C995CAD8193D13DA00D87BCD /* speak_lib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = speak_lib.cpp; sourceTree = "<group>"; };
+		C995CAD9193D13DA00D87BCD /* speak_lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = speak_lib.h; sourceTree = "<group>"; };
+		C995CADA193D13DA00D87BCD /* speech.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = speech.h; sourceTree = "<group>"; };
+		C995CADB193D13DA00D87BCD /* StdAfx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StdAfx.h; sourceTree = "<group>"; };
+		C995CADC193D13DA00D87BCD /* synth_mbrola.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = synth_mbrola.cpp; sourceTree = "<group>"; };
+		C995CADD193D13DA00D87BCD /* synthdata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = synthdata.cpp; sourceTree = "<group>"; };
+		C995CADE193D13DA00D87BCD /* synthesize.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = synthesize.cpp; sourceTree = "<group>"; };
+		C995CADF193D13DA00D87BCD /* synthesize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = synthesize.h; sourceTree = "<group>"; };
+		C995CAE0193D13DA00D87BCD /* tr_languages.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tr_languages.cpp; sourceTree = "<group>"; };
+		C995CAE1193D13DA00D87BCD /* translate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = translate.cpp; sourceTree = "<group>"; };
+		C995CAE2193D13DA00D87BCD /* translate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = translate.h; sourceTree = "<group>"; };
+		C995CAE3193D13DA00D87BCD /* voice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = voice.h; sourceTree = "<group>"; };
+		C995CAE4193D13DA00D87BCD /* voices.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = voices.cpp; sourceTree = "<group>"; };
+		C995CAE5193D13DA00D87BCD /* wave.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wave.cpp; sourceTree = "<group>"; };
+		C995CAE6193D13DA00D87BCD /* wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wave.h; sourceTree = "<group>"; };
+		C995CAE7193D13DA00D87BCD /* wave_pulse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wave_pulse.cpp; sourceTree = "<group>"; };
+		C995CAE8193D13DA00D87BCD /* wave_sada.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wave_sada.cpp; sourceTree = "<group>"; };
+		C995CAE9193D13DA00D87BCD /* wavegen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wavegen.cpp; sourceTree = "<group>"; };
+		C995CB05193D140600D87BCD /* espeak-data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "espeak-data"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +219,8 @@
 		63EDC03E1934DC1B00278B84 /* sing-the-gap */ = {
 			isa = PBXGroup;
 			children = (
+				C995CABA193D13A900D87BCD /* Resources */,
+				C995C701193D124F00D87BCD /* Libraries */,
 				C995C6EE193B48F800D87BCD /* Services */,
 				63EDC06B1934DCF100278B84 /* Controller */,
 				63EDC06C1934DCF100278B84 /* Model */,
@@ -264,8 +340,93 @@
 			children = (
 				C995C6EF193B4A1900D87BCD /* TBWAudioManager.h */,
 				C995C6F0193B4A1900D87BCD /* TBWAudioManager.m */,
+				C995C6FE193CFDE900D87BCD /* TBWTextToSpeechService.h */,
+				C995C6FF193CFDE900D87BCD /* TBWTextToSpeechService.m */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		C995C701193D124F00D87BCD /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				C995CABC193D13DA00D87BCD /* eSpeak */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		C995CABA193D13A900D87BCD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C995CABB193D13A900D87BCD /* eSpeak */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C995CABB193D13A900D87BCD /* eSpeak */ = {
+			isa = PBXGroup;
+			children = (
+				C995CB05193D140600D87BCD /* espeak-data */,
+			);
+			path = eSpeak;
+			sourceTree = "<group>";
+		};
+		C995CABC193D13DA00D87BCD /* eSpeak */ = {
+			isa = PBXGroup;
+			children = (
+				C995CABD193D13DA00D87BCD /* ESpeakEngine.h */,
+				C995CABE193D13DA00D87BCD /* ESpeakEngine.m */,
+				C995CABF193D13DA00D87BCD /* Libraries */,
+			);
+			path = eSpeak;
+			sourceTree = "<group>";
+		};
+		C995CABF193D13DA00D87BCD /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				C995CAC0193D13DA00D87BCD /* compiledict.cpp */,
+				C995CAC1193D13DA00D87BCD /* debug.cpp */,
+				C995CAC2193D13DA00D87BCD /* debug.h */,
+				C995CAC3193D13DA00D87BCD /* dictionary.cpp */,
+				C995CAC4193D13DA00D87BCD /* espeak_command.cpp */,
+				C995CAC5193D13DA00D87BCD /* espeak_command.h */,
+				C995CAC6193D13DA00D87BCD /* event.cpp */,
+				C995CAC7193D13DA00D87BCD /* event.h */,
+				C995CAC8193D13DA00D87BCD /* fifo.cpp */,
+				C995CAC9193D13DA00D87BCD /* fifo.h */,
+				C995CACA193D13DA00D87BCD /* intonation.cpp */,
+				C995CACB193D13DA00D87BCD /* klatt.cpp */,
+				C995CACC193D13DA00D87BCD /* klatt.h */,
+				C995CACD193D13DA00D87BCD /* mbrowrap.cpp */,
+				C995CACE193D13DA00D87BCD /* mbrowrap.h */,
+				C995CACF193D13DA00D87BCD /* numbers.cpp */,
+				C995CAD0193D13DA00D87BCD /* phoneme.h */,
+				C995CAD1193D13DA00D87BCD /* phonemelist.cpp */,
+				C995CAD2193D13DA00D87BCD /* portaudio.h */,
+				C995CAD3193D13DA00D87BCD /* portaudio18.h */,
+				C995CAD4193D13DA00D87BCD /* portaudio19.h */,
+				C995CAD5193D13DA00D87BCD /* readclause.cpp */,
+				C995CAD6193D13DA00D87BCD /* setlengths.cpp */,
+				C995CAD7193D13DA00D87BCD /* sintab.h */,
+				C995CAD8193D13DA00D87BCD /* speak_lib.cpp */,
+				C995CAD9193D13DA00D87BCD /* speak_lib.h */,
+				C995CADA193D13DA00D87BCD /* speech.h */,
+				C995CADB193D13DA00D87BCD /* StdAfx.h */,
+				C995CADC193D13DA00D87BCD /* synth_mbrola.cpp */,
+				C995CADD193D13DA00D87BCD /* synthdata.cpp */,
+				C995CADE193D13DA00D87BCD /* synthesize.cpp */,
+				C995CADF193D13DA00D87BCD /* synthesize.h */,
+				C995CAE0193D13DA00D87BCD /* tr_languages.cpp */,
+				C995CAE1193D13DA00D87BCD /* translate.cpp */,
+				C995CAE2193D13DA00D87BCD /* translate.h */,
+				C995CAE3193D13DA00D87BCD /* voice.h */,
+				C995CAE4193D13DA00D87BCD /* voices.cpp */,
+				C995CAE5193D13DA00D87BCD /* wave.cpp */,
+				C995CAE6193D13DA00D87BCD /* wave.h */,
+				C995CAE7193D13DA00D87BCD /* wave_pulse.cpp */,
+				C995CAE8193D13DA00D87BCD /* wave_sada.cpp */,
+				C995CAE9193D13DA00D87BCD /* wavegen.cpp */,
+			);
+			path = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +511,7 @@
 				63EDC04E1934DC1B00278B84 /* Images.xcassets in Resources */,
 				63EDC0811934DDC400278B84 /* TBWBrowseViewController.xib in Resources */,
 				63EDC0781934DD2E00278B84 /* TBWHomeViewController.xib in Resources */,
+				C995CB06193D140600D87BCD /* espeak-data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,13 +564,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				C995C6F9193B4B3300D87BCD /* TBWGap.m in Sources */,
+				C995CAEC193D13DA00D87BCD /* debug.cpp in Sources */,
 				63EDC0491934DC1B00278B84 /* TBWAppDelegate.m in Sources */,
 				63EDC04C1934DC1B00278B84 /* sing_the_gap.xcdatamodeld in Sources */,
+				C995CAF6193D13DA00D87BCD /* readclause.cpp in Sources */,
+				C995CAF9193D13DA00D87BCD /* synth_mbrola.cpp in Sources */,
+				C995CAF4193D13DA00D87BCD /* numbers.cpp in Sources */,
+				C995CAFF193D13DA00D87BCD /* wave.cpp in Sources */,
+				C995CAF2193D13DA00D87BCD /* klatt.cpp in Sources */,
+				C995CAF7193D13DA00D87BCD /* setlengths.cpp in Sources */,
+				C995CAEF193D13DA00D87BCD /* event.cpp in Sources */,
+				C995CAFE193D13DA00D87BCD /* voices.cpp in Sources */,
+				C995CAEB193D13DA00D87BCD /* compiledict.cpp in Sources */,
+				C995C700193CFDE900D87BCD /* TBWTextToSpeechService.m in Sources */,
+				C995CAEE193D13DA00D87BCD /* espeak_command.cpp in Sources */,
+				C995CAFC193D13DA00D87BCD /* tr_languages.cpp in Sources */,
 				C995C6F1193B4A1900D87BCD /* TBWAudioManager.m in Sources */,
+				C995CAFD193D13DA00D87BCD /* translate.cpp in Sources */,
+				C995CAF5193D13DA00D87BCD /* phonemelist.cpp in Sources */,
+				C995CAF3193D13DA00D87BCD /* mbrowrap.cpp in Sources */,
 				63EDC0801934DDC400278B84 /* TBWBrowseViewController.m in Sources */,
+				C995CB02193D13DA00D87BCD /* wavegen.cpp in Sources */,
+				C995CAF8193D13DA00D87BCD /* speak_lib.cpp in Sources */,
+				C995CAEA193D13DA00D87BCD /* ESpeakEngine.m in Sources */,
 				63EDC0451934DC1B00278B84 /* main.m in Sources */,
+				C995CAFB193D13DA00D87BCD /* synthesize.cpp in Sources */,
 				63EDC0771934DD2E00278B84 /* TBWHomeViewController.m in Sources */,
+				C995CB00193D13DA00D87BCD /* wave_pulse.cpp in Sources */,
+				C995CAF0193D13DA00D87BCD /* fifo.cpp in Sources */,
+				C995CAF1193D13DA00D87BCD /* intonation.cpp in Sources */,
+				C995CAED193D13DA00D87BCD /* dictionary.cpp in Sources */,
+				C995CAFA193D13DA00D87BCD /* synthdata.cpp in Sources */,
 				C995C6F5193B4AEE00D87BCD /* TBWGapSong.m in Sources */,
+				C995CB01193D13DA00D87BCD /* wave_sada.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

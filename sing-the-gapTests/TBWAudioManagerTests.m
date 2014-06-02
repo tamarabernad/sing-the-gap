@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "TBWAudioManager.h"
+#import "TBWTextToSpeechService.h"
 
 @interface TBWAudioManagerTests : XCTestCase
 
@@ -55,5 +56,19 @@
     BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:file];
     XCTAssertTrue(fileExists);
 }
-
+- (void)testTextToSpeech{
+    NSError *error = nil;
+    NSURL *recordingsDirectory = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:@"recordings"] isDirectory:YES];
+    
+    [[NSFileManager defaultManager] createDirectoryAtURL:recordingsDirectory withIntermediateDirectories:YES attributes:nil error:&error];
+    
+    NSString *recordingPath = [[recordingsDirectory path] stringByAppendingPathComponent:@"record.wav"];
+ 
+    TBWTextToSpeechService *sut = [[TBWTextToSpeechService alloc] init];
+    [sut textToSpeech:@"how are you?" WithLanguage:@"en" AndGender:@"male" ToFile:recordingPath];
+    
+    BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:recordingPath];
+    XCTAssertTrue(fileExists);
+    
+}
 @end
