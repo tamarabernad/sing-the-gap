@@ -10,6 +10,7 @@
 #import "TBWHomeViewController.h"
 #import <HockeySDK/HockeySDK.h>
 #import "TBWAudioManager.h"
+#import "TBWAudioPlayerViewController.h"
 
 @implementation TBWAppDelegate
 
@@ -34,7 +35,14 @@
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:hvc];
     [nc setNavigationBarHidden:YES];
     
+    TBWAudioPlayerViewController *apvc = [[TBWAudioPlayerViewController alloc] init];
+//    [nc addChildViewController:apvc];
+//    [nc.view addSubview:apvc.view];
+//    [apvc.view setBackgroundColor:[UIColor clearColor]];
+//    [apvc didMoveToParentViewController:nc];
+    
     [self.window setRootViewController:nc];
+    [self.window addSubview:apvc.view];
 
     return YES;
 }

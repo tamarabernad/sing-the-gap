@@ -62,6 +62,11 @@
 		C995CB02193D13DA00D87BCD /* wavegen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CAE9193D13DA00D87BCD /* wavegen.cpp */; };
 		C995CB06193D140600D87BCD /* espeak-data in Resources */ = {isa = PBXBuildFile; fileRef = C995CB05193D140600D87BCD /* espeak-data */; };
 		C995CB0A193D1E5100D87BCD /* TBWRecordingService.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CB09193D1E5100D87BCD /* TBWRecordingService.m */; };
+		C995CB0E193E749C00D87BCD /* TBWMyCreationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CB0C193E749C00D87BCD /* TBWMyCreationsViewController.m */; };
+		C995CB0F193E749C00D87BCD /* TBWMyCreationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C995CB0D193E749C00D87BCD /* TBWMyCreationsViewController.xib */; };
+		C995CB14193E773000D87BCD /* TBWAudioPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CB12193E773000D87BCD /* TBWAudioPlayerViewController.m */; };
+		C995CB15193E773000D87BCD /* TBWAudioPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C995CB13193E773000D87BCD /* TBWAudioPlayerViewController.xib */; };
+		C995CB18193E80D300D87BCD /* TBWAudioPlayerConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CB17193E80D300D87BCD /* TBWAudioPlayerConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +162,14 @@
 		C995CB05193D140600D87BCD /* espeak-data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "espeak-data"; sourceTree = "<group>"; };
 		C995CB08193D1E5100D87BCD /* TBWRecordingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWRecordingService.h; sourceTree = "<group>"; };
 		C995CB09193D1E5100D87BCD /* TBWRecordingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWRecordingService.m; sourceTree = "<group>"; };
+		C995CB0B193E749C00D87BCD /* TBWMyCreationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBWMyCreationsViewController.h; path = "sing-the-gap/Controller/creation/TBWMyCreationsViewController.h"; sourceTree = SOURCE_ROOT; };
+		C995CB0C193E749C00D87BCD /* TBWMyCreationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBWMyCreationsViewController.m; path = "sing-the-gap/Controller/creation/TBWMyCreationsViewController.m"; sourceTree = SOURCE_ROOT; };
+		C995CB0D193E749C00D87BCD /* TBWMyCreationsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TBWMyCreationsViewController.xib; path = "sing-the-gap/Controller/creation/TBWMyCreationsViewController.xib"; sourceTree = SOURCE_ROOT; };
+		C995CB11193E773000D87BCD /* TBWAudioPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWAudioPlayerViewController.h; sourceTree = "<group>"; };
+		C995CB12193E773000D87BCD /* TBWAudioPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWAudioPlayerViewController.m; sourceTree = "<group>"; };
+		C995CB13193E773000D87BCD /* TBWAudioPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWAudioPlayerViewController.xib; sourceTree = "<group>"; };
+		C995CB16193E80D300D87BCD /* TBWAudioPlayerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWAudioPlayerConstants.h; sourceTree = "<group>"; };
+		C995CB17193E80D300D87BCD /* TBWAudioPlayerConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWAudioPlayerConstants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,10 +282,10 @@
 		63EDC06B1934DCF100278B84 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C995CB10193E771200D87BCD /* player */,
 				63EDC0791934DD7F00278B84 /* browse */,
 				63EDC07A1934DD7F00278B84 /* categories */,
 				63EDC07B1934DD7F00278B84 /* creation */,
-				63EDC07C1934DD7F00278B84 /* purchased */,
 				63EDC0731934DD2E00278B84 /* home */,
 			);
 			path = Controller;
@@ -327,15 +340,11 @@
 		63EDC07B1934DD7F00278B84 /* creation */ = {
 			isa = PBXGroup;
 			children = (
+				C995CB0B193E749C00D87BCD /* TBWMyCreationsViewController.h */,
+				C995CB0C193E749C00D87BCD /* TBWMyCreationsViewController.m */,
+				C995CB0D193E749C00D87BCD /* TBWMyCreationsViewController.xib */,
 			);
 			path = creation;
-			sourceTree = "<group>";
-		};
-		63EDC07C1934DD7F00278B84 /* purchased */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = purchased;
 			sourceTree = "<group>";
 		};
 		C995C6EE193B48F800D87BCD /* Services */ = {
@@ -434,6 +443,18 @@
 			path = Libraries;
 			sourceTree = "<group>";
 		};
+		C995CB10193E771200D87BCD /* player */ = {
+			isa = PBXGroup;
+			children = (
+				C995CB11193E773000D87BCD /* TBWAudioPlayerViewController.h */,
+				C995CB12193E773000D87BCD /* TBWAudioPlayerViewController.m */,
+				C995CB13193E773000D87BCD /* TBWAudioPlayerViewController.xib */,
+				C995CB16193E80D300D87BCD /* TBWAudioPlayerConstants.h */,
+				C995CB17193E80D300D87BCD /* TBWAudioPlayerConstants.m */,
+			);
+			path = player;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -514,7 +535,9 @@
 			files = (
 				63EDC0431934DC1B00278B84 /* InfoPlist.strings in Resources */,
 				63EDC04E1934DC1B00278B84 /* Images.xcassets in Resources */,
+				C995CB0F193E749C00D87BCD /* TBWMyCreationsViewController.xib in Resources */,
 				63EDC0811934DDC400278B84 /* TBWBrowseViewController.xib in Resources */,
+				C995CB15193E773000D87BCD /* TBWAudioPlayerViewController.xib in Resources */,
 				63EDC0781934DD2E00278B84 /* TBWHomeViewController.xib in Resources */,
 				C995CB06193D140600D87BCD /* espeak-data in Resources */,
 			);
@@ -595,10 +618,13 @@
 				C995CAEA193D13DA00D87BCD /* ESpeakEngine.m in Sources */,
 				63EDC0451934DC1B00278B84 /* main.m in Sources */,
 				C995CAFB193D13DA00D87BCD /* synthesize.cpp in Sources */,
+				C995CB18193E80D300D87BCD /* TBWAudioPlayerConstants.m in Sources */,
+				C995CB14193E773000D87BCD /* TBWAudioPlayerViewController.m in Sources */,
 				63EDC0771934DD2E00278B84 /* TBWHomeViewController.m in Sources */,
 				C995CB00193D13DA00D87BCD /* wave_pulse.cpp in Sources */,
 				C995CAF0193D13DA00D87BCD /* fifo.cpp in Sources */,
 				C995CAF1193D13DA00D87BCD /* intonation.cpp in Sources */,
+				C995CB0E193E749C00D87BCD /* TBWMyCreationsViewController.m in Sources */,
 				C995CAED193D13DA00D87BCD /* dictionary.cpp in Sources */,
 				C995CAFA193D13DA00D87BCD /* synthdata.cpp in Sources */,
 				C995C6F5193B4AEE00D87BCD /* TBWGapSong.m in Sources */,
