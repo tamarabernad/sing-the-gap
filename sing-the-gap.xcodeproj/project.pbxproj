@@ -27,6 +27,7 @@
 		63EDC0781934DD2E00278B84 /* TBWHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63EDC0761934DD2E00278B84 /* TBWHomeViewController.xib */; };
 		63EDC0801934DDC400278B84 /* TBWBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EDC07E1934DDC400278B84 /* TBWBrowseViewController.m */; };
 		63EDC0811934DDC400278B84 /* TBWBrowseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63EDC07F1934DDC400278B84 /* TBWBrowseViewController.xib */; };
+		C94262F019460C9F003F0087 /* TBWDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = C94262EF19460C9F003F0087 /* TBWDataService.m */; };
 		C963A78119437E06005A89D1 /* UI.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C963A78019437E06005A89D1 /* UI.xcassets */; };
 		C995C6F1193B4A1900D87BCD /* TBWAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6F0193B4A1900D87BCD /* TBWAudioManager.m */; };
 		C995C6F2193B4A1900D87BCD /* TBWAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6F0193B4A1900D87BCD /* TBWAudioManager.m */; };
@@ -107,6 +108,8 @@
 		63EDC07E1934DDC400278B84 /* TBWBrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWBrowseViewController.m; sourceTree = "<group>"; };
 		63EDC07F1934DDC400278B84 /* TBWBrowseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWBrowseViewController.xib; sourceTree = "<group>"; };
 		65DFACA32083428BA307B345 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C94262EE19460C9F003F0087 /* TBWDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWDataService.h; sourceTree = "<group>"; };
+		C94262EF19460C9F003F0087 /* TBWDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWDataService.m; sourceTree = "<group>"; };
 		C963A78019437E06005A89D1 /* UI.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = UI.xcassets; sourceTree = "<group>"; };
 		C995C6EF193B4A1900D87BCD /* TBWAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWAudioManager.h; sourceTree = "<group>"; };
 		C995C6F0193B4A1900D87BCD /* TBWAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWAudioManager.m; sourceTree = "<group>"; };
@@ -359,6 +362,8 @@
 				C995C6FF193CFDE900D87BCD /* TBWTextToSpeechService.m */,
 				C995CB08193D1E5100D87BCD /* TBWRecordingService.h */,
 				C995CB09193D1E5100D87BCD /* TBWRecordingService.m */,
+				C94262EE19460C9F003F0087 /* TBWDataService.h */,
+				C94262EF19460C9F003F0087 /* TBWDataService.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -623,6 +628,7 @@
 				63EDC0451934DC1B00278B84 /* main.m in Sources */,
 				C995CAFB193D13DA00D87BCD /* synthesize.cpp in Sources */,
 				C995CB18193E80D300D87BCD /* TBWAudioPlayerConstants.m in Sources */,
+				C94262F019460C9F003F0087 /* TBWDataService.m in Sources */,
 				C995CB14193E773000D87BCD /* TBWAudioPlayerViewController.m in Sources */,
 				63EDC0771934DD2E00278B84 /* TBWHomeViewController.m in Sources */,
 				C995CB00193D13DA00D87BCD /* wave_pulse.cpp in Sources */,
