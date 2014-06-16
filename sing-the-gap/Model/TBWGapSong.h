@@ -11,12 +11,15 @@
 @interface TBWGapSong : NSObject
 @property (nonatomic, strong) NSString *uid;
 @property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSString *gender;
+@property (nonatomic, strong) NSString *type;
 @property (nonatomic, strong) NSString *url;
 @property (nonatomic, strong) NSString *path;
 @property (nonatomic) NSInteger characters;
 @property (nonatomic) NSInteger duration;
 @property (nonatomic) NSArray *markers;
+@property (nonatomic) NSArray *categories;
+@property (nonatomic) BOOL isNew;
+@property (nonatomic) NSInteger price;
 
 + (NSURLSessionDataTask *)retrieveGapSongsWithBlock:(void (^)(NSArray *gapSongs, NSError *error))block;
 @end

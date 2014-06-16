@@ -8,6 +8,7 @@
 
 #import "TBWBrowseViewController.h"
 #import "TBWGapSong.h"
+#import "TBWBrowseCell.h"
 
 @interface TBWBrowseViewController ()<UIGestureRecognizerDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -32,6 +33,7 @@
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
     
     [self.tableView setDataSource:self];
+    [self.tableView setDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,11 +46,18 @@
         self.gapSongs = gapSongs;
         [self.tableView reloadData];
     }];
+    [self.tableView setBackgroundColor:[UIColor clearColor]];
 }
 
 //////////////////////////////////////////////////
 #pragma UITableViewDelegate methods
 //////////////////////////////////////////////////
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 72;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
@@ -57,12 +66,18 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    TBWBrowseCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    TBWGapSong *gapSong =(TBWGapSong *)[self.gapSongs objectAtIndex:indexPath.row];
     
     if(!cell){
-        cell = [[UITableViewCell alloc] init];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TBWBrowseCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
     }
-    [cell.textLabel setText: [(TBWGapSong *)[self.gapSongs objectAtIndex:indexPath.row] title]];
+    CGFloat pric = (gapSong.price/(float)100);
+    NSString *pr = [NSString stringWithFormat:@"%.2f", pric];
+    [cell setTitle:gapSong.title];
+    [cell setIsNew:gapSong.isNew];
+    [cell setPriceValue:gapSong.price != 0 ? pr: @"Free"];
     return cell;
 }
 @end

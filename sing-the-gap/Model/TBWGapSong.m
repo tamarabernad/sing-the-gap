@@ -17,15 +17,17 @@
         return nil;
     }
     
-    self.uid = [attributes valueForKeyPath:@"id"];
-    self.title = [attributes valueForKeyPath:@"title_es"];
-    self.gender = [attributes valueForKeyPath:@"gender"];
+    self.uid = [attributes valueForKeyPath:@"uid"];
+    self.title = [attributes valueForKeyPath:@"title"];
+    self.type = [attributes valueForKeyPath:@"type"];
     self.url = [attributes valueForKeyPath:@"url"];
     self.path = [attributes valueForKeyPath:@"path"];
+    self.price = [[attributes valueForKeyPath:@"price"] integerValue];
     
     self.characters = (NSUInteger)[[attributes valueForKeyPath:@"characters"] integerValue];
     self.duration = (NSUInteger)[[attributes valueForKeyPath:@"duration"] integerValue];
-    self.markers = [[attributes valueForKeyPath:@"markers"] componentsSeparatedByString:@"|"];
+    self.markers = [attributes valueForKeyPath:@"markers"];
+    self.categories = [attributes valueForKeyPath:@"categories"];
     return self;
 }
 
