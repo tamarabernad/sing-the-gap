@@ -7,8 +7,11 @@
 //
 
 #import "TBWBrowseViewController.h"
+#import "TBWGapSong.h"
 
-@interface TBWBrowseViewController ()<UIGestureRecognizerDelegate>
+@interface TBWBrowseViewController ()<UIGestureRecognizerDelegate, UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSArray *gapSongs;
 
 @end
 
@@ -27,7 +30,8 @@
 {
     [super viewDidLoad];
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
-    // Do any additional setup after loading the view from its nib.
+    
+    [self.tableView setDataSource:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,5 +39,30 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)viewDidAppear:(BOOL)animated{
+    [TBWGapSong retrieveGapSongsWithBlock:^(NSArray *gapSongs, NSError *error) {
+        self.gapSongs = gapSongs;
+        [self.tableView reloadData];
+    }];
+}
 
+//////////////////////////////////////////////////
+#pragma UITableViewDelegate methods
+//////////////////////////////////////////////////
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [self.gapSongs count];
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if(!cell){
+        cell = [[UITableViewCell alloc] init];
+    }
+    [cell.textLabel setText: [(TBWGapSong *)[self.gapSongs objectAtIndex:indexPath.row] title]];
+    return cell;
+}
 @end

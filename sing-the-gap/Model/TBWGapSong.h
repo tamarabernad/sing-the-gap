@@ -14,6 +14,9 @@
 @property (nonatomic, strong) NSString *gender;
 @property (nonatomic, strong) NSString *url;
 @property (nonatomic, strong) NSString *path;
-@property (nonatomic, strong) NSArray *gaps;
+@property (nonatomic) NSInteger characters;
+@property (nonatomic) NSInteger duration;
+@property (nonatomic) NSArray *markers;
 
++ (NSURLSessionDataTask *)retrieveGapSongsWithBlock:(void (^)(NSArray *gapSongs, NSError *error))block;
 @end

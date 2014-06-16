@@ -42,7 +42,7 @@
 //    [apvc didMoveToParentViewController:nc];
     
     [self.window setRootViewController:nc];
-    [self.window addSubview:apvc.view];
+//    [self.window addSubview:apvc.view];
 
     return YES;
 }
