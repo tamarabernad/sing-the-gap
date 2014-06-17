@@ -10,6 +10,7 @@
 #import "TBWGapSong.h"
 #import "TBWBrowseCell.h"
 #import "TBWAudioPlayerConstants.h"
+#import "TBWCreationFormViewController.h"
 
 @interface TBWBrowseViewController ()<UIGestureRecognizerDelegate, UITableViewDataSource, UITableViewDelegate, TBWBrowseCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -88,7 +89,12 @@
 #pragma mark - TBWBrowseCellDelegate methods
 //////////////////////////////////////////////////
 - (void)TBWBrowseCellDidClickCreate:(TBWBrowseCell *)cell{
-
+    [[NSNotificationCenter defaultCenter] postNotificationName:TBWAudioPlayerPauseNotification object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:TBWAudioPlayerHideNotification object:nil];
+    
+    
+    TBWCreationFormViewController *cfvc = [[TBWCreationFormViewController alloc] init];
+    [self.navigationController pushViewController:cfvc animated:YES];
 }
 - (void)TBWBrowseCellDidClickPlay:(TBWBrowseCell *)cell{
     TBWGapSong *gs = [self.gapSongs objectAtIndex:[self.tableView indexPathForCell:cell].row];

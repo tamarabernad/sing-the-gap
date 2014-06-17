@@ -97,15 +97,15 @@ typedef enum {
 
 - (void) receiveCloseNotification:(NSNotification *) notification
 {
-    [self pause];
+    [self close];
 }
 - (void) receiveHideNotification:(NSNotification *) notification
 {
-    [self pause];
+    [self hide];
 }
 - (void) receiveOpenNotification:(NSNotification *) notification
 {
-    [self pause];
+    [self open];
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -114,20 +114,20 @@ typedef enum {
 
 - (void)play{
     if(self.playerLayoutState != kClosedInteractively){
-        [self transitionToLayoutState:kOpen];
+        [self setLayoutState:kOpen Animated:YES];
     }
 }
 -(void)pause{
     
 }
 - (void)open{
-    
+    [self setLayoutState:kOpen Animated:YES];
 }
 - (void)close{
-
+    [self setLayoutState:kClosed Animated:YES];
 }
 - (void)hide{
-    
+    [self setLayoutState:kHidden Animated:YES];
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -155,10 +155,14 @@ typedef enum {
     [self.view setFrame:[self getEndFrameForState:self.playerLayoutState]];
 }
 
-- (void) transitionToLayoutState:(AudioPlayerLayoutState)state{
+- (void) setLayoutState:(AudioPlayerLayoutState)state Animated:(BOOL) animated{
     self.playerLayoutState = state;
-    [UIView animateWithDuration:0.5 animations:^{
+    if(animated){
+        [UIView animateWithDuration:0.5 animations:^{
+            [self.view setFrame:[self getEndFrameForState:self.playerLayoutState]];
+        }];
+    }else{
         [self.view setFrame:[self getEndFrameForState:self.playerLayoutState]];
-    }];
+    }
 }
 @end
