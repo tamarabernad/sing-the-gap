@@ -13,6 +13,7 @@
 		63290CF11950592700EBAF27 /* TBWMyCreationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63290CEF1950592700EBAF27 /* TBWMyCreationsViewController.xib */; };
 		63290CF819505A3900EBAF27 /* TBWCreationFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63290CF619505A3900EBAF27 /* TBWCreationFormViewController.m */; };
 		63290CF919505A3900EBAF27 /* TBWCreationFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63290CF719505A3900EBAF27 /* TBWCreationFormViewController.xib */; };
+		63290CFE1950AEA100EBAF27 /* TBWRecordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 63290CFD1950AEA100EBAF27 /* TBWRecordButton.m */; };
 		63E324CB194EF55C00B3C07D /* TBWDataServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E324CA194EF55C00B3C07D /* TBWDataServiceTests.m */; };
 		63E324D5194F29B000B3C07D /* TBWBrowseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E324D4194F29B000B3C07D /* TBWBrowseCell.m */; };
 		63E324D7194F29C400B3C07D /* TBWBrowseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E324D6194F29C400B3C07D /* TBWBrowseCell.xib */; };
@@ -93,6 +94,8 @@
 		63290CF519505A3900EBAF27 /* TBWCreationFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWCreationFormViewController.h; sourceTree = "<group>"; };
 		63290CF619505A3900EBAF27 /* TBWCreationFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWCreationFormViewController.m; sourceTree = "<group>"; };
 		63290CF719505A3900EBAF27 /* TBWCreationFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWCreationFormViewController.xib; sourceTree = "<group>"; };
+		63290CFC1950AEA100EBAF27 /* TBWRecordButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWRecordButton.h; sourceTree = "<group>"; };
+		63290CFD1950AEA100EBAF27 /* TBWRecordButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWRecordButton.m; sourceTree = "<group>"; };
 		63E324CA194EF55C00B3C07D /* TBWDataServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWDataServiceTests.m; sourceTree = "<group>"; };
 		63E324CC194EF73F00B3C07D /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		63E324CE194EFDE500B3C07D /* libPods-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AFNetworking.a"; path = "Pods/build/Debug-iphoneos/libPods-AFNetworking.a"; sourceTree = "<group>"; };
@@ -237,6 +240,15 @@
 			path = mycreations;
 			sourceTree = "<group>";
 		};
+		63290CFB1950AE8200EBAF27 /* create */ = {
+			isa = PBXGroup;
+			children = (
+				63290CFC1950AEA100EBAF27 /* TBWRecordButton.h */,
+				63290CFD1950AEA100EBAF27 /* TBWRecordButton.m */,
+			);
+			path = create;
+			sourceTree = "<group>";
+		};
 		63E324D2194F298C00B3C07D /* browse */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +370,7 @@
 		63EDC06D1934DCF100278B84 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				63290CFB1950AE8200EBAF27 /* create */,
 				63E324D2194F298C00B3C07D /* browse */,
 			);
 			path = View;
@@ -705,6 +718,7 @@
 				63290CF819505A3900EBAF27 /* TBWCreationFormViewController.m in Sources */,
 				63EDC0771934DD2E00278B84 /* TBWHomeViewController.m in Sources */,
 				C995CB00193D13DA00D87BCD /* wave_pulse.cpp in Sources */,
+				63290CFE1950AEA100EBAF27 /* TBWRecordButton.m in Sources */,
 				C995CAF0193D13DA00D87BCD /* fifo.cpp in Sources */,
 				C995CAF1193D13DA00D87BCD /* intonation.cpp in Sources */,
 				C995CAED193D13DA00D87BCD /* dictionary.cpp in Sources */,
