@@ -9,8 +9,9 @@
 #import "TBWBrowseViewController.h"
 #import "TBWGapSong.h"
 #import "TBWBrowseCell.h"
+#import "TBWAudioPlayerConstants.h"
 
-@interface TBWBrowseViewController ()<UIGestureRecognizerDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface TBWBrowseViewController ()<UIGestureRecognizerDelegate, UITableViewDataSource, UITableViewDelegate, TBWBrowseCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *gapSongs;
 
@@ -22,7 +23,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -39,8 +39,8 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
 - (void)viewDidAppear:(BOOL)animated{
     [TBWGapSong retrieveGapSongsWithBlock:^(NSArray *gapSongs, NSError *error) {
         self.gapSongs = gapSongs;
@@ -50,7 +50,7 @@
 }
 
 //////////////////////////////////////////////////
-#pragma UITableViewDelegate methods
+#pragma mark - UITableViewDelegate methods
 //////////////////////////////////////////////////
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -61,9 +61,11 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [self.gapSongs count];
 }
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"Cell";
     TBWBrowseCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -72,6 +74,7 @@
     if(!cell){
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TBWBrowseCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
+        [cell setDelegate:self];
     }
     CGFloat pric = (gapSong.price/(float)100);
     NSString *pr = [NSString stringWithFormat:@"%.2f", pric];
@@ -80,4 +83,16 @@
     [cell setPriceValue:gapSong.price != 0 ? pr: @"Free"];
     return cell;
 }
+
+//////////////////////////////////////////////////
+#pragma mark - TBWBrowseCellDelegate methods
+//////////////////////////////////////////////////
+- (void)TBWBrowseCellDidClickCreate:(TBWBrowseCell *)cell{
+
+}
+- (void)TBWBrowseCellDidClickPlay:(TBWBrowseCell *)cell{
+    TBWGapSong *gs = [self.gapSongs objectAtIndex:[self.tableView indexPathForCell:cell].row];
+    [[NSNotificationCenter defaultCenter] postNotificationName:TBWAudioPlayerPlayNotification object:nil userInfo:@{@"contentUrl":gs.url}];
+}
+
 @end

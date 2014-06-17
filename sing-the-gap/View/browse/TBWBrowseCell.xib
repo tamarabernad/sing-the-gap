@@ -32,6 +32,9 @@
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <state key="highlighted" image="bt-play-small-over"/>
+                        <connections>
+                            <action selector="onClickPlay:" destination="YFB-zc-KwA" eventType="touchUpInside" id="hQu-cy-tRF"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBd-r0-kmI">
                         <rect key="frame" x="277" y="18" width="23" height="23"/>
@@ -40,6 +43,9 @@
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <state key="highlighted" image="bt-create-over"/>
+                        <connections>
+                            <action selector="onClickCreate:" destination="YFB-zc-KwA" eventType="touchUpInside" id="5T0-SC-8kz"/>
+                        </connections>
                     </button>
                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="91s-hT-4KJ">
                         <rect key="frame" x="40" y="-1" width="24" height="29"/>

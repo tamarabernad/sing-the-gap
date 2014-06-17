@@ -9,10 +9,15 @@
 #import "TBWAudioPlayerViewController.h"
 #import "TBWAudioPlayerConstants.h"
 
-
+typedef enum {
+    kOpen,
+    kClosed,
+    kHidden,
+    kClosedInteractively
+} AudioPlayerLayoutState;
 
 @interface TBWAudioPlayerViewController ()
-
+@property (nonatomic) AudioPlayerLayoutState playerLayoutState;
 @end
 
 @implementation TBWAudioPlayerViewController
@@ -22,7 +27,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(receivePlayNotification:)
                                                      name:TBWAudioPlayerPlayNotification
@@ -45,10 +49,13 @@
                                                  selector:@selector(receiveOpenNotification:)
                                                      name:TBWAudioPlayerOpenNotification
                                                    object:nil];
+
+        
+        self.playerLayoutState = kHidden;
     }
+    
     return self;
 }
-
 ////////////////////////////////////////////////////////////////////////
 #pragma mark - Life Cycle
 ////////////////////////////////////////////////////////////////////////
@@ -65,6 +72,14 @@
 }
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+- (void)viewDidAppear:(BOOL)animated{
+    self.playerLayoutState = kClosed;
+
+    [self layout];
+}
+- (void)viewDidDisappear:(BOOL)animated{
+//    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 ////////////////////////////////////////////////////////////////////////
 #pragma mark - Notification Handling
@@ -98,7 +113,9 @@
 ////////////////////////////////////////////////////////////////////////
 
 - (void)play{
-    
+    if(self.playerLayoutState != kClosedInteractively){
+        [self transitionToLayoutState:kOpen];
+    }
 }
 -(void)pause{
     
@@ -113,5 +130,35 @@
     
 }
 
+////////////////////////////////////////////////////////////////////////
+#pragma mark - Private methods
+////////////////////////////////////////////////////////////////////////
+- (CGRect) getEndFrameForState:(AudioPlayerLayoutState)state{
+    CGRect frame = self.view.frame;
+    switch (self.playerLayoutState) {
+        case kClosed:
+        case kClosedInteractively:
+            frame.origin.y = [[UIScreen mainScreen] bounds].size.height - 56;
+            break;
+        case kOpen:
+            frame.origin.y = [[UIScreen mainScreen] bounds].size.height - frame.size.height;
+            break;
+        case kHidden:
+            frame.origin.y = [[UIScreen mainScreen] bounds].size.height;
+            break;
+    }
+    return frame;
 
+}
+
+- (void)layout{
+    [self.view setFrame:[self getEndFrameForState:self.playerLayoutState]];
+}
+
+- (void) transitionToLayoutState:(AudioPlayerLayoutState)state{
+    self.playerLayoutState = state;
+    [UIView animateWithDuration:0.5 animations:^{
+        [self.view setFrame:[self getEndFrameForState:self.playerLayoutState]];
+    }];
+}
 @end

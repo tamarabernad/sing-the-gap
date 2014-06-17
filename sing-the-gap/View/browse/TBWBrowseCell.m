@@ -40,13 +40,20 @@
 {
     [self.lbPrice setText:priceValue];
 }
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
+
+//////////////////////////////////////////////////
+#pragma mark - Interactions
+//////////////////////////////////////////////////
+
+- (IBAction)onClickPlay:(id)sender {
+    if(self.delegate){
+        [self.delegate TBWBrowseCellDidClickPlay:self];
+    }
 }
-*/
+- (IBAction)onClickCreate:(id)sender {
+    if(self.delegate){
+        [self.delegate TBWBrowseCellDidClickCreate:self];
+    }
+}
 
 @end
