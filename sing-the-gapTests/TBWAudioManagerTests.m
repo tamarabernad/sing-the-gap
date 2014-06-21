@@ -11,7 +11,11 @@
 #import "TBWTextToSpeechService.h"
 #import "TBWRecordingService.h"
 
-@interface TBWAudioManagerTests : XCTestCase
+@interface TBWAudioManagerTests : XCTestCase {
+    NSURL *recordingsDirectory;
+    NSURL *gapSongsDirectory;
+    NSURL *creationsDirectory;
+}
 
 @end
 
@@ -21,6 +25,17 @@
 {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    NSError *error = nil;
+    recordingsDirectory = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:@"recordings"] isDirectory:YES];
+    [[NSFileManager defaultManager] createDirectoryAtURL:recordingsDirectory withIntermediateDirectories:YES attributes:nil error:&error];
+    
+    gapSongsDirectory = [NSURL fileURLWithPath:[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"gap-songs"] isDirectory:YES];
+    
+    [[NSFileManager defaultManager] createDirectoryAtURL:gapSongsDirectory withIntermediateDirectories:YES attributes:nil error:&error];
+    
+    
+    creationsDirectory = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:@"creations"] isDirectory:YES];
+    [[NSFileManager defaultManager] createDirectoryAtURL:creationsDirectory withIntermediateDirectories:YES attributes:nil error:&error];
 }
 
 - (void)tearDown
@@ -31,20 +46,6 @@
 
 - (void)testAudioFileCreation
 {
-    NSError *error = nil;
-    
-    NSURL *recordingsDirectory = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:@"recordings"] isDirectory:YES];
-                                  
-    [[NSFileManager defaultManager] createDirectoryAtURL:recordingsDirectory withIntermediateDirectories:YES attributes:nil error:&error];
-    
-    NSURL *gapSongsDirectory = [NSURL fileURLWithPath:[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"gap-songs"] isDirectory:YES];
-    
-    [[NSFileManager defaultManager] createDirectoryAtURL:gapSongsDirectory withIntermediateDirectories:YES attributes:nil error:&error];
-
-    NSURL *creationsDirectory = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:@"creations"] isDirectory:YES];
-    
-    [[NSFileManager defaultManager] createDirectoryAtURL:creationsDirectory withIntermediateDirectories:YES attributes:nil error:&error];
-    
     
     NSString *songPath = [[gapSongsDirectory path] stringByAppendingPathComponent:@"test.m4a"];
     NSString *recordingPath = [[recordingsDirectory path] stringByAppendingPathComponent:@"campechano.wav"];
@@ -58,10 +59,6 @@
     XCTAssertTrue(fileExists);
 }
 - (void)testTextToSpeech{
-    NSError *error = nil;
-    NSURL *recordingsDirectory = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:@"recordings"] isDirectory:YES];
-    
-    [[NSFileManager defaultManager] createDirectoryAtURL:recordingsDirectory withIntermediateDirectories:YES attributes:nil error:&error];
     
     NSString *recordingPath = [[recordingsDirectory path] stringByAppendingPathComponent:@"record.wav"];
  
@@ -73,11 +70,6 @@
     
 }
 - (void)testRecording{
-    NSError *error = nil;
-    
-    NSURL *recordingsDirectory = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:@"recordings"] isDirectory:YES];
-    
-    [[NSFileManager defaultManager] createDirectoryAtURL:recordingsDirectory withIntermediateDirectories:YES attributes:nil error:&error];
     
     NSString *recordingPath = [[recordingsDirectory path] stringByAppendingPathComponent:@"recording.m4a"];
 
@@ -88,4 +80,5 @@
     XCTAssertTrue(YES);
     
 }
+
 @end

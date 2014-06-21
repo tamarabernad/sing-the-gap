@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		4C0C3B743487424C8F049DE4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C019CD84D504415915C1B02 /* libPods.a */; };
+		50D69483F6334BFD9C360B07 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C019CD84D504415915C1B02 /* libPods.a */; };
+		63290CF01950592700EBAF27 /* TBWMyCreationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63290CEE1950592700EBAF27 /* TBWMyCreationsViewController.m */; };
+		63290CF11950592700EBAF27 /* TBWMyCreationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63290CEF1950592700EBAF27 /* TBWMyCreationsViewController.xib */; };
+		63290CF819505A3900EBAF27 /* TBWCreationFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63290CF619505A3900EBAF27 /* TBWCreationFormViewController.m */; };
+		63290CF919505A3900EBAF27 /* TBWCreationFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63290CF719505A3900EBAF27 /* TBWCreationFormViewController.xib */; };
+		63290CFE1950AEA100EBAF27 /* TBWRecordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 63290CFD1950AEA100EBAF27 /* TBWRecordButton.m */; };
+		63E324CB194EF55C00B3C07D /* TBWDataServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E324CA194EF55C00B3C07D /* TBWDataServiceTests.m */; };
+		63E324D5194F29B000B3C07D /* TBWBrowseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E324D4194F29B000B3C07D /* TBWBrowseCell.m */; };
+		63E324D7194F29C400B3C07D /* TBWBrowseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E324D6194F29C400B3C07D /* TBWBrowseCell.xib */; };
 		63EDC0371934DC1B00278B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDC0361934DC1B00278B84 /* Foundation.framework */; };
 		63EDC0391934DC1B00278B84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDC0381934DC1B00278B84 /* CoreGraphics.framework */; };
 		63EDC03B1934DC1B00278B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDC03A1934DC1B00278B84 /* UIKit.framework */; };
@@ -33,8 +42,6 @@
 		C995C6F2193B4A1900D87BCD /* TBWAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6F0193B4A1900D87BCD /* TBWAudioManager.m */; };
 		C995C6F5193B4AEE00D87BCD /* TBWGapSong.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6F4193B4AEE00D87BCD /* TBWGapSong.m */; };
 		C995C6F6193B4AEE00D87BCD /* TBWGapSong.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6F4193B4AEE00D87BCD /* TBWGapSong.m */; };
-		C995C6F9193B4B3300D87BCD /* TBWGap.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6F8193B4B3300D87BCD /* TBWGap.m */; };
-		C995C6FA193B4B3300D87BCD /* TBWGap.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6F8193B4B3300D87BCD /* TBWGap.m */; };
 		C995C6FC193B4BE100D87BCD /* TBWAudioManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6FB193B4BE100D87BCD /* TBWAudioManagerTests.m */; };
 		C995C700193CFDE900D87BCD /* TBWTextToSpeechService.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6FF193CFDE900D87BCD /* TBWTextToSpeechService.m */; };
 		C995CAEA193D13DA00D87BCD /* ESpeakEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CABE193D13DA00D87BCD /* ESpeakEngine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -64,8 +71,6 @@
 		C995CB02193D13DA00D87BCD /* wavegen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CAE9193D13DA00D87BCD /* wavegen.cpp */; };
 		C995CB06193D140600D87BCD /* espeak-data in Resources */ = {isa = PBXBuildFile; fileRef = C995CB05193D140600D87BCD /* espeak-data */; };
 		C995CB0A193D1E5100D87BCD /* TBWRecordingService.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CB09193D1E5100D87BCD /* TBWRecordingService.m */; };
-		C995CB0E193E749C00D87BCD /* TBWMyCreationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CB0C193E749C00D87BCD /* TBWMyCreationsViewController.m */; };
-		C995CB0F193E749C00D87BCD /* TBWMyCreationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C995CB0D193E749C00D87BCD /* TBWMyCreationsViewController.xib */; };
 		C995CB14193E773000D87BCD /* TBWAudioPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CB12193E773000D87BCD /* TBWAudioPlayerViewController.m */; };
 		C995CB15193E773000D87BCD /* TBWAudioPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C995CB13193E773000D87BCD /* TBWAudioPlayerViewController.xib */; };
 		C995CB18193E80D300D87BCD /* TBWAudioPlayerConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CB17193E80D300D87BCD /* TBWAudioPlayerConstants.m */; };
@@ -83,6 +88,21 @@
 
 /* Begin PBXFileReference section */
 		5C019CD84D504415915C1B02 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		63290CED1950592700EBAF27 /* TBWMyCreationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWMyCreationsViewController.h; sourceTree = "<group>"; };
+		63290CEE1950592700EBAF27 /* TBWMyCreationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWMyCreationsViewController.m; sourceTree = "<group>"; };
+		63290CEF1950592700EBAF27 /* TBWMyCreationsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWMyCreationsViewController.xib; sourceTree = "<group>"; };
+		63290CF519505A3900EBAF27 /* TBWCreationFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWCreationFormViewController.h; sourceTree = "<group>"; };
+		63290CF619505A3900EBAF27 /* TBWCreationFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWCreationFormViewController.m; sourceTree = "<group>"; };
+		63290CF719505A3900EBAF27 /* TBWCreationFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWCreationFormViewController.xib; sourceTree = "<group>"; };
+		63290CFC1950AEA100EBAF27 /* TBWRecordButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWRecordButton.h; sourceTree = "<group>"; };
+		63290CFD1950AEA100EBAF27 /* TBWRecordButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWRecordButton.m; sourceTree = "<group>"; };
+		63E324CA194EF55C00B3C07D /* TBWDataServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWDataServiceTests.m; sourceTree = "<group>"; };
+		63E324CC194EF73F00B3C07D /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		63E324CE194EFDE500B3C07D /* libPods-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AFNetworking.a"; path = "Pods/build/Debug-iphoneos/libPods-AFNetworking.a"; sourceTree = "<group>"; };
+		63E324D0194F008300B3C07D /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		63E324D3194F29B000B3C07D /* TBWBrowseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWBrowseCell.h; sourceTree = "<group>"; };
+		63E324D4194F29B000B3C07D /* TBWBrowseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWBrowseCell.m; sourceTree = "<group>"; };
+		63E324D6194F29C400B3C07D /* TBWBrowseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWBrowseCell.xib; sourceTree = "<group>"; };
 		63EDC0331934DC1B00278B84 /* sing-the-gap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sing-the-gap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EDC0361934DC1B00278B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		63EDC0381934DC1B00278B84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -115,8 +135,6 @@
 		C995C6F0193B4A1900D87BCD /* TBWAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWAudioManager.m; sourceTree = "<group>"; };
 		C995C6F3193B4AEE00D87BCD /* TBWGapSong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWGapSong.h; sourceTree = "<group>"; };
 		C995C6F4193B4AEE00D87BCD /* TBWGapSong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWGapSong.m; sourceTree = "<group>"; };
-		C995C6F7193B4B3300D87BCD /* TBWGap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWGap.h; sourceTree = "<group>"; };
-		C995C6F8193B4B3300D87BCD /* TBWGap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWGap.m; sourceTree = "<group>"; };
 		C995C6FB193B4BE100D87BCD /* TBWAudioManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWAudioManagerTests.m; sourceTree = "<group>"; };
 		C995C6FE193CFDE900D87BCD /* TBWTextToSpeechService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWTextToSpeechService.h; sourceTree = "<group>"; };
 		C995C6FF193CFDE900D87BCD /* TBWTextToSpeechService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWTextToSpeechService.m; sourceTree = "<group>"; };
@@ -167,9 +185,6 @@
 		C995CB05193D140600D87BCD /* espeak-data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "espeak-data"; sourceTree = "<group>"; };
 		C995CB08193D1E5100D87BCD /* TBWRecordingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWRecordingService.h; sourceTree = "<group>"; };
 		C995CB09193D1E5100D87BCD /* TBWRecordingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWRecordingService.m; sourceTree = "<group>"; };
-		C995CB0B193E749C00D87BCD /* TBWMyCreationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBWMyCreationsViewController.h; path = "sing-the-gap/Controller/creation/TBWMyCreationsViewController.h"; sourceTree = SOURCE_ROOT; };
-		C995CB0C193E749C00D87BCD /* TBWMyCreationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBWMyCreationsViewController.m; path = "sing-the-gap/Controller/creation/TBWMyCreationsViewController.m"; sourceTree = SOURCE_ROOT; };
-		C995CB0D193E749C00D87BCD /* TBWMyCreationsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TBWMyCreationsViewController.xib; path = "sing-the-gap/Controller/creation/TBWMyCreationsViewController.xib"; sourceTree = SOURCE_ROOT; };
 		C995CB11193E773000D87BCD /* TBWAudioPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWAudioPlayerViewController.h; sourceTree = "<group>"; };
 		C995CB12193E773000D87BCD /* TBWAudioPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWAudioPlayerViewController.m; sourceTree = "<group>"; };
 		C995CB13193E773000D87BCD /* TBWAudioPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWAudioPlayerViewController.xib; sourceTree = "<group>"; };
@@ -198,12 +213,52 @@
 				63EDC0581934DC1B00278B84 /* CoreData.framework in Frameworks */,
 				63EDC0571934DC1B00278B84 /* UIKit.framework in Frameworks */,
 				63EDC0561934DC1B00278B84 /* Foundation.framework in Frameworks */,
+				50D69483F6334BFD9C360B07 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63290CEB195058F800EBAF27 /* create */ = {
+			isa = PBXGroup;
+			children = (
+				63290CF519505A3900EBAF27 /* TBWCreationFormViewController.h */,
+				63290CF619505A3900EBAF27 /* TBWCreationFormViewController.m */,
+				63290CF719505A3900EBAF27 /* TBWCreationFormViewController.xib */,
+			);
+			path = create;
+			sourceTree = "<group>";
+		};
+		63290CEC195058F800EBAF27 /* mycreations */ = {
+			isa = PBXGroup;
+			children = (
+				63290CED1950592700EBAF27 /* TBWMyCreationsViewController.h */,
+				63290CEE1950592700EBAF27 /* TBWMyCreationsViewController.m */,
+				63290CEF1950592700EBAF27 /* TBWMyCreationsViewController.xib */,
+			);
+			path = mycreations;
+			sourceTree = "<group>";
+		};
+		63290CFB1950AE8200EBAF27 /* create */ = {
+			isa = PBXGroup;
+			children = (
+				63290CFC1950AEA100EBAF27 /* TBWRecordButton.h */,
+				63290CFD1950AEA100EBAF27 /* TBWRecordButton.m */,
+			);
+			path = create;
+			sourceTree = "<group>";
+		};
+		63E324D2194F298C00B3C07D /* browse */ = {
+			isa = PBXGroup;
+			children = (
+				63E324D3194F29B000B3C07D /* TBWBrowseCell.h */,
+				63E324D4194F29B000B3C07D /* TBWBrowseCell.m */,
+				63E324D6194F29C400B3C07D /* TBWBrowseCell.xib */,
+			);
+			path = browse;
+			sourceTree = "<group>";
+		};
 		63EDC02A1934DC1B00278B84 = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +282,9 @@
 		63EDC0351934DC1B00278B84 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				63E324D0194F008300B3C07D /* libPods.a */,
+				63E324CE194EFDE500B3C07D /* libPods-AFNetworking.a */,
+				63E324CC194EF73F00B3C07D /* libPods.a */,
 				63EDC0361934DC1B00278B84 /* Foundation.framework */,
 				63EDC0381934DC1B00278B84 /* CoreGraphics.framework */,
 				63EDC03A1934DC1B00278B84 /* UIKit.framework */,
@@ -272,6 +330,7 @@
 				63EDC0611934DC1B00278B84 /* sing_the_gapTests.m */,
 				63EDC05C1934DC1B00278B84 /* Supporting Files */,
 				C995C6FB193B4BE100D87BCD /* TBWAudioManagerTests.m */,
+				63E324CA194EF55C00B3C07D /* TBWDataServiceTests.m */,
 			);
 			path = "sing-the-gapTests";
 			sourceTree = "<group>";
@@ -288,10 +347,11 @@
 		63EDC06B1934DCF100278B84 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				63290CEB195058F800EBAF27 /* create */,
+				63290CEC195058F800EBAF27 /* mycreations */,
 				C995CB10193E771200D87BCD /* player */,
 				63EDC0791934DD7F00278B84 /* browse */,
 				63EDC07A1934DD7F00278B84 /* categories */,
-				63EDC07B1934DD7F00278B84 /* creation */,
 				63EDC0731934DD2E00278B84 /* home */,
 			);
 			path = Controller;
@@ -303,8 +363,6 @@
 				63EDC04A1934DC1B00278B84 /* sing_the_gap.xcdatamodeld */,
 				C995C6F3193B4AEE00D87BCD /* TBWGapSong.h */,
 				C995C6F4193B4AEE00D87BCD /* TBWGapSong.m */,
-				C995C6F7193B4B3300D87BCD /* TBWGap.h */,
-				C995C6F8193B4B3300D87BCD /* TBWGap.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -312,6 +370,8 @@
 		63EDC06D1934DCF100278B84 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				63290CFB1950AE8200EBAF27 /* create */,
+				63E324D2194F298C00B3C07D /* browse */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -341,16 +401,6 @@
 			children = (
 			);
 			path = categories;
-			sourceTree = "<group>";
-		};
-		63EDC07B1934DD7F00278B84 /* creation */ = {
-			isa = PBXGroup;
-			children = (
-				C995CB0B193E749C00D87BCD /* TBWMyCreationsViewController.h */,
-				C995CB0C193E749C00D87BCD /* TBWMyCreationsViewController.m */,
-				C995CB0D193E749C00D87BCD /* TBWMyCreationsViewController.xib */,
-			);
-			path = creation;
 			sourceTree = "<group>";
 		};
 		C995C6EE193B48F800D87BCD /* Services */ = {
@@ -489,9 +539,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63EDC0681934DC1B00278B84 /* Build configuration list for PBXNativeTarget "sing-the-gapTests" */;
 			buildPhases = (
+				2FFE4BDE2BFD4FE78079CE86 /* Check Pods Manifest.lock */,
 				63EDC04F1934DC1B00278B84 /* Sources */,
 				63EDC0501934DC1B00278B84 /* Frameworks */,
 				63EDC0511934DC1B00278B84 /* Resources */,
+				C322744D97DC4C25ADE31632 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -543,11 +595,13 @@
 			files = (
 				63EDC0431934DC1B00278B84 /* InfoPlist.strings in Resources */,
 				63EDC04E1934DC1B00278B84 /* Images.xcassets in Resources */,
-				C995CB0F193E749C00D87BCD /* TBWMyCreationsViewController.xib in Resources */,
+				63290CF11950592700EBAF27 /* TBWMyCreationsViewController.xib in Resources */,
 				63EDC0811934DDC400278B84 /* TBWBrowseViewController.xib in Resources */,
 				C995CB15193E773000D87BCD /* TBWAudioPlayerViewController.xib in Resources */,
+				63290CF919505A3900EBAF27 /* TBWCreationFormViewController.xib in Resources */,
 				C963A78119437E06005A89D1 /* UI.xcassets in Resources */,
 				63EDC0781934DD2E00278B84 /* TBWHomeViewController.xib in Resources */,
+				63E324D7194F29C400B3C07D /* TBWBrowseCell.xib in Resources */,
 				C995CB06193D140600D87BCD /* espeak-data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,6 +617,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2FFE4BDE2BFD4FE78079CE86 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		31051F973EAA4DE5806EFEAE /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -593,6 +662,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		C322744D97DC4C25ADE31632 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -600,7 +684,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C995C6F9193B4B3300D87BCD /* TBWGap.m in Sources */,
 				C995CAEC193D13DA00D87BCD /* debug.cpp in Sources */,
 				63EDC0491934DC1B00278B84 /* TBWAppDelegate.m in Sources */,
 				63EDC04C1934DC1B00278B84 /* sing_the_gap.xcdatamodeld in Sources */,
@@ -615,6 +698,7 @@
 				C995CAEB193D13DA00D87BCD /* compiledict.cpp in Sources */,
 				C995C700193CFDE900D87BCD /* TBWTextToSpeechService.m in Sources */,
 				C995CB0A193D1E5100D87BCD /* TBWRecordingService.m in Sources */,
+				63E324D5194F29B000B3C07D /* TBWBrowseCell.m in Sources */,
 				C995CAEE193D13DA00D87BCD /* espeak_command.cpp in Sources */,
 				C995CAFC193D13DA00D87BCD /* tr_languages.cpp in Sources */,
 				C995C6F1193B4A1900D87BCD /* TBWAudioManager.m in Sources */,
@@ -625,16 +709,18 @@
 				C995CB02193D13DA00D87BCD /* wavegen.cpp in Sources */,
 				C995CAF8193D13DA00D87BCD /* speak_lib.cpp in Sources */,
 				C995CAEA193D13DA00D87BCD /* ESpeakEngine.m in Sources */,
+				63290CF01950592700EBAF27 /* TBWMyCreationsViewController.m in Sources */,
 				63EDC0451934DC1B00278B84 /* main.m in Sources */,
 				C995CAFB193D13DA00D87BCD /* synthesize.cpp in Sources */,
 				C995CB18193E80D300D87BCD /* TBWAudioPlayerConstants.m in Sources */,
 				C94262F019460C9F003F0087 /* TBWDataService.m in Sources */,
 				C995CB14193E773000D87BCD /* TBWAudioPlayerViewController.m in Sources */,
+				63290CF819505A3900EBAF27 /* TBWCreationFormViewController.m in Sources */,
 				63EDC0771934DD2E00278B84 /* TBWHomeViewController.m in Sources */,
 				C995CB00193D13DA00D87BCD /* wave_pulse.cpp in Sources */,
+				63290CFE1950AEA100EBAF27 /* TBWRecordButton.m in Sources */,
 				C995CAF0193D13DA00D87BCD /* fifo.cpp in Sources */,
 				C995CAF1193D13DA00D87BCD /* intonation.cpp in Sources */,
-				C995CB0E193E749C00D87BCD /* TBWMyCreationsViewController.m in Sources */,
 				C995CAED193D13DA00D87BCD /* dictionary.cpp in Sources */,
 				C995CAFA193D13DA00D87BCD /* synthdata.cpp in Sources */,
 				C995C6F5193B4AEE00D87BCD /* TBWGapSong.m in Sources */,
@@ -646,9 +732,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C995C6FA193B4B3300D87BCD /* TBWGap.m in Sources */,
 				C995C6F2193B4A1900D87BCD /* TBWAudioManager.m in Sources */,
 				63EDC0621934DC1B00278B84 /* sing_the_gapTests.m in Sources */,
+				63E324CB194EF55C00B3C07D /* TBWDataServiceTests.m in Sources */,
 				C995C6F6193B4AEE00D87BCD /* TBWGapSong.m in Sources */,
 				C995C6FC193B4BE100D87BCD /* TBWAudioManagerTests.m in Sources */,
 			);
@@ -786,6 +872,7 @@
 		};
 		63EDC0691934DC1B00278B84 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65DFACA32083428BA307B345 /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/sing-the-gap.app/sing-the-gap";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -799,7 +886,15 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				INFOPLIST_FILE = "sing-the-gapTests/sing-the-gapTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -808,6 +903,7 @@
 		};
 		63EDC06A1934DC1B00278B84 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65DFACA32083428BA307B345 /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/sing-the-gap.app/sing-the-gap";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -817,7 +913,15 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sing-the-gap/sing-the-gap-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				INFOPLIST_FILE = "sing-the-gapTests/sing-the-gapTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TBWDataService : NSObject
+#import "AFHTTPSessionManager.h"
+@interface TBWDataService : AFHTTPSessionManager
 
++ (instancetype)sharedClient;
 @end

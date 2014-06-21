@@ -1,4 +1,5 @@
 platform :ios, '7.0'
 pod 'TestFlightSDK', '~> 3.0'
 pod 'HockeySDK', '~> 3.5.4'
-pod 'RestKit', '~> 0.20.0'
+pod 'AFNetworking', '~> 2.2.4'
+link_with 'sing-the-gap', 'sing-the-gapTests'

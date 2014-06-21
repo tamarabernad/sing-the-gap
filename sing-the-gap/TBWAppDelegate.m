@@ -12,6 +12,9 @@
 #import "TBWAudioManager.h"
 #import "TBWAudioPlayerViewController.h"
 
+@interface TBWAppDelegate()
+@property (nonatomic, strong) TBWAudioPlayerViewController *audioPlayer;
+@end
 @implementation TBWAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -35,14 +38,14 @@
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:hvc];
     [nc setNavigationBarHidden:YES];
     
-    TBWAudioPlayerViewController *apvc = [[TBWAudioPlayerViewController alloc] init];
+    self.audioPlayer = [[TBWAudioPlayerViewController alloc] init];
 //    [nc addChildViewController:apvc];
 //    [nc.view addSubview:apvc.view];
 //    [apvc.view setBackgroundColor:[UIColor clearColor]];
 //    [apvc didMoveToParentViewController:nc];
     
     [self.window setRootViewController:nc];
-    [self.window addSubview:apvc.view];
+    [self.window addSubview:self.audioPlayer.view];
 
     return YES;
 }
