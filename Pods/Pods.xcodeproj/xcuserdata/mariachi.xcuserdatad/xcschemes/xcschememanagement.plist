@@ -19,22 +19,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-RestKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-SOCKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-TestFlightSDK.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-TransitionKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,42 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>41B85EACB06747E69A7423BC</key>
+		<key>281CD64DDF114267A9B8ACEC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7600416A75A34F3AACB83CDC</key>
+		<key>69A847C1DDC74E78A3A4CFD5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7AF5F71AD4EA48809DB2E178</key>
+		<key>80DFA9F99ABB4AF6A6819034</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A0B697F30C3A4F6BBE6CDFF1</key>
+		<key>95F352E2B13A413BBC5AD2F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B6990E1ACC4847B6AB950BFA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CB32F8466F314CF886BE9C78</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DF3B1D6FBDA647F9B2AE491E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E253E1A0AF7C42F8A5FBDEB1</key>
+		<key>A539A2D4655E4CA38F8F4F1A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

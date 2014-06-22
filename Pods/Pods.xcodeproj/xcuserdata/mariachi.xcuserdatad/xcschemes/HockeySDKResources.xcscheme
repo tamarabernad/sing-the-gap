@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7AF5F71AD4EA48809DB2E178"
+               BlueprintIdentifier = "A539A2D4655E4CA38F8F4F1A"
                BuildableName = "HockeySDKResources.bundle"
                BlueprintName = "HockeySDKResources"
                ReferencedContainer = "container:Pods.xcodeproj">
