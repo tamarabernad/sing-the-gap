@@ -94,6 +94,7 @@
     
     
     TBWCreationFormViewController *cfvc = [[TBWCreationFormViewController alloc] init];
+    cfvc.gapSong = [self.gapSongs objectAtIndex:[self.tableView indexPathForCell:cell].row];
     [self.navigationController pushViewController:cfvc animated:YES];
 }
 - (void)TBWBrowseCellDidClickPlay:(TBWBrowseCell *)cell{

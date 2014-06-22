@@ -74,6 +74,8 @@
 		C995CB14193E773000D87BCD /* TBWAudioPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CB12193E773000D87BCD /* TBWAudioPlayerViewController.m */; };
 		C995CB15193E773000D87BCD /* TBWAudioPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C995CB13193E773000D87BCD /* TBWAudioPlayerViewController.xib */; };
 		C995CB18193E80D300D87BCD /* TBWAudioPlayerConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CB17193E80D300D87BCD /* TBWAudioPlayerConstants.m */; };
+		C99CD4FD19571F5F0087355D /* TBWFileSystemHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C99CD4FC19571F5F0087355D /* TBWFileSystemHelpers.m */; };
+		C99CD500195724080087355D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99CD4FF195724080087355D /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,6 +192,9 @@
 		C995CB13193E773000D87BCD /* TBWAudioPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWAudioPlayerViewController.xib; sourceTree = "<group>"; };
 		C995CB16193E80D300D87BCD /* TBWAudioPlayerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWAudioPlayerConstants.h; sourceTree = "<group>"; };
 		C995CB17193E80D300D87BCD /* TBWAudioPlayerConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWAudioPlayerConstants.m; sourceTree = "<group>"; };
+		C99CD4FB19571F5F0087355D /* TBWFileSystemHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWFileSystemHelpers.h; sourceTree = "<group>"; };
+		C99CD4FC19571F5F0087355D /* TBWFileSystemHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWFileSystemHelpers.m; sourceTree = "<group>"; };
+		C99CD4FF195724080087355D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +202,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C99CD500195724080087355D /* AVFoundation.framework in Frameworks */,
 				63EDC0391934DC1B00278B84 /* CoreGraphics.framework in Frameworks */,
 				63EDC03D1934DC1B00278B84 /* CoreData.framework in Frameworks */,
 				63EDC03B1934DC1B00278B84 /* UIKit.framework in Frameworks */,
@@ -282,6 +288,7 @@
 		63EDC0351934DC1B00278B84 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C99CD4FF195724080087355D /* AVFoundation.framework */,
 				63E324D0194F008300B3C07D /* libPods.a */,
 				63E324CE194EFDE500B3C07D /* libPods-AFNetworking.a */,
 				63E324CC194EF73F00B3C07D /* libPods.a */,
@@ -298,6 +305,7 @@
 		63EDC03E1934DC1B00278B84 /* sing-the-gap */ = {
 			isa = PBXGroup;
 			children = (
+				C99CD4FA19571F140087355D /* Utils */,
 				C995CABA193D13A900D87BCD /* Resources */,
 				C995C701193D124F00D87BCD /* Libraries */,
 				C995C6EE193B48F800D87BCD /* Services */,
@@ -513,6 +521,15 @@
 			path = player;
 			sourceTree = "<group>";
 		};
+		C99CD4FA19571F140087355D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C99CD4FB19571F5F0087355D /* TBWFileSystemHelpers.h */,
+				C99CD4FC19571F5F0087355D /* TBWFileSystemHelpers.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -716,6 +733,7 @@
 				C94262F019460C9F003F0087 /* TBWDataService.m in Sources */,
 				C995CB14193E773000D87BCD /* TBWAudioPlayerViewController.m in Sources */,
 				63290CF819505A3900EBAF27 /* TBWCreationFormViewController.m in Sources */,
+				C99CD4FD19571F5F0087355D /* TBWFileSystemHelpers.m in Sources */,
 				63EDC0771934DD2E00278B84 /* TBWHomeViewController.m in Sources */,
 				C995CB00193D13DA00D87BCD /* wave_pulse.cpp in Sources */,
 				63290CFE1950AEA100EBAF27 /* TBWRecordButton.m in Sources */,

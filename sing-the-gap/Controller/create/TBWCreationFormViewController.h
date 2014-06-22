@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TBWGapSong.h"
 
 @interface TBWCreationFormViewController : UIViewController
-
+@property (nonatomic, strong) TBWGapSong *gapSong;
 @end

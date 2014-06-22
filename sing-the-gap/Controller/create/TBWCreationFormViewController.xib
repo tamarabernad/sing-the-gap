@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="btStep1Record" destination="gwp-bG-Cum" id="Q1w-XR-5Dw"/>
                 <outlet property="btStep1Write" destination="I05-ON-LUy" id="y3b-XB-OOg"/>
+                <outlet property="scrollview" destination="Urt-ax-TTl" id="nOX-MD-2o4"/>
                 <outlet property="step1View" destination="swE-j7-jWY" id="qFJ-Hy-VvO"/>
                 <outlet property="step2RecordView" destination="kWn-Mc-DWE" id="hyv-0B-655"/>
                 <outlet property="step2View" destination="b17-cc-ZSc" id="waL-zk-iek"/>
@@ -130,6 +131,10 @@
                                                     <state key="normal" title="Button" image="bt-form-next">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <state key="disabled" image="bt-form-next-disabled"/>
+                                                    <connections>
+                                                        <action selector="onClickS2Next:" destination="-1" eventType="touchUpInside" id="Ynn-Ys-w45"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </view>
@@ -170,6 +175,10 @@
                                                     <state key="normal" title="Button" image="bt-form-next">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <state key="disabled" image="bt-form-next-disabled"/>
+                                                    <connections>
+                                                        <action selector="onClickS2Next:" destination="-1" eventType="touchUpInside" id="Km0-lw-Wzk"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </view>
@@ -323,6 +332,7 @@
         <image name="bt-buy-form" width="43" height="43"/>
         <image name="bt-buy-form-over" width="43" height="43"/>
         <image name="bt-form-next" width="42" height="43"/>
+        <image name="bt-form-next-disabled" width="42" height="43"/>
         <image name="bt-form-record" width="43" height="43"/>
         <image name="bt-form-record-selected" width="43" height="43"/>
         <image name="bt-form-write" width="42" height="43"/>

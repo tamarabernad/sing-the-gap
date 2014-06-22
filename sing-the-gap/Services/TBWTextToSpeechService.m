@@ -24,9 +24,9 @@
         _engine.volume = 1;
         
         NSArray * languages = [_engine supportedLanguages];
-        for (NSString *lang in languages) {
-            NSLog(@"%@", lang);
-        }
+//        for (NSString *lang in languages) {
+//            NSLog(@"%@", lang);
+//        }
         [_engine setLanguage:@"en"];
 
     }
