@@ -51,4 +51,20 @@
         }
     }];
 }
+
++ (NSURLSessionDataTask *)retrieveGapSongById:(NSString *)uid WithBlock:(void (^)(TBWGapSong *gapSong, NSError *error))block {
+    NSString *url = [NSString stringWithFormat:@"gap-songs/%@", uid];
+    return [[TBWDataService sharedClient] GET:url parameters:nil success:^(NSURLSessionDataTask * __unused task, id JSON) {
+        NSDictionary *gapSongFromResponse = JSON;
+        TBWGapSong *gapSong = [[TBWGapSong alloc] initWithAttributes:gapSongFromResponse];
+
+        if (block) {
+            block(gapSong, nil);
+        }
+    } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
+        if (block) {
+            block(nil, error);
+        }
+    }];
+}
 @end

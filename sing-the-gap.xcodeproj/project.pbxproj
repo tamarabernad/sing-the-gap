@@ -38,6 +38,8 @@
 		C92D325A195F023F00E2330D /* sing_the_gap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C92D3258195F023E00E2330D /* sing_the_gap.xcdatamodeld */; };
 		C92D3260195F036800E2330D /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = C92D325F195F036800E2330D /* CoreDataStack.m */; };
 		C92D3263195F049300E2330D /* TBWCreation.m in Sources */ = {isa = PBXBuildFile; fileRef = C92D3262195F049300E2330D /* TBWCreation.m */; };
+		C92D3268195F092400E2330D /* TBWMyCreationsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C92D3266195F092400E2330D /* TBWMyCreationsCell.m */; };
+		C92D3269195F092400E2330D /* TBWMyCreationsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C92D3267195F092400E2330D /* TBWMyCreationsCell.xib */; };
 		C94262F019460C9F003F0087 /* TBWDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = C94262EF19460C9F003F0087 /* TBWDataService.m */; };
 		C963A78119437E06005A89D1 /* UI.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C963A78019437E06005A89D1 /* UI.xcassets */; };
 		C995C6F1193B4A1900D87BCD /* TBWAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6F0193B4A1900D87BCD /* TBWAudioManager.m */; };
@@ -136,6 +138,9 @@
 		C92D325F195F036800E2330D /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
 		C92D3261195F049300E2330D /* TBWCreation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWCreation.h; sourceTree = "<group>"; };
 		C92D3262195F049300E2330D /* TBWCreation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWCreation.m; sourceTree = "<group>"; };
+		C92D3265195F092400E2330D /* TBWMyCreationsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWMyCreationsCell.h; sourceTree = "<group>"; };
+		C92D3266195F092400E2330D /* TBWMyCreationsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWMyCreationsCell.m; sourceTree = "<group>"; };
+		C92D3267195F092400E2330D /* TBWMyCreationsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWMyCreationsCell.xib; sourceTree = "<group>"; };
 		C94262EE19460C9F003F0087 /* TBWDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWDataService.h; sourceTree = "<group>"; };
 		C94262EF19460C9F003F0087 /* TBWDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWDataService.m; sourceTree = "<group>"; };
 		C963A78019437E06005A89D1 /* UI.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = UI.xcassets; sourceTree = "<group>"; };
@@ -388,6 +393,7 @@
 		63EDC06D1934DCF100278B84 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C92D3264195F08F300E2330D /* mycreations */,
 				63290CFB1950AE8200EBAF27 /* create */,
 				63E324D2194F298C00B3C07D /* browse */,
 			);
@@ -419,6 +425,16 @@
 			children = (
 			);
 			path = categories;
+			sourceTree = "<group>";
+		};
+		C92D3264195F08F300E2330D /* mycreations */ = {
+			isa = PBXGroup;
+			children = (
+				C92D3265195F092400E2330D /* TBWMyCreationsCell.h */,
+				C92D3266195F092400E2330D /* TBWMyCreationsCell.m */,
+				C92D3267195F092400E2330D /* TBWMyCreationsCell.xib */,
+			);
+			path = mycreations;
 			sourceTree = "<group>";
 		};
 		C995C6EE193B48F800D87BCD /* Services */ = {
@@ -624,6 +640,7 @@
 				63EDC04E1934DC1B00278B84 /* Images.xcassets in Resources */,
 				63290CF11950592700EBAF27 /* TBWMyCreationsViewController.xib in Resources */,
 				63EDC0811934DDC400278B84 /* TBWBrowseViewController.xib in Resources */,
+				C92D3269195F092400E2330D /* TBWMyCreationsCell.xib in Resources */,
 				C995CB15193E773000D87BCD /* TBWAudioPlayerViewController.xib in Resources */,
 				63290CF919505A3900EBAF27 /* TBWCreationFormViewController.xib in Resources */,
 				C963A78119437E06005A89D1 /* UI.xcassets in Resources */,
@@ -727,6 +744,7 @@
 				C995CB0A193D1E5100D87BCD /* TBWRecordingService.m in Sources */,
 				63E324D5194F29B000B3C07D /* TBWBrowseCell.m in Sources */,
 				C995CAEE193D13DA00D87BCD /* espeak_command.cpp in Sources */,
+				C92D3268195F092400E2330D /* TBWMyCreationsCell.m in Sources */,
 				C995CAFC193D13DA00D87BCD /* tr_languages.cpp in Sources */,
 				C995C6F1193B4A1900D87BCD /* TBWAudioManager.m in Sources */,
 				C92D3263195F049300E2330D /* TBWCreation.m in Sources */,
