@@ -17,6 +17,10 @@
 
 @end
 @implementation TBWTextToSpeechService
+
+- (NSString *)getFileExtension{
+    return @"wav";
+}
 - (ESpeakEngine *)engine{
     if(!_engine){
         // Custom initialization
@@ -33,10 +37,11 @@
     return _engine;
 }
 
-- (void) textToSpeech:(NSString *)text WithLanguage:(NSString *)language AndGender:(NSString *)gender ToFile:(NSString *)filePath{
+- (void) textToSpeech:(NSString *)text WithLanguage:(NSString *)language AndGender:(NSString *)gender ToFileWithName:(NSString *)fileName{
     ESpeakEngineGener speakGender = [gender isEqualToString:@"female"] ? kESpeakEngineGenerFemale : kESpeakEngineGenerMale;
     [self.engine setGender:speakGender];
     [self.engine setLanguage:language];
+    NSString *filePath = [NSString stringWithFormat:@"%@.%@",fileName, [self getFileExtension]];
 	[self.engine speek:text ToFile:filePath];
 }
 @end

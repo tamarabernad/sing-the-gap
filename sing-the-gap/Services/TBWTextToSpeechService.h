@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface TBWTextToSpeechService : NSObject
-- (void) textToSpeech:(NSString *)text WithLanguage:(NSString *)language AndGender:(NSString *)gender ToFile:(NSString *)filePath;
+- (NSString *)getFileExtension;
+- (void) textToSpeech:(NSString *)text WithLanguage:(NSString *)language AndGender:(NSString *)gender ToFileWithName:(NSString *)fileName;
 @end

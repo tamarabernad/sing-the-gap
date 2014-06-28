@@ -16,7 +16,8 @@ typedef NS_OPTIONS(NSUInteger, RecordButtonState) {
 
 @interface TBWRecordButton()
 @property (nonatomic) CALayer *bg;
-@property (nonatomic) CALayer *inner;
+@property (nonatomic) CALayer *innerRecord;
+@property (nonatomic) CALayer *innerStop;
 @property (nonatomic) CALayer *fill;
 @end
 @implementation TBWRecordButton
@@ -41,12 +42,28 @@ typedef NS_OPTIONS(NSUInteger, RecordButtonState) {
     self.bg.frame = CGRectMake(0, 0, 42, 42);
     [self.layer addSublayer:self.bg];
     
-    self.inner = [CALayer layer];
-    self.inner.backgroundColor = [UIColor greenColor].CGColor;
-    self.inner.cornerRadius=11.0;
-    self.inner.frame = CGRectMake(10, 10, 22, 22);
-    [self.layer addSublayer:self.inner];
+    self.innerRecord = [CALayer layer];
+    self.innerRecord.backgroundColor = [UIColor greenColor].CGColor;
+    self.innerRecord.cornerRadius=11.0;
+    self.innerRecord.frame = CGRectMake(10, 10, 22, 22);
+    [self.layer addSublayer:self.innerRecord];
+    
+    self.innerStop = [CALayer layer];
+    self.innerStop.backgroundColor = [UIColor redColor].CGColor;
+    self.innerStop.frame = CGRectMake(10, 10, 22, 22);
+    [self.layer addSublayer:self.innerStop];
+    
+    [self setSelected:NO];
 }
+- (void)setSelected:(BOOL)selected{
+    [super setSelected:selected];
+    [self updateView];
+}
+- (void)updateView{
+    [self.innerStop setHidden:!self.isSelected];
+    [self.innerRecord setHidden:self.isSelected];
+}
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

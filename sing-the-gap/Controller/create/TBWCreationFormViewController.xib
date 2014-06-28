@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TBWCreationFormViewController">
             <connections>
+                <outlet property="btRecord" destination="xYU-aN-aFt" id="ckS-zR-eVH"/>
                 <outlet property="btStep1Record" destination="gwp-bG-Cum" id="Q1w-XR-5Dw"/>
                 <outlet property="btStep1Write" destination="I05-ON-LUy" id="y3b-XB-OOg"/>
                 <outlet property="scrollview" destination="Urt-ax-TTl" id="nOX-MD-2o4"/>

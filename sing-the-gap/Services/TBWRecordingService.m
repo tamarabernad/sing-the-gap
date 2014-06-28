@@ -12,14 +12,21 @@
 
 @property (nonatomic, strong) AVAudioRecorder *recorder;
 @property (nonatomic, strong) NSTimer *recordTimer;
+@property (nonatomic, strong) NSTimer *progressTimer;
+@property (nonatomic) NSInteger progressCount;
+@property (nonatomic) NSTimeInterval duration;
 
 
 @end
 
 @implementation TBWRecordingService
 
-
-- (void)recordAudioWithDuration:(NSTimeInterval)duration ToFile:(NSString *)filePath{
+- (NSString *)getFileExtension{
+    return @"m4a";
+}
+- (void)recordAudioWithDuration:(NSTimeInterval)duration ToFileWithName:(NSString *)fileName{
+    self.duration = duration;
+    NSString *filePath = [NSString  stringWithFormat:@"%@.%@", fileName, [self getFileExtension]];
     NSURL *url = [NSURL fileURLWithPath:filePath];
 
     
@@ -38,9 +45,30 @@
 
     
     self.recordTimer = [NSTimer scheduledTimerWithTimeInterval: duration target: self selector: @selector(stopRecording) userInfo: nil repeats: NO];
+    
+    self.progressCount = 0;
+    self.progressTimer =[NSTimer scheduledTimerWithTimeInterval: 0.001 target: self selector: @selector(updateProgress) userInfo: nil repeats: YES];
 
 }
 - (void)stopRecording{
+    [self.recordTimer invalidate];
+    self.recordTimer = nil;
+    
+    [self.progressTimer invalidate];
+    self.progressTimer = nil;
+    
     [self.recorder stop];
+    
+    if(self.delegate){
+        [self.delegate TBWRecordingServiceDidStopRecording:self];
+    }
+}
+- (void)updateProgress{
+    self.progressCount++;
+    float progress = (self.progressCount * 0.001)/self.duration;
+
+    if(self.delegate){
+        [self.delegate TBWRecordingService:self updateWithProgress:progress];
+    }
 }
 @end

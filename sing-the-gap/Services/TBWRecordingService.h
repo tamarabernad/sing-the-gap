@@ -7,8 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@protocol TBWRecordingServiceDelegate;
 @interface TBWRecordingService : NSObject
+@property (nonatomic, weak) NSObject<TBWRecordingServiceDelegate> *delegate;
+- (NSString *)getFileExtension;
 - (void)stopRecording;
-- (void)recordAudioWithDuration:(NSTimeInterval)duration ToFile:(NSString *)filePath;
+- (void)recordAudioWithDuration:(NSTimeInterval)duration ToFileWithName:(NSString *)fileName;
+
+@end
+
+@protocol TBWRecordingServiceDelegate <NSObject>
+@required
+- (void)TBWRecordingService:(TBWRecordingService *)service updateWithProgress:(float)progress;
+- (void)TBWRecordingServiceDidStopRecording:(TBWRecordingService *)service;
+
 @end

@@ -60,23 +60,24 @@
 }
 - (void)testTextToSpeech{
     
-    NSString *recordingPath = [[recordingsDirectory path] stringByAppendingPathComponent:@"record.wav"];
+    NSString *recordingFileName = [[recordingsDirectory path] stringByAppendingPathComponent:@"txttospeach"];
  
     TBWTextToSpeechService *sut = [[TBWTextToSpeechService alloc] init];
-    [sut textToSpeech:@"how are you?" WithLanguage:@"en" AndGender:@"male" ToFile:recordingPath];
+    [sut textToSpeech:@"how are you?" WithLanguage:@"en" AndGender:@"male" ToFileWithName:recordingFileName];
     
+    NSString *recordingPath = [NSString stringWithFormat:@"%@.%@",recordingFileName, [sut getFileExtension]];
     BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:recordingPath];
     XCTAssertTrue(fileExists);
     
 }
 - (void)testRecording{
-    
-    NSString *recordingPath = [[recordingsDirectory path] stringByAppendingPathComponent:@"recording.m4a"];
+    NSString *recordingFileName = [[recordingsDirectory path] stringByAppendingPathComponent:@"record"];
 
     TBWRecordingService *sut = [[TBWRecordingService alloc] init];
-    [sut recordAudioWithDuration:2.0 ToFile:recordingPath];
+    [sut recordAudioWithDuration:2.0 ToFileWithName:recordingFileName];
     
-
+    NSString *recordingPath = [NSString stringWithFormat:@"%@.%@",recordingFileName, [sut getFileExtension]];
+    
     XCTAssertTrue(YES);
     
 }

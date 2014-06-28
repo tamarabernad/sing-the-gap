@@ -8,9 +8,11 @@
 
 #import "TBWCreationFormViewController.h"
 #import "TBWTextToSpeechService.h"
+#import "TBWRecordingService.h"
+#import "TBWRecordButton.h"
 
 #import  <AVFoundation/AVFoundation.h>
-@interface TBWCreationFormViewController ()<UIGestureRecognizerDelegate>
+@interface TBWCreationFormViewController ()<UIGestureRecognizerDelegate, TBWRecordingServiceDelegate>
 @property (weak, nonatomic) IBOutlet UIView *step1View;
 @property (weak, nonatomic) IBOutlet UIView *step2View;
 @property (weak, nonatomic) IBOutlet UIView *step3View;
@@ -22,10 +24,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *tfStep4Name;
 @property (weak, nonatomic) IBOutlet UIButton *btStep1Write;
 @property (weak, nonatomic) IBOutlet UIButton *btStep1Record;
+@property (weak, nonatomic) IBOutlet TBWRecordButton *btRecord;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollview;
 
 @property (nonatomic, strong)TBWTextToSpeechService *textToSpeachService;
+@property (nonatomic, strong)TBWRecordingService *recordingService;
+
 @property (nonatomic, strong) NSString *currentTextToSpeechString;
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 
@@ -53,9 +58,15 @@
     }
 
     NSURL *url = [NSURL fileURLWithPath:path];
-    AVPlayerItem *playerItem = [AVPlayerItem playerItemWithURL:url];
-    _audioPlayer = [AVPlayer playerWithPlayerItem:playerItem];
+    _audioPlayer  = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
     return _audioPlayer;
+}
+- (TBWRecordingService *)recordingService{
+    if(!_recordingService){
+        _recordingService = [[TBWRecordingService alloc] init];
+        _recordingService.delegate = self;
+    }
+    return _recordingService;
 }
 - (TBWTextToSpeechService *)textToSpeachService{
     if(!_textToSpeachService){
@@ -74,6 +85,12 @@
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
     [self showWriteViewAnimated:NO];
     self.currentStep = 2;
+    
+    UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc]
+                                           initWithTarget:self
+                                           action:@selector(hideKeyBoard)];
+    
+    [self.view addGestureRecognizer:tapGesture];
 
 }
 - (void)viewDidAppear:(BOOL)animated{
@@ -105,8 +122,17 @@
 #pragma mark Step 2 actions
 ////////////////////////////////
 - (IBAction)onClickS2Record:(id)sender {
+    UIButton *bt = (UIButton *)sender;
+    if([bt isSelected]){
+        [self.recordingService stopRecording];
+    }else{
+        NSString *path = [self getRecordingPathCurrentGapSong];
+        NSTimeInterval time = self.gapSong.duration/1000.0;
+        [self.recordingService recordAudioWithDuration:time ToFileWithName:path];
+    }
 }
 - (IBAction)onClickS2RecordPlay:(id)sender {
+    
 }
 - (IBAction)onClick2WritePlay:(id)sender {
     [self convertTextToSpeech];
@@ -182,16 +208,37 @@
     NSString *text = self.tfStep2Write.text;
     if(![text isEqualToString:self.currentTextToSpeechString]){
         self.currentTextToSpeechString = text;
-        
-        NSString *fileName =[NSString stringWithFormat:@"%@.wav",self.gapSong.title];
-        NSString *path = [RecordingsPath() stringByAppendingPathComponent:fileName];
-        [self.textToSpeachService textToSpeech:text WithLanguage:@"en" AndGender:@"fe" ToFile:path];
+    
+        NSString *path = [self getRecordingPathCurrentGapSong];
+        [self.textToSpeachService textToSpeech:text WithLanguage:@"en" AndGender:@"fe" ToFileWithName:path];
     }
 }
 - (void)playTextToSpeech{
-    NSString *fileName =[NSString stringWithFormat:@"%@.wav",self.gapSong.title];
+    NSString *fileName =[NSString stringWithFormat:@"%@.%@",self.gapSong.title, [self.textToSpeachService getFileExtension]];
     NSString *path = [RecordingsPath() stringByAppendingPathComponent:fileName];
     [self audioPlayerWithPath:path];
     [self.audioPlayer play];
 }
+-(void)hideKeyBoard {
+    [self.tfStep2Write resignFirstResponder];
+    [self.tfStep4Name resignFirstResponder];
+}
+- (NSString *)getRecordingPathCurrentGapSong{
+    NSString *fileName =[NSString stringWithFormat:@"%@",self.gapSong.title];
+    NSString *path = [RecordingsPath() stringByAppendingPathComponent:fileName];
+
+    return path;
+}
+
+////////////////////////////////////////////////////////////////
+#pragma mark - TBWRecordingServiceDelegate methods
+////////////////////////////////////////////////////////////////
+- (void)TBWRecordingService:(TBWRecordingService *)service updateWithProgress:(float)progress{
+    NSLog(@"Did stop updateWithProgress %f",progress);
+}
+- (void)TBWRecordingServiceDidStopRecording:(TBWRecordingService *)service{
+    NSLog(@"Did stop recording");
+}
+
+
 @end
