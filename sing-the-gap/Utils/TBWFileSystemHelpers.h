@@ -10,5 +10,5 @@
 
 NSString *RecordingsPath();
 NSString *GapSongsPath();
-NSString *creationsTemporalPath();
-NSString *creationsBaughtPath();
+NSString *CreationsTemporalPath();
+NSString *CreationsBaughtPath();

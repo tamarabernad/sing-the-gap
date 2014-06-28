@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 @interface TBWAudioManager : NSObject
 
+- (NSString *)getFileExtension;
 - (void)createAudioMixWithBaseAudio:(NSString *)baseUrl GapAudio:(NSString *)gapUrl AndDestinationPath:(NSString *)destinationPath AndMarkerMiliseconds:(NSArray *)markers;
 @end

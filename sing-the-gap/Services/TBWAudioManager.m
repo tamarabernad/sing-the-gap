@@ -10,7 +10,11 @@
 #import  <AVFoundation/AVFoundation.h>
 
 @implementation TBWAudioManager
+- (NSString *)getFileExtension{
+    return @"m4a";
+}
 - (void)createAudioMixWithBaseAudio:(NSString *)baseUrl GapAudio:(NSString *)gapUrl AndDestinationPath:(NSString *)destinationPath AndMarkerMiliseconds:(NSArray *)markers{
+    destinationPath = [destinationPath stringByAppendingFormat:@".%@",[self getFileExtension]];
     
     NSString *as1str = baseUrl;
     AVURLAsset *asset1 = [[AVURLAsset alloc] initWithURL:[NSURL fileURLWithPath:as1str] options:nil];
@@ -27,7 +31,7 @@
     
     for (NSNumber *marker in markers) {
         
-        Float64 seconds = [marker integerValue]/1000;
+        Float64 seconds = [marker integerValue]/1000.0;
         AVMutableCompositionTrack *composition2 = [mc addMutableTrackWithMediaType:AVMediaTypeAudio preferredTrackID:kCMPersistentTrackID_Invalid];
         AVAssetTrack *clipAudioTrack2 = [[asset2 tracksWithMediaType:AVMediaTypeAudio] objectAtIndex:0];
         [composition2 insertTimeRange:CMTimeRangeMake(kCMTimeZero, [asset2 duration])  ofTrack:clipAudioTrack2 atTime:CMTimeMakeWithSeconds(seconds, 600) error:nil];

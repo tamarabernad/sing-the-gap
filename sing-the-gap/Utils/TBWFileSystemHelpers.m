@@ -25,7 +25,7 @@ NSString *GapSongsPath(){
     
     return [gapSongsDirectory path];
 }
-NSString *creationsTemporalPath(){
+NSString *CreationsTemporalPath(){
     NSError *error;
     
     NSURL *creationsDirectory = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:@"creations"] isDirectory:YES];
@@ -33,7 +33,7 @@ NSString *creationsTemporalPath(){
     
     return [creationsDirectory path];
 }
-NSString *creationsBaughtPath(){
+NSString *CreationsBaughtPath(){
     NSError *error;
     
     NSURL *creationsDirectory = [NSURL fileURLWithPath:[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"creations"] isDirectory:YES];

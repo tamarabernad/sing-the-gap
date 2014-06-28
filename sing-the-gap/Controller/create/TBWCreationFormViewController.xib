@@ -178,7 +178,7 @@
                                                     </state>
                                                     <state key="disabled" image="bt-form-next-disabled"/>
                                                     <connections>
-                                                        <action selector="onClickS2Next:" destination="-1" eventType="touchUpInside" id="Km0-lw-Wzk"/>
+                                                        <action selector="onClickRecordNext:" destination="-1" eventType="touchUpInside" id="Pui-OA-YjD"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -290,6 +290,9 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <state key="highlighted" image="bt-buy-form-over"/>
+                                            <connections>
+                                                <action selector="onClickBuy:" destination="-1" eventType="touchUpInside" id="YHy-jY-kjE"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0,99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bj-Xs-lLX">
                                             <rect key="frame" x="119" y="54" width="28" height="21"/>
@@ -308,9 +311,6 @@
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <state key="selected" image="ic-step-bg-selected"/>
-                                    <connections>
-                                        <action selector="onClickBuy:" destination="-1" eventType="touchUpInside" id="CAn-U0-Uq4"/>
-                                    </connections>
                                 </button>
                             </subviews>
                         </view>

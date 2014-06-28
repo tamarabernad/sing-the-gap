@@ -9,6 +9,7 @@
 #import "TBWCreationFormViewController.h"
 #import "TBWTextToSpeechService.h"
 #import "TBWRecordingService.h"
+#import "TBWAudioManager.h"
 #import "TBWRecordButton.h"
 
 #import  <AVFoundation/AVFoundation.h>
@@ -30,6 +31,7 @@
 
 @property (nonatomic, strong)TBWTextToSpeechService *textToSpeachService;
 @property (nonatomic, strong)TBWRecordingService *recordingService;
+@property (nonatomic, strong)TBWAudioManager *audioMixerService;
 
 @property (nonatomic, strong) NSString *currentTextToSpeechString;
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
@@ -60,6 +62,12 @@
     NSURL *url = [NSURL fileURLWithPath:path];
     _audioPlayer  = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
     return _audioPlayer;
+}
+- (TBWAudioManager *)audioMixerService{
+    if(!_audioMixerService){
+        _audioMixerService = [[TBWAudioManager alloc] init];
+    }
+    return _audioMixerService;
 }
 - (TBWRecordingService *)recordingService{
     if(!_recordingService){
@@ -132,7 +140,12 @@
     }
 }
 - (IBAction)onClickS2RecordPlay:(id)sender {
+    [self playRecordedFile];
     
+}
+- (IBAction)onClickRecordNext:(id)sender {
+    self.currentStep = 3;
+    [self createMixWithRecording];
 }
 - (IBAction)onClick2WritePlay:(id)sender {
     [self convertTextToSpeech];
@@ -141,7 +154,7 @@
 - (IBAction)onClickS2Next:(id)sender {
     self.currentStep = 3;
     [self convertTextToSpeech];
-
+    [self createMixWithTextToSpeach];
     
 }
 
@@ -149,12 +162,78 @@
 #pragma mark Step 3 actions
 ////////////////////////////////
 - (IBAction)onClick3Play:(id)sender {
+    [self playCreation];
 }
 
 ////////////////////////////////
 #pragma mark Step 5 actions
 ////////////////////////////////
 - (IBAction)onClickBuy:(id)sender {
+    [self buySong];
+}
+
+////////////////////////////////
+#pragma mark - Logic
+////////////////////////////////
+- (void)convertTextToSpeech{
+    NSString *text = self.tfStep2Write.text;
+    if(![text isEqualToString:self.currentTextToSpeechString]){
+        self.currentTextToSpeechString = text;
+        
+        NSString *path = [self getRecordingPathCurrentGapSong];
+        [self.textToSpeachService textToSpeech:text WithLanguage:@"en" AndGender:@"fe" ToFileWithName:path];
+    }
+}
+- (void)playTextToSpeech{
+    NSString *fileName =[NSString stringWithFormat:@"%@.%@",self.gapSong.title, [self.textToSpeachService getFileExtension]];
+    NSString *path = [RecordingsPath() stringByAppendingPathComponent:fileName];
+    [self audioPlayerWithPath:path];
+    [self.audioPlayer play];
+}
+
+-(void)playRecordedFile{
+    NSString *fileName =[NSString stringWithFormat:@"%@.%@",self.gapSong.title, [self.recordingService getFileExtension]];
+    NSString *path = [RecordingsPath() stringByAppendingPathComponent:fileName];
+    [self audioPlayerWithPath:path];
+    [self.audioPlayer play];
+}
+-(void)playCreation{
+    NSString *fileName =[NSString stringWithFormat:@"%@.%@",self.gapSong.title, [self.audioMixerService getFileExtension]];
+    NSString *path = [CreationsTemporalPath() stringByAppendingPathComponent:fileName];
+    [self audioPlayerWithPath:path];
+    [self.audioPlayer play];
+}
+- (void)createMixWithRecording{
+    NSString *fileName =[NSString stringWithFormat:@"%@.%@",self.gapSong.title, [self.recordingService getFileExtension]];
+    NSString *path = [RecordingsPath() stringByAppendingPathComponent:fileName];
+    
+    NSString *destinationPath = [CreationsTemporalPath() stringByAppendingPathComponent:self.gapSong.title];
+    
+    self.gapSong.path = [GapSongsPath() stringByAppendingPathComponent:@"test.m4a"];
+    [self.audioMixerService createAudioMixWithBaseAudio:self.gapSong.path GapAudio:path AndDestinationPath:destinationPath AndMarkerMiliseconds:self.gapSong.markers];
+}
+- (void)createMixWithTextToSpeach{
+    NSString *fileName =[NSString stringWithFormat:@"%@.%@",self.gapSong.title, [self.textToSpeachService getFileExtension]];
+    NSString *path = [RecordingsPath() stringByAppendingPathComponent:fileName];
+    
+    NSString *destinationPath = [CreationsTemporalPath() stringByAppendingPathComponent:self.gapSong.title];
+    
+    self.gapSong.path = [GapSongsPath() stringByAppendingPathComponent:@"test.m4a"];
+    //TODO use the downloaded path
+    [self.audioMixerService createAudioMixWithBaseAudio:self.gapSong.path GapAudio:path AndDestinationPath:destinationPath AndMarkerMiliseconds:self.gapSong.markers];
+}
+- (void)buySong{
+    NSString *fileName =[NSString stringWithFormat:@"%@.%@",self.gapSong.title, [self.audioMixerService getFileExtension]];
+    NSString *path = [CreationsTemporalPath() stringByAppendingPathComponent:fileName];
+    NSURL *sourceUrl = [NSURL fileURLWithPath:path];
+    
+    NSString *destinationPath = [CreationsBaughtPath() stringByAppendingPathComponent:fileName];
+    NSURL *destinationUrl = [NSURL fileURLWithPath:destinationPath];
+    
+    if ( [[NSFileManager defaultManager] isReadableFileAtPath:path] ){
+        [[NSFileManager defaultManager] copyItemAtURL:sourceUrl toURL:destinationUrl error:nil];
+    }
+    
 }
 
 ////////////////////////////////
@@ -203,21 +282,6 @@
             self.step5View.hidden = NO;
             break;
     }
-}
-- (void)convertTextToSpeech{
-    NSString *text = self.tfStep2Write.text;
-    if(![text isEqualToString:self.currentTextToSpeechString]){
-        self.currentTextToSpeechString = text;
-    
-        NSString *path = [self getRecordingPathCurrentGapSong];
-        [self.textToSpeachService textToSpeech:text WithLanguage:@"en" AndGender:@"fe" ToFileWithName:path];
-    }
-}
-- (void)playTextToSpeech{
-    NSString *fileName =[NSString stringWithFormat:@"%@.%@",self.gapSong.title, [self.textToSpeachService getFileExtension]];
-    NSString *path = [RecordingsPath() stringByAppendingPathComponent:fileName];
-    [self audioPlayerWithPath:path];
-    [self.audioPlayer play];
 }
 -(void)hideKeyBoard {
     [self.tfStep2Write resignFirstResponder];

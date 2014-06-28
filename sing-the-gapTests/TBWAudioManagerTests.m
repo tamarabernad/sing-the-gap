@@ -49,7 +49,7 @@
     
     NSString *songPath = [[gapSongsDirectory path] stringByAppendingPathComponent:@"test.m4a"];
     NSString *recordingPath = [[recordingsDirectory path] stringByAppendingPathComponent:@"campechano.wav"];
-    NSString* file = [[creationsDirectory path] stringByAppendingPathComponent:@"mymp3.m4a"];
+    NSString* file = [[creationsDirectory path] stringByAppendingPathComponent:@"mymp3"];
     
     TBWAudioManager *sut = [[TBWAudioManager alloc] init];
     [sut createAudioMixWithBaseAudio:songPath GapAudio:recordingPath AndDestinationPath:file AndMarkerMiliseconds:@[]];
