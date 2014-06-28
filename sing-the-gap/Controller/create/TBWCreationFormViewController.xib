@@ -18,7 +18,7 @@
                 <outlet property="step4View" destination="AcE-bU-umV" id="4cH-Vt-qso"/>
                 <outlet property="step5View" destination="Jve-CS-mjq" id="cR5-do-P8w"/>
                 <outlet property="tfStep2Write" destination="hHv-tS-LOJ" id="Lnk-7F-7wj"/>
-                <outlet property="tfStep4Name" destination="EcG-Zw-ucg" id="p8J-MD-aI7"/>
+                <outlet property="tfStep4Name" destination="2cc-JH-L6d" id="rTT-hM-RMU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -24,7 +24,6 @@
 		63EDC0431934DC1B00278B84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63EDC0411934DC1B00278B84 /* InfoPlist.strings */; };
 		63EDC0451934DC1B00278B84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EDC0441934DC1B00278B84 /* main.m */; };
 		63EDC0491934DC1B00278B84 /* TBWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EDC0481934DC1B00278B84 /* TBWAppDelegate.m */; };
-		63EDC04C1934DC1B00278B84 /* sing_the_gap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63EDC04A1934DC1B00278B84 /* sing_the_gap.xcdatamodeld */; };
 		63EDC04E1934DC1B00278B84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63EDC04D1934DC1B00278B84 /* Images.xcassets */; };
 		63EDC0551934DC1B00278B84 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDC0541934DC1B00278B84 /* XCTest.framework */; };
 		63EDC0561934DC1B00278B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDC0361934DC1B00278B84 /* Foundation.framework */; };
@@ -36,6 +35,9 @@
 		63EDC0781934DD2E00278B84 /* TBWHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63EDC0761934DD2E00278B84 /* TBWHomeViewController.xib */; };
 		63EDC0801934DDC400278B84 /* TBWBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EDC07E1934DDC400278B84 /* TBWBrowseViewController.m */; };
 		63EDC0811934DDC400278B84 /* TBWBrowseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63EDC07F1934DDC400278B84 /* TBWBrowseViewController.xib */; };
+		C92D325A195F023F00E2330D /* sing_the_gap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C92D3258195F023E00E2330D /* sing_the_gap.xcdatamodeld */; };
+		C92D3260195F036800E2330D /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = C92D325F195F036800E2330D /* CoreDataStack.m */; };
+		C92D3263195F049300E2330D /* TBWCreation.m in Sources */ = {isa = PBXBuildFile; fileRef = C92D3262195F049300E2330D /* TBWCreation.m */; };
 		C94262F019460C9F003F0087 /* TBWDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = C94262EF19460C9F003F0087 /* TBWDataService.m */; };
 		C963A78119437E06005A89D1 /* UI.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C963A78019437E06005A89D1 /* UI.xcassets */; };
 		C995C6F1193B4A1900D87BCD /* TBWAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6F0193B4A1900D87BCD /* TBWAudioManager.m */; };
@@ -116,7 +118,6 @@
 		63EDC0461934DC1B00278B84 /* sing-the-gap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sing-the-gap-Prefix.pch"; sourceTree = "<group>"; };
 		63EDC0471934DC1B00278B84 /* TBWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBWAppDelegate.h; sourceTree = "<group>"; };
 		63EDC0481934DC1B00278B84 /* TBWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBWAppDelegate.m; sourceTree = "<group>"; };
-		63EDC04B1934DC1B00278B84 /* sing_the_gap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = sing_the_gap.xcdatamodel; sourceTree = "<group>"; };
 		63EDC04D1934DC1B00278B84 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		63EDC0531934DC1B00278B84 /* sing-the-gapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sing-the-gapTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EDC0541934DC1B00278B84 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -130,6 +131,11 @@
 		63EDC07E1934DDC400278B84 /* TBWBrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWBrowseViewController.m; sourceTree = "<group>"; };
 		63EDC07F1934DDC400278B84 /* TBWBrowseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWBrowseViewController.xib; sourceTree = "<group>"; };
 		65DFACA32083428BA307B345 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C92D3259195F023F00E2330D /* sing_the_gap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = sing_the_gap.xcdatamodel; sourceTree = "<group>"; };
+		C92D325E195F036800E2330D /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		C92D325F195F036800E2330D /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		C92D3261195F049300E2330D /* TBWCreation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWCreation.h; sourceTree = "<group>"; };
+		C92D3262195F049300E2330D /* TBWCreation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWCreation.m; sourceTree = "<group>"; };
 		C94262EE19460C9F003F0087 /* TBWDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWDataService.h; sourceTree = "<group>"; };
 		C94262EF19460C9F003F0087 /* TBWDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWDataService.m; sourceTree = "<group>"; };
 		C963A78019437E06005A89D1 /* UI.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = UI.xcassets; sourceTree = "<group>"; };
@@ -368,7 +374,11 @@
 		63EDC06C1934DCF100278B84 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				63EDC04A1934DC1B00278B84 /* sing_the_gap.xcdatamodeld */,
+				C92D3261195F049300E2330D /* TBWCreation.h */,
+				C92D3262195F049300E2330D /* TBWCreation.m */,
+				C92D325E195F036800E2330D /* CoreDataStack.h */,
+				C92D325F195F036800E2330D /* CoreDataStack.m */,
+				C92D3258195F023E00E2330D /* sing_the_gap.xcdatamodeld */,
 				C995C6F3193B4AEE00D87BCD /* TBWGapSong.h */,
 				C995C6F4193B4AEE00D87BCD /* TBWGapSong.m */,
 			);
@@ -701,9 +711,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C92D325A195F023F00E2330D /* sing_the_gap.xcdatamodeld in Sources */,
 				C995CAEC193D13DA00D87BCD /* debug.cpp in Sources */,
 				63EDC0491934DC1B00278B84 /* TBWAppDelegate.m in Sources */,
-				63EDC04C1934DC1B00278B84 /* sing_the_gap.xcdatamodeld in Sources */,
 				C995CAF6193D13DA00D87BCD /* readclause.cpp in Sources */,
 				C995CAF9193D13DA00D87BCD /* synth_mbrola.cpp in Sources */,
 				C995CAF4193D13DA00D87BCD /* numbers.cpp in Sources */,
@@ -719,6 +729,7 @@
 				C995CAEE193D13DA00D87BCD /* espeak_command.cpp in Sources */,
 				C995CAFC193D13DA00D87BCD /* tr_languages.cpp in Sources */,
 				C995C6F1193B4A1900D87BCD /* TBWAudioManager.m in Sources */,
+				C92D3263195F049300E2330D /* TBWCreation.m in Sources */,
 				C995CAFD193D13DA00D87BCD /* translate.cpp in Sources */,
 				C995CAF5193D13DA00D87BCD /* phonemelist.cpp in Sources */,
 				C995CAF3193D13DA00D87BCD /* mbrowrap.cpp in Sources */,
@@ -727,6 +738,7 @@
 				C995CAF8193D13DA00D87BCD /* speak_lib.cpp in Sources */,
 				C995CAEA193D13DA00D87BCD /* ESpeakEngine.m in Sources */,
 				63290CF01950592700EBAF27 /* TBWMyCreationsViewController.m in Sources */,
+				C92D3260195F036800E2330D /* CoreDataStack.m in Sources */,
 				63EDC0451934DC1B00278B84 /* main.m in Sources */,
 				C995CAFB193D13DA00D87BCD /* synthesize.cpp in Sources */,
 				C995CB18193E80D300D87BCD /* TBWAudioPlayerConstants.m in Sources */,
@@ -979,14 +991,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		63EDC04A1934DC1B00278B84 /* sing_the_gap.xcdatamodeld */ = {
+		C92D3258195F023E00E2330D /* sing_the_gap.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				63EDC04B1934DC1B00278B84 /* sing_the_gap.xcdatamodel */,
+				C92D3259195F023F00E2330D /* sing_the_gap.xcdatamodel */,
 			);
-			currentVersion = 63EDC04B1934DC1B00278B84 /* sing_the_gap.xcdatamodel */;
-			name = sing_the_gap.xcdatamodeld;
-			path = ../sing_the_gap.xcdatamodeld;
+			currentVersion = C92D3259195F023F00E2330D /* sing_the_gap.xcdatamodel */;
+			path = sing_the_gap.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

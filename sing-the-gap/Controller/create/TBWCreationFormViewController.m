@@ -11,6 +11,8 @@
 #import "TBWRecordingService.h"
 #import "TBWAudioManager.h"
 #import "TBWRecordButton.h"
+#import "TBWCreation.h"
+
 
 #import  <AVFoundation/AVFoundation.h>
 @interface TBWCreationFormViewController ()<UIGestureRecognizerDelegate, TBWRecordingServiceDelegate>
@@ -22,7 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIView *step2WriteView;
 @property (weak, nonatomic) IBOutlet UIView *step2RecordView;
 @property (weak, nonatomic) IBOutlet UITextField *tfStep2Write;
-@property (weak, nonatomic) IBOutlet UILabel *tfStep4Name;
+@property (weak, nonatomic) IBOutlet UITextField *tfStep4Name;
 @property (weak, nonatomic) IBOutlet UIButton *btStep1Write;
 @property (weak, nonatomic) IBOutlet UIButton *btStep1Record;
 @property (weak, nonatomic) IBOutlet TBWRecordButton *btRecord;
@@ -169,7 +171,11 @@
 #pragma mark Step 5 actions
 ////////////////////////////////
 - (IBAction)onClickBuy:(id)sender {
-    [self buySong];
+    if([self.tfStep4Name.text isEqualToString:@""]){
+        [self showError:@"Please name your creation!"];
+    }else{
+        [self buySong];
+    }
 }
 
 ////////////////////////////////
@@ -234,6 +240,13 @@
         [[NSFileManager defaultManager] copyItemAtURL:sourceUrl toURL:destinationUrl error:nil];
     }
     
+    TBWCreation *creation = [self createNewCreationObject];
+    creation.gapSongId = self.gapSong.uid;
+    creation.name = self.tfStep4Name.text;
+    creation.fileName = fileName;
+    
+    [self save];
+    
 }
 
 ////////////////////////////////
@@ -293,7 +306,23 @@
 
     return path;
 }
-
+- (TBWCreation *)createNewCreationObject{
+    TBWCreation *creation = [NSEntityDescription insertNewObjectForEntityForName:@"TBWCreation"
+                                                inManagedObjectContext:[[CoreDataStack coreDataStack] managedObjectContext]];
+    return creation;
+}
+- (void) save{
+    NSManagedObjectContext *context  = [[CoreDataStack coreDataStack] managedObjectContext];
+    NSError *error;
+    if (![context save:&error])
+    {
+        NSLog(@"Error saving context");
+    }
+}
+- (void)showError:(NSString *)message{
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Uo!" message:message delegate:nil cancelButtonTitle:@"Understood" otherButtonTitles:nil];
+    [av show];
+}
 ////////////////////////////////////////////////////////////////
 #pragma mark - TBWRecordingServiceDelegate methods
 ////////////////////////////////////////////////////////////////
