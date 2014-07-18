@@ -23,4 +23,5 @@
 
 + (NSURLSessionDataTask *)retrieveGapSongsWithBlock:(void (^)(NSArray *gapSongs, NSError *error))block;
 + (NSURLSessionDataTask *)retrieveGapSongById:(NSString *)uid WithBlock:(void (^)(TBWGapSong *gapSong, NSError *error))block;
++ (NSURLSessionDownloadTask *) downloadGapSongFileWithGapsong:(TBWGapSong *)gapsong WithBlock:(void (^)(TBWGapSong *gapsong,NSURL *filePath, NSError *error))block;
 @end

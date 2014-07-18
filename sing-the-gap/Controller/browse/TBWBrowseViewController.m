@@ -92,10 +92,14 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:TBWAudioPlayerPauseNotification object:nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:TBWAudioPlayerHideNotification object:nil];
     
+    TBWGapSong *gs = [self.gapSongs objectAtIndex:[self.tableView indexPathForCell:cell].row];
+    [TBWGapSong downloadGapSongFileWithGapsong:gs WithBlock:^(TBWGapSong *gs, NSURL *filePath, NSError *error) {
+        TBWCreationFormViewController *cfvc = [[TBWCreationFormViewController alloc] init];
+        cfvc.gapSong = gs;
+        [self.navigationController pushViewController:cfvc animated:YES];
+    }];
     
-    TBWCreationFormViewController *cfvc = [[TBWCreationFormViewController alloc] init];
-    cfvc.gapSong = [self.gapSongs objectAtIndex:[self.tableView indexPathForCell:cell].row];
-    [self.navigationController pushViewController:cfvc animated:YES];
+    
 }
 - (void)TBWBrowseCellDidClickPlay:(TBWBrowseCell *)cell{
     TBWGapSong *gs = [self.gapSongs objectAtIndex:[self.tableView indexPathForCell:cell].row];

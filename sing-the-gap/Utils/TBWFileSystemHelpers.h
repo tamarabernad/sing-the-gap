@@ -12,3 +12,4 @@ NSString *RecordingsPath();
 NSString *GapSongsPath();
 NSString *CreationsTemporalPath();
 NSString *CreationsBaughtPath();
+BOOL doesFileExist(NSString *filePath);

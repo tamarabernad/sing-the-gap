@@ -30,7 +30,7 @@ NSString *CreationsTemporalPath(){
     
     NSURL *creationsDirectory = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:@"creations"] isDirectory:YES];
     [[NSFileManager defaultManager] createDirectoryAtURL:creationsDirectory withIntermediateDirectories:YES attributes:nil error:&error];
-    
+
     return [creationsDirectory path];
 }
 NSString *CreationsBaughtPath(){
@@ -40,4 +40,7 @@ NSString *CreationsBaughtPath(){
     [[NSFileManager defaultManager] createDirectoryAtURL:creationsDirectory withIntermediateDirectories:YES attributes:nil error:&error];
     
     return [creationsDirectory path];
+}
+BOOL doesFileExist(NSString *filePath){
+    return [[NSFileManager defaultManager] fileExistsAtPath:filePath];
 }

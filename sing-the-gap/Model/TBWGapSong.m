@@ -8,6 +8,7 @@
 
 #import "TBWGapSong.h"
 #import "TBWDataService.h"
+#import "AFHTTPRequestOperation.h"
 @implementation TBWGapSong
 
 
@@ -21,7 +22,7 @@
     self.title = [attributes valueForKeyPath:@"title"];
     self.type = [attributes valueForKeyPath:@"type"];
     self.url = [attributes valueForKeyPath:@"url"];
-    self.path = [attributes valueForKeyPath:@"path"];
+    self.path = [GapSongsPath() stringByAppendingPathComponent:[self.url lastPathComponent]];
     self.price = [[attributes valueForKeyPath:@"price"] integerValue];
     
     self.characters = (NSUInteger)[[attributes valueForKeyPath:@"characters"] integerValue];
@@ -66,5 +67,24 @@
             block(nil, error);
         }
     }];
+}
+
++ (NSURLSessionDownloadTask *) downloadGapSongFileWithGapsong:(TBWGapSong *)gapsong WithBlock:(void (^)(TBWGapSong *gapsong,NSURL *filePath, NSError *error))block
+{
+    gapsong.url = @"http://tamarabernad.com/sillysongs/song1.m4a";
+
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:gapsong.url]];
+    NSURLSessionDownloadTask *task = [[TBWDataService sharedClient] downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+        
+        return [NSURL fileURLWithPath:gapsong.path];
+        
+    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+        if(block){
+            block(gapsong, filePath,error);
+        }
+    }];
+    [task resume];
+    return task;
+    
 }
 @end
