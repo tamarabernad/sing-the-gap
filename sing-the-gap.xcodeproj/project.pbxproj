@@ -9,14 +9,7 @@
 /* Begin PBXBuildFile section */
 		4C0C3B743487424C8F049DE4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C019CD84D504415915C1B02 /* libPods.a */; };
 		50D69483F6334BFD9C360B07 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C019CD84D504415915C1B02 /* libPods.a */; };
-		63290CF01950592700EBAF27 /* TBWMyCreationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63290CEE1950592700EBAF27 /* TBWMyCreationsViewController.m */; };
-		63290CF11950592700EBAF27 /* TBWMyCreationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63290CEF1950592700EBAF27 /* TBWMyCreationsViewController.xib */; };
-		63290CF819505A3900EBAF27 /* TBWCreationFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63290CF619505A3900EBAF27 /* TBWCreationFormViewController.m */; };
-		63290CF919505A3900EBAF27 /* TBWCreationFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63290CF719505A3900EBAF27 /* TBWCreationFormViewController.xib */; };
-		63290CFE1950AEA100EBAF27 /* TBWRecordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 63290CFD1950AEA100EBAF27 /* TBWRecordButton.m */; };
 		63E324CB194EF55C00B3C07D /* TBWDataServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E324CA194EF55C00B3C07D /* TBWDataServiceTests.m */; };
-		63E324D5194F29B000B3C07D /* TBWBrowseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E324D4194F29B000B3C07D /* TBWBrowseCell.m */; };
-		63E324D7194F29C400B3C07D /* TBWBrowseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E324D6194F29C400B3C07D /* TBWBrowseCell.xib */; };
 		63EDC0371934DC1B00278B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDC0361934DC1B00278B84 /* Foundation.framework */; };
 		63EDC0391934DC1B00278B84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDC0381934DC1B00278B84 /* CoreGraphics.framework */; };
 		63EDC03B1934DC1B00278B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDC03A1934DC1B00278B84 /* UIKit.framework */; };
@@ -31,15 +24,9 @@
 		63EDC0581934DC1B00278B84 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDC03C1934DC1B00278B84 /* CoreData.framework */; };
 		63EDC0601934DC1B00278B84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63EDC05E1934DC1B00278B84 /* InfoPlist.strings */; };
 		63EDC0621934DC1B00278B84 /* sing_the_gapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EDC0611934DC1B00278B84 /* sing_the_gapTests.m */; };
-		63EDC0771934DD2E00278B84 /* TBWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EDC0751934DD2E00278B84 /* TBWHomeViewController.m */; };
-		63EDC0781934DD2E00278B84 /* TBWHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63EDC0761934DD2E00278B84 /* TBWHomeViewController.xib */; };
-		63EDC0801934DDC400278B84 /* TBWBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EDC07E1934DDC400278B84 /* TBWBrowseViewController.m */; };
-		63EDC0811934DDC400278B84 /* TBWBrowseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63EDC07F1934DDC400278B84 /* TBWBrowseViewController.xib */; };
 		C92D325A195F023F00E2330D /* sing_the_gap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C92D3258195F023E00E2330D /* sing_the_gap.xcdatamodeld */; };
 		C92D3260195F036800E2330D /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = C92D325F195F036800E2330D /* CoreDataStack.m */; };
 		C92D3263195F049300E2330D /* TBWCreation.m in Sources */ = {isa = PBXBuildFile; fileRef = C92D3262195F049300E2330D /* TBWCreation.m */; };
-		C92D3268195F092400E2330D /* TBWMyCreationsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C92D3266195F092400E2330D /* TBWMyCreationsCell.m */; };
-		C92D3269195F092400E2330D /* TBWMyCreationsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C92D3267195F092400E2330D /* TBWMyCreationsCell.xib */; };
 		C94262F019460C9F003F0087 /* TBWDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = C94262EF19460C9F003F0087 /* TBWDataService.m */; };
 		C963A78119437E06005A89D1 /* UI.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C963A78019437E06005A89D1 /* UI.xcassets */; };
 		C995C6F1193B4A1900D87BCD /* TBWAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C995C6F0193B4A1900D87BCD /* TBWAudioManager.m */; };
@@ -75,11 +62,24 @@
 		C995CB02193D13DA00D87BCD /* wavegen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C995CAE9193D13DA00D87BCD /* wavegen.cpp */; };
 		C995CB06193D140600D87BCD /* espeak-data in Resources */ = {isa = PBXBuildFile; fileRef = C995CB05193D140600D87BCD /* espeak-data */; };
 		C995CB0A193D1E5100D87BCD /* TBWRecordingService.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CB09193D1E5100D87BCD /* TBWRecordingService.m */; };
-		C995CB14193E773000D87BCD /* TBWAudioPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CB12193E773000D87BCD /* TBWAudioPlayerViewController.m */; };
-		C995CB15193E773000D87BCD /* TBWAudioPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C995CB13193E773000D87BCD /* TBWAudioPlayerViewController.xib */; };
-		C995CB18193E80D300D87BCD /* TBWAudioPlayerConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CB17193E80D300D87BCD /* TBWAudioPlayerConstants.m */; };
 		C99CD4FD19571F5F0087355D /* TBWFileSystemHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C99CD4FC19571F5F0087355D /* TBWFileSystemHelpers.m */; };
 		C99CD500195724080087355D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99CD4FF195724080087355D /* AVFoundation.framework */; };
+		E00841E21995137300BF62A3 /* TBWAudioPlayerConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E00841D21995137300BF62A3 /* TBWAudioPlayerConstants.m */; };
+		E00841E31995137300BF62A3 /* TBWAudioPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E00841D41995137300BF62A3 /* TBWAudioPlayerViewController.m */; };
+		E00841E41995137300BF62A3 /* TBWAudioPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E00841D51995137300BF62A3 /* TBWAudioPlayerViewController.xib */; };
+		E00841E51995137300BF62A3 /* TBWBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E00841D71995137300BF62A3 /* TBWBrowseViewController.m */; };
+		E00841E61995137300BF62A3 /* TBWBrowseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E00841D81995137300BF62A3 /* TBWBrowseViewController.xib */; };
+		E00841E71995137300BF62A3 /* TBWCreationFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E00841DA1995137300BF62A3 /* TBWCreationFormViewController.m */; };
+		E00841E81995137300BF62A3 /* TBWCreationFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E00841DB1995137300BF62A3 /* TBWCreationFormViewController.xib */; };
+		E00841E91995137300BF62A3 /* TBWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E00841DD1995137300BF62A3 /* TBWHomeViewController.m */; };
+		E00841EA1995137300BF62A3 /* TBWHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E00841DE1995137300BF62A3 /* TBWHomeViewController.xib */; };
+		E00841EB1995137300BF62A3 /* TBWMyCreationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E00841E01995137300BF62A3 /* TBWMyCreationsViewController.m */; };
+		E00841EC1995137300BF62A3 /* TBWMyCreationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E00841E11995137300BF62A3 /* TBWMyCreationsViewController.xib */; };
+		E00841F519951CC600BF62A3 /* TBWBrowseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E00841EE19951CC600BF62A3 /* TBWBrowseCell.m */; };
+		E00841F619951CC600BF62A3 /* TBWBrowseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E00841EF19951CC600BF62A3 /* TBWBrowseCell.xib */; };
+		E00841F719951CC600BF62A3 /* TBWMyCreationsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E00841F119951CC600BF62A3 /* TBWMyCreationsCell.m */; };
+		E00841F819951CC600BF62A3 /* TBWMyCreationsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E00841F219951CC600BF62A3 /* TBWMyCreationsCell.xib */; };
+		E00841F919951CC600BF62A3 /* TBWRecordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E00841F419951CC600BF62A3 /* TBWRecordButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,21 +94,10 @@
 
 /* Begin PBXFileReference section */
 		5C019CD84D504415915C1B02 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		63290CED1950592700EBAF27 /* TBWMyCreationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWMyCreationsViewController.h; sourceTree = "<group>"; };
-		63290CEE1950592700EBAF27 /* TBWMyCreationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWMyCreationsViewController.m; sourceTree = "<group>"; };
-		63290CEF1950592700EBAF27 /* TBWMyCreationsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWMyCreationsViewController.xib; sourceTree = "<group>"; };
-		63290CF519505A3900EBAF27 /* TBWCreationFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWCreationFormViewController.h; sourceTree = "<group>"; };
-		63290CF619505A3900EBAF27 /* TBWCreationFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWCreationFormViewController.m; sourceTree = "<group>"; };
-		63290CF719505A3900EBAF27 /* TBWCreationFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWCreationFormViewController.xib; sourceTree = "<group>"; };
-		63290CFC1950AEA100EBAF27 /* TBWRecordButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWRecordButton.h; sourceTree = "<group>"; };
-		63290CFD1950AEA100EBAF27 /* TBWRecordButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWRecordButton.m; sourceTree = "<group>"; };
 		63E324CA194EF55C00B3C07D /* TBWDataServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWDataServiceTests.m; sourceTree = "<group>"; };
 		63E324CC194EF73F00B3C07D /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		63E324CE194EFDE500B3C07D /* libPods-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AFNetworking.a"; path = "Pods/build/Debug-iphoneos/libPods-AFNetworking.a"; sourceTree = "<group>"; };
 		63E324D0194F008300B3C07D /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
-		63E324D3194F29B000B3C07D /* TBWBrowseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWBrowseCell.h; sourceTree = "<group>"; };
-		63E324D4194F29B000B3C07D /* TBWBrowseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWBrowseCell.m; sourceTree = "<group>"; };
-		63E324D6194F29C400B3C07D /* TBWBrowseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWBrowseCell.xib; sourceTree = "<group>"; };
 		63EDC0331934DC1B00278B84 /* sing-the-gap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sing-the-gap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EDC0361934DC1B00278B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		63EDC0381934DC1B00278B84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -126,21 +115,12 @@
 		63EDC05D1934DC1B00278B84 /* sing-the-gapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sing-the-gapTests-Info.plist"; sourceTree = "<group>"; };
 		63EDC05F1934DC1B00278B84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		63EDC0611934DC1B00278B84 /* sing_the_gapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sing_the_gapTests.m; sourceTree = "<group>"; };
-		63EDC0741934DD2E00278B84 /* TBWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWHomeViewController.h; sourceTree = "<group>"; };
-		63EDC0751934DD2E00278B84 /* TBWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWHomeViewController.m; sourceTree = "<group>"; };
-		63EDC0761934DD2E00278B84 /* TBWHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWHomeViewController.xib; sourceTree = "<group>"; };
-		63EDC07D1934DDC400278B84 /* TBWBrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWBrowseViewController.h; sourceTree = "<group>"; };
-		63EDC07E1934DDC400278B84 /* TBWBrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWBrowseViewController.m; sourceTree = "<group>"; };
-		63EDC07F1934DDC400278B84 /* TBWBrowseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWBrowseViewController.xib; sourceTree = "<group>"; };
 		65DFACA32083428BA307B345 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C92D3259195F023F00E2330D /* sing_the_gap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = sing_the_gap.xcdatamodel; sourceTree = "<group>"; };
 		C92D325E195F036800E2330D /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
 		C92D325F195F036800E2330D /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
 		C92D3261195F049300E2330D /* TBWCreation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWCreation.h; sourceTree = "<group>"; };
 		C92D3262195F049300E2330D /* TBWCreation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWCreation.m; sourceTree = "<group>"; };
-		C92D3265195F092400E2330D /* TBWMyCreationsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWMyCreationsCell.h; sourceTree = "<group>"; };
-		C92D3266195F092400E2330D /* TBWMyCreationsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWMyCreationsCell.m; sourceTree = "<group>"; };
-		C92D3267195F092400E2330D /* TBWMyCreationsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWMyCreationsCell.xib; sourceTree = "<group>"; };
 		C94262EE19460C9F003F0087 /* TBWDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWDataService.h; sourceTree = "<group>"; };
 		C94262EF19460C9F003F0087 /* TBWDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWDataService.m; sourceTree = "<group>"; };
 		C963A78019437E06005A89D1 /* UI.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = UI.xcassets; sourceTree = "<group>"; };
@@ -198,14 +178,34 @@
 		C995CB05193D140600D87BCD /* espeak-data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "espeak-data"; sourceTree = "<group>"; };
 		C995CB08193D1E5100D87BCD /* TBWRecordingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWRecordingService.h; sourceTree = "<group>"; };
 		C995CB09193D1E5100D87BCD /* TBWRecordingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWRecordingService.m; sourceTree = "<group>"; };
-		C995CB11193E773000D87BCD /* TBWAudioPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWAudioPlayerViewController.h; sourceTree = "<group>"; };
-		C995CB12193E773000D87BCD /* TBWAudioPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWAudioPlayerViewController.m; sourceTree = "<group>"; };
-		C995CB13193E773000D87BCD /* TBWAudioPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWAudioPlayerViewController.xib; sourceTree = "<group>"; };
-		C995CB16193E80D300D87BCD /* TBWAudioPlayerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWAudioPlayerConstants.h; sourceTree = "<group>"; };
-		C995CB17193E80D300D87BCD /* TBWAudioPlayerConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWAudioPlayerConstants.m; sourceTree = "<group>"; };
 		C99CD4FB19571F5F0087355D /* TBWFileSystemHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWFileSystemHelpers.h; sourceTree = "<group>"; };
 		C99CD4FC19571F5F0087355D /* TBWFileSystemHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWFileSystemHelpers.m; sourceTree = "<group>"; };
 		C99CD4FF195724080087355D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E00841D11995137300BF62A3 /* TBWAudioPlayerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWAudioPlayerConstants.h; sourceTree = "<group>"; };
+		E00841D21995137300BF62A3 /* TBWAudioPlayerConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWAudioPlayerConstants.m; sourceTree = "<group>"; };
+		E00841D31995137300BF62A3 /* TBWAudioPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWAudioPlayerViewController.h; sourceTree = "<group>"; };
+		E00841D41995137300BF62A3 /* TBWAudioPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWAudioPlayerViewController.m; sourceTree = "<group>"; };
+		E00841D51995137300BF62A3 /* TBWAudioPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWAudioPlayerViewController.xib; sourceTree = "<group>"; };
+		E00841D61995137300BF62A3 /* TBWBrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWBrowseViewController.h; sourceTree = "<group>"; };
+		E00841D71995137300BF62A3 /* TBWBrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWBrowseViewController.m; sourceTree = "<group>"; };
+		E00841D81995137300BF62A3 /* TBWBrowseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWBrowseViewController.xib; sourceTree = "<group>"; };
+		E00841D91995137300BF62A3 /* TBWCreationFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWCreationFormViewController.h; sourceTree = "<group>"; };
+		E00841DA1995137300BF62A3 /* TBWCreationFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWCreationFormViewController.m; sourceTree = "<group>"; };
+		E00841DB1995137300BF62A3 /* TBWCreationFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWCreationFormViewController.xib; sourceTree = "<group>"; };
+		E00841DC1995137300BF62A3 /* TBWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWHomeViewController.h; sourceTree = "<group>"; };
+		E00841DD1995137300BF62A3 /* TBWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWHomeViewController.m; sourceTree = "<group>"; };
+		E00841DE1995137300BF62A3 /* TBWHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWHomeViewController.xib; sourceTree = "<group>"; };
+		E00841DF1995137300BF62A3 /* TBWMyCreationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWMyCreationsViewController.h; sourceTree = "<group>"; };
+		E00841E01995137300BF62A3 /* TBWMyCreationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWMyCreationsViewController.m; sourceTree = "<group>"; };
+		E00841E11995137300BF62A3 /* TBWMyCreationsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWMyCreationsViewController.xib; sourceTree = "<group>"; };
+		E00841ED19951CC600BF62A3 /* TBWBrowseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWBrowseCell.h; sourceTree = "<group>"; };
+		E00841EE19951CC600BF62A3 /* TBWBrowseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWBrowseCell.m; sourceTree = "<group>"; };
+		E00841EF19951CC600BF62A3 /* TBWBrowseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWBrowseCell.xib; sourceTree = "<group>"; };
+		E00841F019951CC600BF62A3 /* TBWMyCreationsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWMyCreationsCell.h; sourceTree = "<group>"; };
+		E00841F119951CC600BF62A3 /* TBWMyCreationsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWMyCreationsCell.m; sourceTree = "<group>"; };
+		E00841F219951CC600BF62A3 /* TBWMyCreationsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWMyCreationsCell.xib; sourceTree = "<group>"; };
+		E00841F319951CC600BF62A3 /* TBWRecordButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWRecordButton.h; sourceTree = "<group>"; };
+		E00841F419951CC600BF62A3 /* TBWRecordButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWRecordButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,45 +237,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		63290CEB195058F800EBAF27 /* create */ = {
-			isa = PBXGroup;
-			children = (
-				63290CF519505A3900EBAF27 /* TBWCreationFormViewController.h */,
-				63290CF619505A3900EBAF27 /* TBWCreationFormViewController.m */,
-				63290CF719505A3900EBAF27 /* TBWCreationFormViewController.xib */,
-			);
-			path = create;
-			sourceTree = "<group>";
-		};
-		63290CEC195058F800EBAF27 /* mycreations */ = {
-			isa = PBXGroup;
-			children = (
-				63290CED1950592700EBAF27 /* TBWMyCreationsViewController.h */,
-				63290CEE1950592700EBAF27 /* TBWMyCreationsViewController.m */,
-				63290CEF1950592700EBAF27 /* TBWMyCreationsViewController.xib */,
-			);
-			path = mycreations;
-			sourceTree = "<group>";
-		};
-		63290CFB1950AE8200EBAF27 /* create */ = {
-			isa = PBXGroup;
-			children = (
-				63290CFC1950AEA100EBAF27 /* TBWRecordButton.h */,
-				63290CFD1950AEA100EBAF27 /* TBWRecordButton.m */,
-			);
-			path = create;
-			sourceTree = "<group>";
-		};
-		63E324D2194F298C00B3C07D /* browse */ = {
-			isa = PBXGroup;
-			children = (
-				63E324D3194F29B000B3C07D /* TBWBrowseCell.h */,
-				63E324D4194F29B000B3C07D /* TBWBrowseCell.m */,
-				63E324D6194F29C400B3C07D /* TBWBrowseCell.xib */,
-			);
-			path = browse;
-			sourceTree = "<group>";
-		};
 		63EDC02A1934DC1B00278B84 = {
 			isa = PBXGroup;
 			children = (
@@ -366,12 +327,23 @@
 		63EDC06B1934DCF100278B84 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				63290CEB195058F800EBAF27 /* create */,
-				63290CEC195058F800EBAF27 /* mycreations */,
-				C995CB10193E771200D87BCD /* player */,
-				63EDC0791934DD7F00278B84 /* browse */,
-				63EDC07A1934DD7F00278B84 /* categories */,
-				63EDC0731934DD2E00278B84 /* home */,
+				E00841D11995137300BF62A3 /* TBWAudioPlayerConstants.h */,
+				E00841D21995137300BF62A3 /* TBWAudioPlayerConstants.m */,
+				E00841D31995137300BF62A3 /* TBWAudioPlayerViewController.h */,
+				E00841D41995137300BF62A3 /* TBWAudioPlayerViewController.m */,
+				E00841D51995137300BF62A3 /* TBWAudioPlayerViewController.xib */,
+				E00841D61995137300BF62A3 /* TBWBrowseViewController.h */,
+				E00841D71995137300BF62A3 /* TBWBrowseViewController.m */,
+				E00841D81995137300BF62A3 /* TBWBrowseViewController.xib */,
+				E00841D91995137300BF62A3 /* TBWCreationFormViewController.h */,
+				E00841DA1995137300BF62A3 /* TBWCreationFormViewController.m */,
+				E00841DB1995137300BF62A3 /* TBWCreationFormViewController.xib */,
+				E00841DC1995137300BF62A3 /* TBWHomeViewController.h */,
+				E00841DD1995137300BF62A3 /* TBWHomeViewController.m */,
+				E00841DE1995137300BF62A3 /* TBWHomeViewController.xib */,
+				E00841DF1995137300BF62A3 /* TBWMyCreationsViewController.h */,
+				E00841E01995137300BF62A3 /* TBWMyCreationsViewController.m */,
+				E00841E11995137300BF62A3 /* TBWMyCreationsViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -393,48 +365,16 @@
 		63EDC06D1934DCF100278B84 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C92D3264195F08F300E2330D /* mycreations */,
-				63290CFB1950AE8200EBAF27 /* create */,
-				63E324D2194F298C00B3C07D /* browse */,
+				E00841ED19951CC600BF62A3 /* TBWBrowseCell.h */,
+				E00841EE19951CC600BF62A3 /* TBWBrowseCell.m */,
+				E00841EF19951CC600BF62A3 /* TBWBrowseCell.xib */,
+				E00841F019951CC600BF62A3 /* TBWMyCreationsCell.h */,
+				E00841F119951CC600BF62A3 /* TBWMyCreationsCell.m */,
+				E00841F219951CC600BF62A3 /* TBWMyCreationsCell.xib */,
+				E00841F319951CC600BF62A3 /* TBWRecordButton.h */,
+				E00841F419951CC600BF62A3 /* TBWRecordButton.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		63EDC0731934DD2E00278B84 /* home */ = {
-			isa = PBXGroup;
-			children = (
-				63EDC0741934DD2E00278B84 /* TBWHomeViewController.h */,
-				63EDC0751934DD2E00278B84 /* TBWHomeViewController.m */,
-				63EDC0761934DD2E00278B84 /* TBWHomeViewController.xib */,
-			);
-			path = home;
-			sourceTree = "<group>";
-		};
-		63EDC0791934DD7F00278B84 /* browse */ = {
-			isa = PBXGroup;
-			children = (
-				63EDC07D1934DDC400278B84 /* TBWBrowseViewController.h */,
-				63EDC07E1934DDC400278B84 /* TBWBrowseViewController.m */,
-				63EDC07F1934DDC400278B84 /* TBWBrowseViewController.xib */,
-			);
-			path = browse;
-			sourceTree = "<group>";
-		};
-		63EDC07A1934DD7F00278B84 /* categories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = categories;
-			sourceTree = "<group>";
-		};
-		C92D3264195F08F300E2330D /* mycreations */ = {
-			isa = PBXGroup;
-			children = (
-				C92D3265195F092400E2330D /* TBWMyCreationsCell.h */,
-				C92D3266195F092400E2330D /* TBWMyCreationsCell.m */,
-				C92D3267195F092400E2330D /* TBWMyCreationsCell.xib */,
-			);
-			path = mycreations;
 			sourceTree = "<group>";
 		};
 		C995C6EE193B48F800D87BCD /* Services */ = {
@@ -535,18 +475,6 @@
 			path = Libraries;
 			sourceTree = "<group>";
 		};
-		C995CB10193E771200D87BCD /* player */ = {
-			isa = PBXGroup;
-			children = (
-				C995CB11193E773000D87BCD /* TBWAudioPlayerViewController.h */,
-				C995CB12193E773000D87BCD /* TBWAudioPlayerViewController.m */,
-				C995CB13193E773000D87BCD /* TBWAudioPlayerViewController.xib */,
-				C995CB16193E80D300D87BCD /* TBWAudioPlayerConstants.h */,
-				C995CB17193E80D300D87BCD /* TBWAudioPlayerConstants.m */,
-			);
-			path = player;
-			sourceTree = "<group>";
-		};
 		C99CD4FA19571F140087355D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -638,15 +566,15 @@
 			files = (
 				63EDC0431934DC1B00278B84 /* InfoPlist.strings in Resources */,
 				63EDC04E1934DC1B00278B84 /* Images.xcassets in Resources */,
-				63290CF11950592700EBAF27 /* TBWMyCreationsViewController.xib in Resources */,
-				63EDC0811934DDC400278B84 /* TBWBrowseViewController.xib in Resources */,
-				C92D3269195F092400E2330D /* TBWMyCreationsCell.xib in Resources */,
-				C995CB15193E773000D87BCD /* TBWAudioPlayerViewController.xib in Resources */,
-				63290CF919505A3900EBAF27 /* TBWCreationFormViewController.xib in Resources */,
+				E00841E61995137300BF62A3 /* TBWBrowseViewController.xib in Resources */,
 				C963A78119437E06005A89D1 /* UI.xcassets in Resources */,
-				63EDC0781934DD2E00278B84 /* TBWHomeViewController.xib in Resources */,
-				63E324D7194F29C400B3C07D /* TBWBrowseCell.xib in Resources */,
+				E00841F819951CC600BF62A3 /* TBWMyCreationsCell.xib in Resources */,
+				E00841E41995137300BF62A3 /* TBWAudioPlayerViewController.xib in Resources */,
+				E00841E81995137300BF62A3 /* TBWCreationFormViewController.xib in Resources */,
+				E00841EC1995137300BF62A3 /* TBWMyCreationsViewController.xib in Resources */,
+				E00841EA1995137300BF62A3 /* TBWHomeViewController.xib in Resources */,
 				C995CB06193D140600D87BCD /* espeak-data in Resources */,
+				E00841F619951CC600BF62A3 /* TBWBrowseCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,9 +656,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E00841E71995137300BF62A3 /* TBWCreationFormViewController.m in Sources */,
+				E00841F919951CC600BF62A3 /* TBWRecordButton.m in Sources */,
 				C92D325A195F023F00E2330D /* sing_the_gap.xcdatamodeld in Sources */,
 				C995CAEC193D13DA00D87BCD /* debug.cpp in Sources */,
 				63EDC0491934DC1B00278B84 /* TBWAppDelegate.m in Sources */,
+				E00841EB1995137300BF62A3 /* TBWMyCreationsViewController.m in Sources */,
 				C995CAF6193D13DA00D87BCD /* readclause.cpp in Sources */,
 				C995CAF9193D13DA00D87BCD /* synth_mbrola.cpp in Sources */,
 				C995CAF4193D13DA00D87BCD /* numbers.cpp in Sources */,
@@ -742,31 +673,28 @@
 				C995CAEB193D13DA00D87BCD /* compiledict.cpp in Sources */,
 				C995C700193CFDE900D87BCD /* TBWTextToSpeechService.m in Sources */,
 				C995CB0A193D1E5100D87BCD /* TBWRecordingService.m in Sources */,
-				63E324D5194F29B000B3C07D /* TBWBrowseCell.m in Sources */,
+				E00841E51995137300BF62A3 /* TBWBrowseViewController.m in Sources */,
 				C995CAEE193D13DA00D87BCD /* espeak_command.cpp in Sources */,
-				C92D3268195F092400E2330D /* TBWMyCreationsCell.m in Sources */,
+				E00841E31995137300BF62A3 /* TBWAudioPlayerViewController.m in Sources */,
+				E00841E91995137300BF62A3 /* TBWHomeViewController.m in Sources */,
 				C995CAFC193D13DA00D87BCD /* tr_languages.cpp in Sources */,
+				E00841F519951CC600BF62A3 /* TBWBrowseCell.m in Sources */,
 				C995C6F1193B4A1900D87BCD /* TBWAudioManager.m in Sources */,
 				C92D3263195F049300E2330D /* TBWCreation.m in Sources */,
 				C995CAFD193D13DA00D87BCD /* translate.cpp in Sources */,
 				C995CAF5193D13DA00D87BCD /* phonemelist.cpp in Sources */,
 				C995CAF3193D13DA00D87BCD /* mbrowrap.cpp in Sources */,
-				63EDC0801934DDC400278B84 /* TBWBrowseViewController.m in Sources */,
 				C995CB02193D13DA00D87BCD /* wavegen.cpp in Sources */,
 				C995CAF8193D13DA00D87BCD /* speak_lib.cpp in Sources */,
 				C995CAEA193D13DA00D87BCD /* ESpeakEngine.m in Sources */,
-				63290CF01950592700EBAF27 /* TBWMyCreationsViewController.m in Sources */,
 				C92D3260195F036800E2330D /* CoreDataStack.m in Sources */,
 				63EDC0451934DC1B00278B84 /* main.m in Sources */,
 				C995CAFB193D13DA00D87BCD /* synthesize.cpp in Sources */,
-				C995CB18193E80D300D87BCD /* TBWAudioPlayerConstants.m in Sources */,
+				E00841E21995137300BF62A3 /* TBWAudioPlayerConstants.m in Sources */,
+				E00841F719951CC600BF62A3 /* TBWMyCreationsCell.m in Sources */,
 				C94262F019460C9F003F0087 /* TBWDataService.m in Sources */,
-				C995CB14193E773000D87BCD /* TBWAudioPlayerViewController.m in Sources */,
-				63290CF819505A3900EBAF27 /* TBWCreationFormViewController.m in Sources */,
 				C99CD4FD19571F5F0087355D /* TBWFileSystemHelpers.m in Sources */,
-				63EDC0771934DD2E00278B84 /* TBWHomeViewController.m in Sources */,
 				C995CB00193D13DA00D87BCD /* wave_pulse.cpp in Sources */,
-				63290CFE1950AEA100EBAF27 /* TBWRecordButton.m in Sources */,
 				C995CAF0193D13DA00D87BCD /* fifo.cpp in Sources */,
 				C995CAF1193D13DA00D87BCD /* intonation.cpp in Sources */,
 				C995CAED193D13DA00D87BCD /* dictionary.cpp in Sources */,
