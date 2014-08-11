@@ -11,5 +11,5 @@
 
 
 @interface TBWAudioPlayerViewController : UIViewController
-
+@property (nonatomic, strong) NSLayoutConstraint *verticalConstraint;
 @end

@@ -33,43 +33,17 @@
     [self addChildViewController:self.audioPlayer];
     [self.view addSubview:self.audioPlayer.view];
     [self.audioPlayer didMoveToParentViewController:self];
-//    [self.audioPlayer.view setFrame:CGRectMake(0, 0, self.audioPlayer.view.frame.size.width, self.audioPlayer.view.frame.size.height)];
     [self.view bringSubviewToFront:self.audioPlayer.view];
-    id metrics = @{@"margin": @0};
-
     
-//    [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
-    
-
-    
-    
-//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[audioPlayer(100)]"
-//                                                                      options:0
-//                                                                      metrics:metrics
-//                                                                        views:@{@"audioPlayer":self.audioPlayer.view}]];
-    
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[audioPlayer]"
-                                                                      options:0
-                                                                      metrics:metrics
-                                                                        views:@{@"audioPlayer":self.audioPlayer.view}]];
+    NSLayoutConstraint *verticalAudioplayerConstraint =[NSLayoutConstraint constraintWithItem:self.audioPlayer.view attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
+    [self.audioPlayer setVerticalConstraint:verticalAudioplayerConstraint];
+    [self.view addConstraint:verticalAudioplayerConstraint];
     
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[audioPlayer]-0-|"
-                                                                      options:0
-                                                                      metrics:metrics
+                                                                      options:NSLayoutFormatAlignAllBaseline
+                                                                      metrics:nil
                                                                         views:@{@"audioPlayer":self.audioPlayer.view}]];
-
-//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[audioPlayer]-|"
-//                                                                      options:0
-//                                                                      metrics:metrics
-//                                                                        views:@{@"audioPlayer":self.audioPlayer.view}]];
-//    
-//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[audioPlayer(122)]"
-//                                                                      options:0
-//                                                                      metrics:metrics
-//                                                                        views:@{@"audioPlayer":self.audioPlayer.view}]];
     
-//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[audioPlayer]-0-|" options:0 metrics:metrics views:@{@"audioPlayer":self.audioPlayer.view}]];
-
 }
 
 - (void)didReceiveMemoryWarning {

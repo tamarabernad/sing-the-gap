@@ -51,7 +51,7 @@ typedef enum {
                                                    object:nil];
 
         
-//        self.playerLayoutState = kHidden;
+        self.playerLayoutState = kHidden;
     }
     
     return self;
@@ -62,29 +62,27 @@ typedef enum {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     self.view.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[audioPlayer(>=122)]"
+    
+    NSString *constrantsVF = [NSString stringWithFormat:@"V:[audioPlayer(%li)]", (long)[self getViewHeight]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:constrantsVF
                                                                                   options:0
                                                                                   metrics:nil
                                                                                     views:@{@"audioPlayer":self.view}]];
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 - (void)viewDidAppear:(BOOL)animated{
-//    self.playerLayoutState = kClosed;
-
-    [self layout];
+    [self setLayoutState:kClosed Animated:NO];
 }
 - (void)viewDidDisappear:(BOOL)animated{
-//    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 ////////////////////////////////////////////////////////////////////////
 #pragma mark - Notification Handling
@@ -92,7 +90,7 @@ typedef enum {
 
 - (void) receivePlayNotification:(NSNotification *) notification
 {
-    NSString *contentUrl = [notification.userInfo objectForKey:@"contentUrl"];
+//    NSString *contentUrl = [notification.userInfo objectForKey:@"contentUrl"];
     [self play];
 }
 - (void) receivePauseNotification:(NSNotification *) notification
@@ -126,48 +124,49 @@ typedef enum {
     
 }
 - (void)open{
-//    [self setLayoutState:kOpen Animated:YES];
+    [self setLayoutState:kOpen Animated:YES];
 }
 - (void)close{
-//    [self setLayoutState:kClosed Animated:YES];
+    [self setLayoutState:kClosed Animated:YES];
 }
 - (void)hide{
-//    [self setLayoutState:kHidden Animated:YES];
+    [self setLayoutState:kHidden Animated:YES];
 }
 
 ////////////////////////////////////////////////////////////////////////
 #pragma mark - Private methods
 ////////////////////////////////////////////////////////////////////////
-- (CGRect) getEndFrameForState:(AudioPlayerLayoutState)state{
-    CGRect frame = self.view.frame;
+- (NSInteger)getViewHeight{
+    return 122;
+}
+
+- (NSInteger) getLayoutConstantForState:(AudioPlayerLayoutState)state{
+    NSInteger constant;
     switch (self.playerLayoutState) {
         case kClosed:
         case kClosedInteractively:
-            frame.origin.y = [[UIScreen mainScreen] bounds].size.height - 56;
+            constant = [self getViewHeight];
             break;
         case kOpen:
-            frame.origin.y = [[UIScreen mainScreen] bounds].size.height - frame.size.height;
+            constant = 0;
             break;
         case kHidden:
-            frame.origin.y = [[UIScreen mainScreen] bounds].size.height;
+            constant = 100;
             break;
     }
-    return frame;
-
+    return constant;
+    
 }
-
-- (void)layout{
-//    [self.view setFrame:[self getEndFrameForState:self.playerLayoutState]];
-}
-
 - (void) setLayoutState:(AudioPlayerLayoutState)state Animated:(BOOL) animated{
     self.playerLayoutState = state;
+    
+    self.verticalConstraint.constant = [self getLayoutConstantForState:self.playerLayoutState];
     if(animated){
-        [UIView animateWithDuration:0.5 animations:^{
-            [self.view setFrame:[self getEndFrameForState:self.playerLayoutState]];
+        [UIView animateWithDuration: 0.5 animations:^{
+            [self.view.superview layoutIfNeeded];
         }];
     }else{
-        [self.view setFrame:[self getEndFrameForState:self.playerLayoutState]];
+        [self.view.superview layoutIfNeeded];
     }
 }
 @end
