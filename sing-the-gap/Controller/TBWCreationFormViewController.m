@@ -101,10 +101,40 @@
                                            action:@selector(hideKeyBoard)];
     
     [self.view addGestureRecognizer:tapGesture];
+    
+    
+    [self.scrollview addSubview:self.step1View];
+    [self.scrollview addSubview:self.step2View];
+    [self.scrollview addSubview:self.step3View];
+    [self.scrollview addSubview:self.step4View];
+    [self.scrollview addSubview:self.step5View];
+    
+    [self.scrollview setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.step1View setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.step2View setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.step3View setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.step4View setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.step5View setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    NSDictionary *viewsDictionary =@{@"step1":self.step1View,
+                                     @"step2":self.step2View,
+                                     @"step3":self.step3View,
+                                     @"step4":self.step4View,
+                                     @"step5":self.step5View};
+    
+    NSDictionary *metricsDictionary = @{@"stepSpacing":@5, @"stepHeight":@100};
+    
+    [self.scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[step1(stepHeight)]-stepSpacing-[step2(stepHeight)]-stepSpacing-[step3(stepHeight)]-stepSpacing-[step4(stepHeight)]-stepSpacing-[step5(stepHeight)]|"
+                                                                            options:0
+                                                                            metrics:metricsDictionary
+                                                                              views:viewsDictionary]];
+    
+    [self.scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[step1]|" options:0 metrics:nil views:viewsDictionary]];
+    [self.scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[step2]|" options:0 metrics:nil views:viewsDictionary]];
+    [self.scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[step3]|" options:0 metrics:nil views:viewsDictionary]];
+    [self.scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[step4]|" options:0 metrics:nil views:viewsDictionary]];
+    [self.scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[step5]|" options:0 metrics:nil views:viewsDictionary]];
 
-}
-- (void)viewDidAppear:(BOOL)animated{
-        [self.scrollview setContentSize:CGSizeMake(self.scrollview.frame.size.width, self.step5View.frame.origin.y+self.step5View.frame.size.height)];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -115,7 +145,9 @@
 ////////////////////////////////
 #pragma mark - Actions
 ////////////////////////////////
-
+- (void)viewDidAppear:(BOOL)animated{
+    NSLog(@"stop");
+}
 ////////////////////////////////
 #pragma mark Step 1 actions
 ////////////////////////////////
@@ -278,12 +310,12 @@
 - (void)updateStep{
     switch (self.currentStep) {
         case 1:
-        case 2:
+        case 2:            
             self.step1View.hidden = NO;
             self.step2View.hidden = NO;
-            self.step3View.hidden = YES;
-            self.step4View.hidden = YES;
-            self.step5View.hidden = YES;
+            self.step3View.hidden = NO;
+            self.step4View.hidden = NO;
+            self.step5View.hidden = NO;
             break;
         case 3:
         case 4:
