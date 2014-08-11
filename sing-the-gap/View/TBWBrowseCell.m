@@ -29,6 +29,7 @@
 }
 - (void)awakeFromNib{
     [self setBackgroundColor:[UIColor clearColor]];
+//    [self setTranslatesAutoresizingMaskIntoConstraints:NO];
 }
 - (void)setTitle:(NSString *)title {
     [self.lbTitle setText:title];

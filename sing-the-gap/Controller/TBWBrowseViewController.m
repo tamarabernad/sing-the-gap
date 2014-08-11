@@ -33,6 +33,18 @@
     [super viewDidLoad];
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
     
+    self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
+//    NSDictionary *viewsDictionary = @{@"tableView" : self.tableView };
+//    
+//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[tableView]|"
+//                                                                      options:kNilOptions
+//                                                                      metrics:nil
+//                                                                        views:viewsDictionary]];
+//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[tableView]|"
+//                                                                      options:kNilOptions
+//                                                                      metrics:nil
+//                                                                        views:viewsDictionary]];
+    
     [self.tableView setDataSource:self];
     [self.tableView setDelegate:self];
 }
