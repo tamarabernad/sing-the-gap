@@ -51,7 +51,7 @@ typedef enum {
                                                    object:nil];
 
         
-        self.playerLayoutState = kHidden;
+//        self.playerLayoutState = kHidden;
     }
     
     return self;
@@ -63,6 +63,11 @@ typedef enum {
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.view.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[audioPlayer(>=122)]"
+                                                                                  options:0
+                                                                                  metrics:nil
+                                                                                    views:@{@"audioPlayer":self.view}]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,7 +79,7 @@ typedef enum {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 - (void)viewDidAppear:(BOOL)animated{
-    self.playerLayoutState = kClosed;
+//    self.playerLayoutState = kClosed;
 
     [self layout];
 }
@@ -121,13 +126,13 @@ typedef enum {
     
 }
 - (void)open{
-    [self setLayoutState:kOpen Animated:YES];
+//    [self setLayoutState:kOpen Animated:YES];
 }
 - (void)close{
-    [self setLayoutState:kClosed Animated:YES];
+//    [self setLayoutState:kClosed Animated:YES];
 }
 - (void)hide{
-    [self setLayoutState:kHidden Animated:YES];
+//    [self setLayoutState:kHidden Animated:YES];
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -152,7 +157,7 @@ typedef enum {
 }
 
 - (void)layout{
-    [self.view setFrame:[self getEndFrameForState:self.playerLayoutState]];
+//    [self.view setFrame:[self getEndFrameForState:self.playerLayoutState]];
 }
 
 - (void) setLayoutState:(AudioPlayerLayoutState)state Animated:(BOOL) animated{

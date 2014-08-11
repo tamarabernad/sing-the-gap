@@ -11,6 +11,7 @@
 #import <HockeySDK/HockeySDK.h>
 #import "TBWAudioManager.h"
 #import "TBWAudioPlayerViewController.h"
+#import "TBWMainViewController.h"
 
 @interface TBWAppDelegate()
 @property (nonatomic, strong) TBWAudioPlayerViewController *audioPlayer;
@@ -33,19 +34,24 @@
     [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation];
     
     
+    TBWMainViewController *vc = [[TBWMainViewController alloc] init];
     
-    TBWHomeViewController *hvc = [[TBWHomeViewController alloc] init];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:hvc];
-    [nc setNavigationBarHidden:YES];
+//    TBWHomeViewController *hvc = [[TBWHomeViewController alloc] init];
+//    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:hvc];
+//    [nc setNavigationBarHidden:YES];
+//    
+//    [nc willMoveToParentViewController:vc];
+//    [vc.view addSubview:nc.view];
+//    [vc addChildViewController:nc];
+//    [nc didMoveToParentViewController:vc];
     
-    self.audioPlayer = [[TBWAudioPlayerViewController alloc] init];
-//    [nc addChildViewController:apvc];
-//    [nc.view addSubview:apvc.view];
-//    [apvc.view setBackgroundColor:[UIColor clearColor]];
-//    [apvc didMoveToParentViewController:nc];
+//    self.audioPlayer = [[TBWAudioPlayerViewController alloc] init];
+//    [self.audioPlayer willMoveToParentViewController:vc];
+//    [vc addChildViewController:self.audioPlayer];
+//    [vc.view addSubview:self.audioPlayer.view];
+//    [self.audioPlayer didMoveToParentViewController:vc];
     
-    [self.window setRootViewController:nc];
-    [self.window addSubview:self.audioPlayer.view];
+    [self.window setRootViewController:vc];
 
     return YES;
 }

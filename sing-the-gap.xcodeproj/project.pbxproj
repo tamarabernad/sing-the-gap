@@ -80,6 +80,8 @@
 		E00841F719951CC600BF62A3 /* TBWMyCreationsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E00841F119951CC600BF62A3 /* TBWMyCreationsCell.m */; };
 		E00841F819951CC600BF62A3 /* TBWMyCreationsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E00841F219951CC600BF62A3 /* TBWMyCreationsCell.xib */; };
 		E00841F919951CC600BF62A3 /* TBWRecordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E00841F419951CC600BF62A3 /* TBWRecordButton.m */; };
+		E082779C199662CA006E220E /* TBWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E082779A199662CA006E220E /* TBWMainViewController.m */; };
+		E082779D199662CA006E220E /* TBWMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E082779B199662CA006E220E /* TBWMainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -206,6 +208,9 @@
 		E00841F219951CC600BF62A3 /* TBWMyCreationsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWMyCreationsCell.xib; sourceTree = "<group>"; };
 		E00841F319951CC600BF62A3 /* TBWRecordButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWRecordButton.h; sourceTree = "<group>"; };
 		E00841F419951CC600BF62A3 /* TBWRecordButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWRecordButton.m; sourceTree = "<group>"; };
+		E0827799199662CA006E220E /* TBWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWMainViewController.h; sourceTree = "<group>"; };
+		E082779A199662CA006E220E /* TBWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWMainViewController.m; sourceTree = "<group>"; };
+		E082779B199662CA006E220E /* TBWMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWMainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,6 +349,9 @@
 				E00841DF1995137300BF62A3 /* TBWMyCreationsViewController.h */,
 				E00841E01995137300BF62A3 /* TBWMyCreationsViewController.m */,
 				E00841E11995137300BF62A3 /* TBWMyCreationsViewController.xib */,
+				E0827799199662CA006E220E /* TBWMainViewController.h */,
+				E082779A199662CA006E220E /* TBWMainViewController.m */,
+				E082779B199662CA006E220E /* TBWMainViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -571,6 +579,7 @@
 				E00841F819951CC600BF62A3 /* TBWMyCreationsCell.xib in Resources */,
 				E00841E41995137300BF62A3 /* TBWAudioPlayerViewController.xib in Resources */,
 				E00841E81995137300BF62A3 /* TBWCreationFormViewController.xib in Resources */,
+				E082779D199662CA006E220E /* TBWMainViewController.xib in Resources */,
 				E00841EC1995137300BF62A3 /* TBWMyCreationsViewController.xib in Resources */,
 				E00841EA1995137300BF62A3 /* TBWHomeViewController.xib in Resources */,
 				C995CB06193D140600D87BCD /* espeak-data in Resources */,
@@ -665,6 +674,7 @@
 				C995CAF6193D13DA00D87BCD /* readclause.cpp in Sources */,
 				C995CAF9193D13DA00D87BCD /* synth_mbrola.cpp in Sources */,
 				C995CAF4193D13DA00D87BCD /* numbers.cpp in Sources */,
+				E082779C199662CA006E220E /* TBWMainViewController.m in Sources */,
 				C995CAFF193D13DA00D87BCD /* wave.cpp in Sources */,
 				C995CAF2193D13DA00D87BCD /* klatt.cpp in Sources */,
 				C995CAF7193D13DA00D87BCD /* setlengths.cpp in Sources */,

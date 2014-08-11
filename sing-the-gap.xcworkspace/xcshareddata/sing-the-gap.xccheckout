@@ -10,29 +10,29 @@
 	<string>sing-the-gap</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>5061257A-28CD-45F8-ADFD-398045E79CED</key>
+		<key>BB8A859CAF6346E3FC7849254C8C97CF37392C39</key>
 		<string>https://github.com/tamarinda/sing-the-gap.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>sing-the-gap.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>5061257A-28CD-45F8-ADFD-398045E79CED</key>
+		<key>BB8A859CAF6346E3FC7849254C8C97CF37392C39</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/tamarinda/sing-the-gap.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>5061257A-28CD-45F8-ADFD-398045E79CED</string>
+	<string>BB8A859CAF6346E3FC7849254C8C97CF37392C39</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>5061257A-28CD-45F8-ADFD-398045E79CED</string>
+			<string>BB8A859CAF6346E3FC7849254C8C97CF37392C39</string>
 			<key>IDESourceControlWCCName</key>
 			<string>sing-the-gap</string>
 		</dict>
