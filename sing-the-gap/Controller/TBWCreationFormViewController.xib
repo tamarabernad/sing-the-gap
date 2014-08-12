@@ -11,13 +11,11 @@
                 <outlet property="btStep1Write" destination="I05-ON-LUy" id="y3b-XB-OOg"/>
                 <outlet property="scrollview" destination="Urt-ax-TTl" id="nOX-MD-2o4"/>
                 <outlet property="step1View" destination="swE-j7-jWY" id="qFJ-Hy-VvO"/>
-                <outlet property="step2RecordView" destination="kWn-Mc-DWE" id="hyv-0B-655"/>
-                <outlet property="step2View" destination="b17-cc-ZSc" id="waL-zk-iek"/>
-                <outlet property="step2WriteView" destination="WAK-2x-hBm" id="QEt-61-Ksk"/>
+                <outlet property="step2Record" destination="b17-cc-ZSc" id="saL-XS-f8h"/>
+                <outlet property="step2Write" destination="yTC-sV-Mde" id="rGK-am-6fB"/>
                 <outlet property="step3View" destination="Ca3-aS-aJG" id="ZTb-DG-B19"/>
                 <outlet property="step4View" destination="AcE-bU-umV" id="4cH-Vt-qso"/>
                 <outlet property="step5View" destination="Jve-CS-mjq" id="cR5-do-P8w"/>
-                <outlet property="tfStep2Write" destination="hHv-tS-LOJ" id="Lnk-7F-7wj"/>
                 <outlet property="tfStep4Name" destination="2cc-JH-L6d" id="rTT-hM-RMU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -164,94 +162,48 @@
             <rect key="frame" x="0.0" y="0.0" width="291" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bbw-Ww-9oJ">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bbw-Ww-9oJ">
                     <rect key="frame" x="24" y="0.0" width="267" height="100"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WAK-2x-hBm">
-                            <rect key="frame" x="0.0" y="0.0" width="267" height="100"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Record" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ll7-BH-TAz">
+                            <rect key="frame" x="105" y="8" width="56" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Write" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCP-6Z-wOV">
-                                    <rect key="frame" x="113" y="9" width="40" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" red="0.0" green="0.3294117647" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="what should I say?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hHv-tS-LOJ">
-                                    <rect key="frame" x="20" y="50" width="142" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </textField>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xuy-71-doU">
-                                    <rect key="frame" x="161" y="44" width="41" height="41"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button" image="bt-play-medium">
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="onClick2WritePlay:" destination="-1" eventType="touchUpInside" id="pqJ-74-GzZ"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPa-JH-oqu">
-                                    <rect key="frame" x="215" y="44" width="41" height="41"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button" image="bt-form-next">
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <state key="disabled" image="bt-form-next-disabled"/>
-                                    <connections>
-                                        <action selector="onClickS2Next:" destination="-1" eventType="touchUpInside" id="Ynn-Ys-w45"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                        </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kWn-Mc-DWE">
-                            <rect key="frame" x="0.0" y="0.0" width="267" height="100"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.3294117647" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYU-aN-aFt" customClass="TBWRecordButton">
+                            <rect key="frame" x="56" y="38" width="42" height="42"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Record" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ll7-BH-TAz">
-                                    <rect key="frame" x="105" y="9" width="56" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" red="0.0" green="0.3294117647" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYU-aN-aFt" customClass="TBWRecordButton">
-                                    <rect key="frame" x="80" y="38" width="42" height="42"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal">
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="onClickS2Record:" destination="-1" eventType="touchUpInside" id="ciH-yt-my4"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geh-js-O5k">
-                                    <rect key="frame" x="143" y="38" width="41" height="41"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button" image="bt-play-medium">
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="onClickS2RecordPlay:" destination="-1" eventType="touchUpInside" id="egX-i3-aJY"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ouc-AG-zR6">
-                                    <rect key="frame" x="215" y="38" width="41" height="41"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button" image="bt-form-next">
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <state key="disabled" image="bt-form-next-disabled"/>
-                                    <connections>
-                                        <action selector="onClickRecordNext:" destination="-1" eventType="touchUpInside" id="Pui-OA-YjD"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                        </view>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onClickS2Record:" destination="-1" eventType="touchUpInside" id="ciH-yt-my4"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geh-js-O5k">
+                            <rect key="frame" x="120" y="38" width="41" height="41"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button" image="bt-play-medium">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onClickS2RecordPlay:" destination="-1" eventType="touchUpInside" id="egX-i3-aJY"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ouc-AG-zR6">
+                            <rect key="frame" x="186" y="38" width="41" height="41"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button" image="bt-form-next">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="disabled" image="bt-form-next-disabled"/>
+                            <connections>
+                                <action selector="onClickRecordNext:" destination="-1" eventType="touchUpInside" id="Pui-OA-YjD"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.52941176469999995" green="0.89411764709999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
@@ -265,6 +217,74 @@
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.91764705879999997" green="0.20784313730000001" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Bbw-Ww-9oJ" firstAttribute="top" secondItem="b17-cc-ZSc" secondAttribute="top" id="7z4-OI-P0c"/>
+                <constraint firstAttribute="bottom" secondItem="Bbw-Ww-9oJ" secondAttribute="bottom" id="9cx-FU-xHJ"/>
+                <constraint firstItem="Bbw-Ww-9oJ" firstAttribute="leading" secondItem="b17-cc-ZSc" secondAttribute="leading" constant="24" id="UWF-nM-Y51"/>
+                <constraint firstAttribute="trailing" secondItem="Bbw-Ww-9oJ" secondAttribute="trailing" id="ZaP-WP-WDK"/>
+            </constraints>
+        </view>
+        <view contentMode="scaleToFill" id="yTC-sV-Mde">
+            <rect key="frame" x="0.0" y="0.0" width="291" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gej-jP-LPl">
+                    <rect key="frame" x="24" y="0.0" width="267" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Write" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCc-bu-Hx8">
+                            <rect key="frame" x="113" y="6" width="40" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.3294117647" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="what should I say?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MIS-9k-XsD">
+                            <rect key="frame" x="20" y="35" width="142" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t64-Lr-vkG">
+                            <rect key="frame" x="170" y="29" width="41" height="41"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button" image="bt-play-medium">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onClick2WritePlay:" destination="-1" eventType="touchUpInside" id="KYj-PA-5Hc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8F-VB-2Tt">
+                            <rect key="frame" x="219" y="29" width="41" height="41"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button" image="bt-form-next">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="disabled" image="bt-form-next-disabled"/>
+                            <connections>
+                                <action selector="onClickS2Next:" destination="-1" eventType="touchUpInside" id="3fa-DG-PiL"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.52941176469999995" green="0.89411764709999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLt-r2-xeM">
+                    <rect key="frame" x="0.0" y="35" width="33" height="33"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="ic-step-bg-normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="ic-step-bg-selected"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.91764705879999997" green="0.20784313730000001" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Gej-jP-LPl" secondAttribute="trailing" id="Thm-cL-h9C"/>
+                <constraint firstItem="Gej-jP-LPl" firstAttribute="top" secondItem="yTC-sV-Mde" secondAttribute="top" id="fmQ-Yy-qjr"/>
+                <constraint firstAttribute="bottom" secondItem="Gej-jP-LPl" secondAttribute="bottom" id="gkG-Pd-OeL"/>
+                <constraint firstItem="Gej-jP-LPl" firstAttribute="leading" secondItem="yTC-sV-Mde" secondAttribute="leading" constant="24" id="lgb-X9-1X4"/>
+            </constraints>
         </view>
         <view contentMode="scaleToFill" id="Ca3-aS-aJG">
             <rect key="frame" x="0.0" y="0.0" width="291" height="100"/>

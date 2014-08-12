@@ -16,9 +16,12 @@
 
 #import  <AVFoundation/AVFoundation.h>
 @interface TBWCreationFormViewController ()<UIGestureRecognizerDelegate, TBWRecordingServiceDelegate>
+
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UIView *step1View;
-@property (weak, nonatomic) IBOutlet UIView *step2View;
+@property (strong, nonatomic) IBOutlet UIView *step2Record;
+@property (strong, nonatomic) IBOutlet UIView *step2Write;
+//@property (weak, nonatomic) IBOutlet UIView *step2View;
 @property (weak, nonatomic) IBOutlet UIView *step3View;
 @property (weak, nonatomic) IBOutlet UIView *step4View;
 @property (weak, nonatomic) IBOutlet UIView *step5View;
@@ -109,32 +112,40 @@
     
     
     [self.scrollview addSubview:self.step1View];
-    [self.scrollview addSubview:self.step2View];
+//    [self.scrollview addSubview:self.step2View];
+    [self.scrollview addSubview:self.step2Record];
+    [self.scrollview addSubview:self.step2Write];
     [self.scrollview addSubview:self.step3View];
     [self.scrollview addSubview:self.step4View];
     [self.scrollview addSubview:self.step5View];
     
     [self.step1View setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self.step2View setTranslatesAutoresizingMaskIntoConstraints:NO];
+//    [self.step2View setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.step2Record setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.step2Write setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.step3View setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.step4View setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.step5View setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     NSDictionary *viewsDictionary =@{@"step1":self.step1View,
-                                     @"step2":self.step2View,
+                                     @"step2record":self.step2Record,
+                                     @"step2write":self.step2Write,
                                      @"step3":self.step3View,
                                      @"step4":self.step4View,
                                      @"step5":self.step5View};
     
     NSDictionary *metricsDictionary = @{@"stepSpacing":@5, @"stepHeight":@100};
     
-    [self.scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[step1(stepHeight)]-stepSpacing-[step2(stepHeight)]-stepSpacing-[step3(stepHeight)]-stepSpacing-[step4(stepHeight)]-stepSpacing-[step5(stepHeight)]|"
+    [self.scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[step1(stepHeight)]-stepSpacing-[step2record(stepHeight)]-stepSpacing-[step3(stepHeight)]-stepSpacing-[step4(stepHeight)]-stepSpacing-[step5(stepHeight)]|"
                                                                             options:0
                                                                             metrics:metricsDictionary
                                                                               views:viewsDictionary]];
     
+    
+    
     [self.scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[step1]|" options:0 metrics:nil views:viewsDictionary]];
-    [self.scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[step2]|" options:0 metrics:nil views:viewsDictionary]];
+    [self.scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[step2record]|" options:0 metrics:nil views:viewsDictionary]];
+    [self.scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[step2write]|" options:0 metrics:nil views:viewsDictionary]];
     [self.scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[step3]|" options:0 metrics:nil views:viewsDictionary]];
     [self.scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[step4]|" options:0 metrics:nil views:viewsDictionary]];
     [self.scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[step5]|" options:0 metrics:nil views:viewsDictionary]];
@@ -144,6 +155,18 @@
                                    attribute:NSLayoutAttributeWidth
                                    multiplier:1.0f
                                    constant:0]];
+    
+    [self.scrollview addConstraint:[NSLayoutConstraint constraintWithItem:self.step2Write attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual
+                                                                   toItem: self.step2Record
+                                                                attribute:NSLayoutAttributeTop
+                                                               multiplier:1.0f
+                                                                 constant:0]];
+    
+    [self.scrollview addConstraint:[NSLayoutConstraint constraintWithItem:self.step2Write attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual
+                                                                   toItem: self.step2Record
+                                                                attribute:NSLayoutAttributeWidth
+                                                               multiplier:1.0f
+                                                                 constant:0]];
 
 }
 - (void)didReceiveMemoryWarning
@@ -298,8 +321,12 @@
     if(!self.writeVisible)return;
     
     self.writeVisible = NO;
-    self.step2RecordView.hidden = NO;
-    self.step2WriteView.hidden = YES;
+    
+    self.step2Write.hidden = YES;
+    self.step2Record.hidden = NO;
+    
+//    self.step2RecordView.hidden = NO;
+//    self.step2WriteView.hidden = YES;
     
     [self.btStep1Write setSelected:NO];
     [self.btStep1Record setSelected:YES];
@@ -311,8 +338,12 @@
     if(self.writeVisible)return;
     
     self.writeVisible = YES;
-    self.step2RecordView.hidden = YES;
-    self.step2WriteView.hidden = NO;
+    
+    self.step2Write.hidden = NO;
+    self.step2Record.hidden = YES;
+    
+//    self.step2RecordView.hidden = YES;
+//    self.step2WriteView.hidden = NO;
     
     [self.btStep1Write setSelected:YES];
     [self.btStep1Record setSelected:NO];
@@ -322,7 +353,8 @@
         case 1:
         case 2:            
             self.step1View.hidden = NO;
-            self.step2View.hidden = NO;
+            self.writeVisible ? [self showWriteViewAnimated:YES] : [self showRecordViewAnimated:YES];
+//            self.step2View.hidden = NO;
             self.step3View.hidden = NO;
             self.step4View.hidden = NO;
             self.step5View.hidden = NO;
@@ -331,7 +363,8 @@
         case 4:
         case 5:
             self.step1View.hidden = NO;
-            self.step2View.hidden = NO;
+            self.writeVisible ? [self showWriteViewAnimated:YES] : [self showRecordViewAnimated:YES];
+//            self.step2View.hidden = NO;
             self.step3View.hidden = NO;
             self.step4View.hidden = NO;
             self.step5View.hidden = NO;
