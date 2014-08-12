@@ -141,7 +141,10 @@
                                                                             metrics:metricsDictionary
                                                                               views:viewsDictionary]];
     
-    
+    [self.scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[step1(stepHeight)]-stepSpacing-[step2write(stepHeight)]"
+                                                                            options:0
+                                                                            metrics:metricsDictionary
+                                                                              views:viewsDictionary]];
     
     [self.scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[step1]|" options:0 metrics:nil views:viewsDictionary]];
     [self.scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[step2record]|" options:0 metrics:nil views:viewsDictionary]];
@@ -156,18 +159,6 @@
                                    multiplier:1.0f
                                    constant:0]];
     
-    [self.scrollview addConstraint:[NSLayoutConstraint constraintWithItem:self.step2Write attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual
-                                                                   toItem: self.step2Record
-                                                                attribute:NSLayoutAttributeTop
-                                                               multiplier:1.0f
-                                                                 constant:0]];
-    
-    [self.scrollview addConstraint:[NSLayoutConstraint constraintWithItem:self.step2Write attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual
-                                                                   toItem: self.step2Record
-                                                                attribute:NSLayoutAttributeWidth
-                                                               multiplier:1.0f
-                                                                 constant:0]];
-
 }
 - (void)didReceiveMemoryWarning
 {
