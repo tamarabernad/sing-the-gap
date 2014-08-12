@@ -16,6 +16,7 @@
 
 #import  <AVFoundation/AVFoundation.h>
 @interface TBWCreationFormViewController ()<UIGestureRecognizerDelegate, TBWRecordingServiceDelegate>
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UIView *step1View;
 @property (weak, nonatomic) IBOutlet UIView *step2View;
 @property (weak, nonatomic) IBOutlet UIView *step3View;
@@ -102,6 +103,10 @@
     
     [self.view addGestureRecognizer:tapGesture];
     
+
+    [self.scrollview setTranslatesAutoresizingMaskIntoConstraints:NO];
+//    [self.containerView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
     
     [self.scrollview addSubview:self.step1View];
     [self.scrollview addSubview:self.step2View];
@@ -109,7 +114,6 @@
     [self.scrollview addSubview:self.step4View];
     [self.scrollview addSubview:self.step5View];
     
-    [self.scrollview setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.step1View setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.step2View setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.step3View setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -134,6 +138,12 @@
     [self.scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[step3]|" options:0 metrics:nil views:viewsDictionary]];
     [self.scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[step4]|" options:0 metrics:nil views:viewsDictionary]];
     [self.scrollview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[step5]|" options:0 metrics:nil views:viewsDictionary]];
+    
+    [self.scrollview addConstraint:[NSLayoutConstraint constraintWithItem:self.step1View attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual
+                                   toItem: self.scrollview
+                                   attribute:NSLayoutAttributeWidth
+                                   multiplier:1.0f
+                                   constant:0]];
 
 }
 - (void)didReceiveMemoryWarning
