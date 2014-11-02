@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4C0C3B743487424C8F049DE4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C019CD84D504415915C1B02 /* libPods.a */; };
 		50D69483F6334BFD9C360B07 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C019CD84D504415915C1B02 /* libPods.a */; };
+		636628331A06194400384408 /* TBWFormatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 636628321A06194400384408 /* TBWFormatManager.m */; };
 		63E324CB194EF55C00B3C07D /* TBWDataServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E324CA194EF55C00B3C07D /* TBWDataServiceTests.m */; };
 		63EDC0371934DC1B00278B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDC0361934DC1B00278B84 /* Foundation.framework */; };
 		63EDC0391934DC1B00278B84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDC0381934DC1B00278B84 /* CoreGraphics.framework */; };
@@ -96,6 +97,8 @@
 
 /* Begin PBXFileReference section */
 		5C019CD84D504415915C1B02 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		636628311A06194400384408 /* TBWFormatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWFormatManager.h; sourceTree = "<group>"; };
+		636628321A06194400384408 /* TBWFormatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWFormatManager.m; sourceTree = "<group>"; };
 		63E324CA194EF55C00B3C07D /* TBWDataServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWDataServiceTests.m; sourceTree = "<group>"; };
 		63E324CC194EF73F00B3C07D /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		63E324CE194EFDE500B3C07D /* libPods-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AFNetworking.a"; path = "Pods/build/Debug-iphoneos/libPods-AFNetworking.a"; sourceTree = "<group>"; };
@@ -242,6 +245,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		636628301A06193600384408 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				636628311A06194400384408 /* TBWFormatManager.h */,
+				636628321A06194400384408 /* TBWFormatManager.m */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		63EDC02A1934DC1B00278B84 = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +294,7 @@
 		63EDC03E1934DC1B00278B84 /* sing-the-gap */ = {
 			isa = PBXGroup;
 			children = (
+				636628301A06193600384408 /* Managers */,
 				C99CD4FA19571F140087355D /* Utils */,
 				C995CABA193D13A900D87BCD /* Resources */,
 				C995C701193D124F00D87BCD /* Libraries */,
@@ -704,6 +717,7 @@
 				E00841F719951CC600BF62A3 /* TBWMyCreationsCell.m in Sources */,
 				C94262F019460C9F003F0087 /* TBWDataService.m in Sources */,
 				C99CD4FD19571F5F0087355D /* TBWFileSystemHelpers.m in Sources */,
+				636628331A06194400384408 /* TBWFormatManager.m in Sources */,
 				C995CB00193D13DA00D87BCD /* wave_pulse.cpp in Sources */,
 				C995CAF0193D13DA00D87BCD /* fifo.cpp in Sources */,
 				C995CAF1193D13DA00D87BCD /* intonation.cpp in Sources */,
