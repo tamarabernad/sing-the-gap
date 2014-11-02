@@ -89,11 +89,11 @@
         cell = [nib objectAtIndex:0];
         [cell setDelegate:self];
     }
-    CGFloat pric = (gapSong.price/(float)100);
-    NSString *pr = [NSString stringWithFormat:@"%.2f", pric];
+    double priceValue = (gapSong.price/100.0);    
+
     [cell setTitle:gapSong.title];
     [cell setIsNew:gapSong.isNew];
-    [cell setPriceValue:gapSong.price != 0 ? pr: @"Free"];
+    [cell setPriceValue:[TBWFormatManager formatCurrency:[NSNumber numberWithDouble:priceValue]]];
     return cell;
 }
 

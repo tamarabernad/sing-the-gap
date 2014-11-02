@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TBWCreationFormViewController">
@@ -88,7 +88,6 @@
                 <constraint firstItem="be4-os-ESQ" firstAttribute="top" secondItem="HLx-7L-6IM" secondAttribute="bottom" constant="8" id="wrE-rj-egU"/>
                 <constraint firstItem="brb-fg-h1s" firstAttribute="leading" secondItem="HLx-7L-6IM" secondAttribute="trailing" constant="8" id="xs9-MK-YF0"/>
             </constraints>
-            <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
         <view contentMode="scaleToFill" id="swE-j7-jWY">
@@ -149,7 +148,6 @@
                 <constraint firstAttribute="bottom" secondItem="ucb-4A-ge0" secondAttribute="bottom" id="fmZ-i7-61b"/>
                 <constraint firstItem="ucb-4A-ge0" firstAttribute="leading" secondItem="swE-j7-jWY" secondAttribute="leading" constant="24" id="ps7-aE-Y5o"/>
             </constraints>
-            <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
         <view contentMode="scaleToFill" id="b17-cc-ZSc">
@@ -224,7 +222,6 @@
                 <constraint firstItem="Bbw-Ww-9oJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="b17-cc-ZSc" secondAttribute="leading" constant="24" id="XzP-MX-2ZQ"/>
                 <constraint firstAttribute="trailing" secondItem="Bbw-Ww-9oJ" secondAttribute="trailing" id="ZaP-WP-WDK"/>
             </constraints>
-            <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
         <view contentMode="scaleToFill" id="yTC-sV-Mde">
@@ -240,7 +237,7 @@
                             <color key="textColor" red="0.0" green="0.3294117647" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t64-Lr-vkG">
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="751" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t64-Lr-vkG">
                             <rect key="frame" x="162" y="37" width="43" height="43"/>
                             <state key="normal" image="bt-play-medium">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -262,7 +259,7 @@
                                 <constraint firstAttribute="width" constant="1" id="FNc-Ac-vdl"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8F-VB-2Tt">
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8F-VB-2Tt">
                             <rect key="frame" x="214" y="37" width="42" height="43"/>
                             <state key="normal" image="bt-form-next">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -302,7 +299,6 @@
                 <constraint firstAttribute="bottom" secondItem="Gej-jP-LPl" secondAttribute="bottom" id="kcA-1k-NGY"/>
                 <constraint firstItem="Gej-jP-LPl" firstAttribute="leading" secondItem="yTC-sV-Mde" secondAttribute="leading" constant="24" id="l3r-nz-g15"/>
             </constraints>
-            <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
         <view contentMode="scaleToFill" id="Ca3-aS-aJG">
@@ -354,7 +350,6 @@
                 <constraint firstItem="kC1-sp-rDB" firstAttribute="top" secondItem="Ca3-aS-aJG" secondAttribute="top" id="L9d-mF-KUj"/>
                 <constraint firstItem="kC1-sp-rDB" firstAttribute="leading" secondItem="Ca3-aS-aJG" secondAttribute="leading" constant="24" id="UrE-74-i2K"/>
             </constraints>
-            <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
         <view contentMode="scaleToFill" id="AcE-bU-umV">
@@ -399,7 +394,6 @@
                 <constraint firstItem="v2o-gE-KuF" firstAttribute="leading" secondItem="AcE-bU-umV" secondAttribute="leading" constant="24" id="fIS-ok-k9R"/>
                 <constraint firstAttribute="trailing" secondItem="v2o-gE-KuF" secondAttribute="trailing" id="nBx-Sz-Tdy"/>
             </constraints>
-            <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
         <view contentMode="scaleToFill" id="Jve-CS-mjq">
@@ -409,14 +403,14 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jxn-yn-0x6">
                     <rect key="frame" x="24" y="0.0" width="267" height="100"/>
                     <subviews>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save it!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdb-ij-R6z">
-                            <rect key="frame" x="105" y="8" width="57" height="21"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save it!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdb-ij-R6z">
+                            <rect key="frame" x="105" y="5" width="57" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.3294117647" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTa-O1-3aU">
-                            <rect key="frame" x="85" y="42" width="98" height="43"/>
+                            <rect key="frame" x="112" y="42" width="43" height="43"/>
                             <state key="normal" image="bt-buy-form">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -425,8 +419,8 @@
                                 <action selector="onClickBuy:" destination="-1" eventType="touchUpInside" id="YHy-jY-kjE"/>
                             </connections>
                         </button>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0,99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bj-Xs-lLX">
-                            <rect key="frame" x="120" y="53" width="28" height="21"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bj-Xs-lLX">
+                            <rect key="frame" x="122" y="56" width="25" height="15"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" red="0.91764705879999997" green="0.20784313730000001" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -434,8 +428,12 @@
                     </subviews>
                     <color key="backgroundColor" red="0.52941176469999995" green="0.89411764709999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="centerX" secondItem="UTa-O1-3aU" secondAttribute="centerX" id="RDF-Kk-Z7z"/>
-                        <constraint firstAttribute="bottom" secondItem="UTa-O1-3aU" secondAttribute="bottom" constant="15" id="aRV-GR-X4k"/>
+                        <constraint firstAttribute="centerX" secondItem="UTa-O1-3aU" secondAttribute="centerX" id="D9b-WF-itx"/>
+                        <constraint firstAttribute="bottom" secondItem="UTa-O1-3aU" secondAttribute="bottom" constant="15" id="K4B-Cl-ufP"/>
+                        <constraint firstItem="wdb-ij-R6z" firstAttribute="top" secondItem="Jxn-yn-0x6" secondAttribute="top" constant="5" id="NtH-8r-Wyy"/>
+                        <constraint firstItem="5Bj-Xs-lLX" firstAttribute="centerY" secondItem="UTa-O1-3aU" secondAttribute="centerY" id="WZR-zM-q0d"/>
+                        <constraint firstAttribute="centerX" secondItem="wdb-ij-R6z" secondAttribute="centerX" id="ZKP-I6-g8q"/>
+                        <constraint firstItem="5Bj-Xs-lLX" firstAttribute="centerX" secondItem="UTa-O1-3aU" secondAttribute="centerX" constant="0.5" id="qvS-iG-3lO"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51W-0J-MoS">
@@ -452,7 +450,6 @@
                 <constraint firstItem="Jxn-yn-0x6" firstAttribute="top" secondItem="Jve-CS-mjq" secondAttribute="top" id="pkK-zn-3jo"/>
                 <constraint firstAttribute="trailing" secondItem="Jxn-yn-0x6" secondAttribute="trailing" id="zrx-xS-68Y"/>
             </constraints>
-            <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
@@ -469,9 +466,4 @@
         <image name="ic-step-bg-normal" width="33" height="33"/>
         <image name="ic-step-bg-selected" width="33" height="33"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

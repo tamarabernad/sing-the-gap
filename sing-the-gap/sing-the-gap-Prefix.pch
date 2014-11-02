@@ -16,4 +16,5 @@
     #import <CoreData/CoreData.h>
     #import "TBWFileSystemHelpers.h"
     #import "CoreDataStack.h"
+    #import "TBWFormatManager.h"
 #endif

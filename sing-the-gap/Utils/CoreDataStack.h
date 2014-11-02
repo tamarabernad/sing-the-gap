@@ -19,4 +19,8 @@
 - (NSManagedObjectContext *)independentManagedObjectContext;
 + (CoreDataStack *)coreDataStack;
 
++ (NSManagedObject *)fetchEntity:(NSString *)entity WithSortKey:(NSString *)sortKey Ascending:(BOOL)ascending WithPredicate:(NSPredicate *)predicate;
++ (NSManagedObject *)fetchEntity:(NSString *)entity WithPredicate:(NSPredicate *)predicate;
++ (NSArray *)fetchEntities:(NSString *)entity WithSortKey:(NSString *)sortKey Ascending:(BOOL)ascending WithPredicate:(NSPredicate *)predicate;
++ (NSManagedObject*) createEntityWithName:(NSString *)entityName;
 @end

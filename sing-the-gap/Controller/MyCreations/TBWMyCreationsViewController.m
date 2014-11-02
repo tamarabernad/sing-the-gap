@@ -49,6 +49,7 @@
         return _fetchedResultsController;
     }
     
+
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"TBWCreation" inManagedObjectContext:[[CoreDataStack coreDataStack] managedObjectContext]];
     
@@ -106,6 +107,7 @@
 //////////////////////////////////////////////////
 #pragma mark - TBWMyCreationsCellDelegate methods
 //////////////////////////////////////////////////
+
 - (void)TBWMyCreationsCellClickCreate:(TBWMyCreationsCell *)cell{
     [[NSNotificationCenter defaultCenter] postNotificationName:TBWAudioPlayerPauseNotification object:nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:TBWAudioPlayerHideNotification object:nil];
@@ -113,7 +115,7 @@
     TBWCreation *creation =(TBWCreation *)[self.fetchedResultsController objectAtIndexPath:[self.tableView indexPathForCell:cell]];
     
     [TBWGapSong retrieveGapSongById:creation.gapSongId WithBlock:^(TBWGapSong *gapSong, NSError *error) {
-       //TODO gapsong might be not available anymore
+       //TODO gapsong might not be available anymore
         TBWCreationFormViewController *cfvc = [[TBWCreationFormViewController alloc] init];
         cfvc.gapSong = gapSong;
         [self.navigationController pushViewController:cfvc animated:YES];
@@ -122,6 +124,7 @@
 - (void)TBWMyCreationsCellDidClickPlay:(TBWMyCreationsCell *)cell{
     TBWCreation *creation =(TBWCreation *)[self.fetchedResultsController objectAtIndexPath:[self.tableView indexPathForCell:cell]];
     NSString *path = [CreationsBaughtPath() stringByAppendingPathComponent:creation.fileName];
+    
     [[NSNotificationCenter defaultCenter] postNotificationName:TBWAudioPlayerPlayNotification object:nil userInfo:@{@"contentUrl":path}];
 }
 

@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface TBWFormatManager : NSObject
++ (NSString *) formatCurrency:(NSNumber *)value;
+
 + (NSString *) dateToString:(NSDate *)date;
 + (NSString *) timeToString:(NSDate *)date;
 + (NSString *) indicatorValueToString:(NSNumber *)value WithType:(NSString *) valueType;

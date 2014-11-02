@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sing-the-gap/Managers/TBWFormatManager.m"
-            timestampString = "436607618.317901"
+            timestampString = "436609756.231115"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "@implementation TBWFormatManager"
             landmarkType = "3">
          </BreakpointContent>

@@ -24,6 +24,83 @@
     }
     return theSigleton;
 }
++ (NSManagedObject *)fetchEntity:(NSString *)entity WithSortKey:(NSString *)sortKey Ascending:(BOOL)ascending WithPredicate:(NSPredicate *)predicate{
+    
+    NSManagedObjectContext *context = [[CoreDataStack coreDataStack] managedObjectContext];
+    NSEntityDescription *entityDescription = [NSEntityDescription
+                                              entityForName:entity inManagedObjectContext:context];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDescription];
+    [request setFetchLimit:1];
+    if(sortKey){
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]
+                                            initWithKey:sortKey ascending:ascending];
+        [request setSortDescriptors:@[sortDescriptor]];
+    }
+    
+    
+    if(predicate){
+        [request setPredicate:predicate];
+    }
+    NSError *error;
+    NSArray *array = [context executeFetchRequest:request error:&error];
+    if (error != nil || array == nil)
+    {
+        NSLog(@"CoreDataStack::ErrorFeching::Entity %@ With Predicat: %@",entity, predicate);
+    }
+    return [array firstObject];
+}
++ (NSManagedObject *)fetchEntity:(NSString *)entity WithPredicate:(NSPredicate *)predicate{
+    NSManagedObjectContext *context = [[CoreDataStack coreDataStack] managedObjectContext];
+    NSEntityDescription *entityDescription = [NSEntityDescription
+                                              entityForName:entity inManagedObjectContext:context];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDescription];
+    [request setFetchLimit:1];
+    
+    if(predicate){
+        [request setPredicate:predicate];
+    }
+    NSError *error;
+    NSArray *array = [context executeFetchRequest:request error:&error];
+    if (error != nil || array == nil)
+    {
+        NSLog(@"CoreDataStack::ErrorFeching::Entity %@ With Predicat: %@",entity, predicate);
+    }
+    return [array firstObject];
+}
++ (NSArray *)fetchEntities:(NSString *)entity WithSortKey:(NSString *)sortKey Ascending:(BOOL)ascending WithPredicate:(NSPredicate *)predicate{
+    NSManagedObjectContext *context = [[CoreDataStack coreDataStack] managedObjectContext];
+    NSEntityDescription *entityDescription = [NSEntityDescription
+                                              entityForName:entity inManagedObjectContext:context];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDescription];
+    
+    if(sortKey){
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]
+                                            initWithKey:sortKey ascending:ascending];
+        [request setSortDescriptors:@[sortDescriptor]];
+    }
+    if(predicate){
+        [request setPredicate:predicate];
+    }
+    
+    NSError *error;
+    NSArray *array = [context executeFetchRequest:request error:&error];
+    if (error != nil || array == nil)
+    {
+        NSLog(@"CoreDataStack::ErrorFeching::Entity %@ With Predicat: %@",entity, predicate);
+    }
+    return array;
+}
++ (NSManagedObject*) createEntityWithName:(NSString *)entityName {
+    NSManagedObjectContext *context = [[CoreDataStack coreDataStack] managedObjectContext];
+    NSManagedObject *entity = [NSEntityDescription insertNewObjectForEntityForName:entityName
+                                                            inManagedObjectContext:context];
+    
+    return entity;
+}
 
 - (void)saveContext
 {

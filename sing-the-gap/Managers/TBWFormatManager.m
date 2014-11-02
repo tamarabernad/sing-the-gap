@@ -18,6 +18,8 @@
 #define  FORMATTING_ORDINARY_SUFFIX_RD NSLocalizedStringFromTableInBundle(@"FORMATTING_ORDINARY_SUFFIX_RD", @"General", [CDASettingsManager currentLanguageResourceBundle],@"Formatting - rd sufix for numeric values")
 
 @interface TBWFormatManager()
+@property (nonatomic, strong) NSNumberFormatter *currencyFormatter;
+
 
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
 @property (nonatomic, strong) NSDateFormatter *timeFormatter;
@@ -40,6 +42,9 @@ static TBWFormatManager *sharedInstance;
 ///////////////////////////////////////
 #pragma mark - Public methods
 ///////////////////////////////////////
++ (NSString *) formatCurrency:(NSNumber *)value{
+    return [sharedInstance.currencyFormatter stringFromNumber:value];
+}
 
 + (NSString *) dateToString:(NSDate *)date {
     return [sharedInstance.dateFormatter stringFromDate:date];
@@ -79,6 +84,15 @@ static TBWFormatManager *sharedInstance;
 /////////////////////////////
 #pragma mark - Lazy getters
 /////////////////////////////
+- (NSNumberFormatter *)currencyFormatter{
+    if(!_currencyFormatter){
+        _currencyFormatter = [[NSNumberFormatter alloc]  init];
+        [_currencyFormatter setLocale:[NSLocale currentLocale]];
+        [_currencyFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    }
+    return _currencyFormatter;
+}
+
 - (NSDateFormatter *)yearFormatter{
     if (!_yearFormatter) {
         _yearFormatter = [[NSDateFormatter alloc] init];
